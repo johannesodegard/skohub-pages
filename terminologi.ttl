@@ -483,7 +483,7 @@ skos:ConceptScheme rdf:type owl:Class .
                      skos:Concept ;
             skos:broader :etterretningshjulet ;
             skos:inScheme :spn_terminologi ;
-            dct:bibliografphicCitation "Forsvarets etterretningsdoktrine (2025) s. 77"@nb ;
+            dct:bibliographicCitation "Forsvarets etterretningsdoktrine (2025) s. 77"@nb ;
             skos:definition "ferdigheter, aktiviteter og selve etterretningsproduktet som samlet kommuniserer den relevante kunnskapen fra etterretningsorganisasjonen til etterretningsbrukeren"@nb ;
             skos:prefLabel "formidling"@nb ;
             skos:scopeNote "etterretning"@nb .
@@ -514,7 +514,7 @@ skos:ConceptScheme rdf:type owl:Class .
                                        skos:Concept ;
                               skos:broader :sannsynlighet_ulykke ;
                               skos:inScheme :spn_terminologi ;
-                              dct:bibliografphicCitation "FFI-rapport 18/02058 kap. 2.2.2"@nb ;
+                              dct:bibliographicCitation "FFI-rapport 18-02058 kap. 2.2.2"@nb ;
                               skos:altLabel "matematisk sannsynlighet"@nb ;
                               skos:prefLabel "frekvensbasert sannsynlighet"@nb .
 
@@ -589,7 +589,7 @@ skos:ConceptScheme rdf:type owl:Class .
                        skos:Concept ;
               skos:broader :trussel ;
               skos:inScheme :spn_terminologi ;
-              dct:bibliografphicCitation "Se Forsvarets etterretningsdoktrine (2025) s. 73."@nb ;
+              dct:bibliographicCitation "Se Forsvarets etterretningsdoktrine (2025) s. 73."@nb ;
               skos:definition "uttrykk for omfanget av eksterne forhold som påvirker en trussels evne eller vilje til å gjennomføre et angrep"@nb ;
               skos:example "Den fiendtlige bataljonsstridsgruppen har kapabiliteter til å krysse elven, men har ikke handlefrihet til å gjennomføre dette de neste 48 timene da broleggingskapabiliteten er bundet opp i en annen pågående elvekryssing."@nb ;
               skos:prefLabel "handlefrihet"@nb .
@@ -693,7 +693,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
                       skos:Concept ;
              skos:broader :innhentingsbehov ;
              skos:inScheme :spn_terminologi ;
-             dct:bibliografphicCitation "Forsvarets etterretningsdoktrine (2025) s. 27"@nb ;
+             dct:bibliographicCitation "Forsvarets etterretningsdoktrine (2025) s. 27"@nb ;
              skos:definition "data eller informasjon som eksisterer, men som en aktør ønsker å holde hemmelig, for eksempel hvilke kapasiteter nye våpensystemer har, hvor militære våpenplattformer er, eller hvem som sto bak et cyberangrep"@nb ;
              skos:prefLabel "hemmelighet"@nb .
 
@@ -742,7 +742,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
                      skos:Concept ;
             skos:broader :etterretningshjulet ;
             skos:inScheme :spn_terminologi ;
-            dct:bibliografphicCitation "Forsvarets etterretningsdoktrine (2025) s. 103"@nb ;
+            dct:bibliographicCitation "Forsvarets etterretningsdoktrine (2025) s. 103"@nb ;
             skos:definition "generisk betegnelse på aktivitetene knyttet til både målsøking og målrettet innhenting"@nb ;
             skos:prefLabel "innhenting"@nb ;
             skos:scopeNote "etterretning"@nb .
@@ -845,7 +845,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
                                       skos:Concept ;
                              skos:broader :innhenting_mot_person_og_virksomhet ;
                              skos:inScheme :spn_terminologi ;
-                             dct:bibliografphicCitation "Forsvarets etterretningsdoktrine (2025) s. 103"@nb ;
+                             dct:bibliographicCitation "Forsvarets etterretningsdoktrine (2025) s. 103"@nb ;
                              skos:altLabel "COMINT"@nb ;
                              skos:definition "etterretninger som er utvunnet av signaler fra elektroniske kommunikasjonssystemer (f.eks. telefoner og radioer), innsamlet eller oppfanget av andre enn tiltenkte brukere"@nb ;
                              skos:prefLabel "kommunikasjons-etterretning"@nb .
@@ -873,7 +873,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
                     skos:Concept ;
            skos:broader :flerdisiplin ;
            skos:inScheme :spn_terminologi ;
-           dct:bibliografphicCitation "Forsvarets etterretningsdoktrine (2025) s. 103"@nb ;
+           dct:bibliographicCitation "Forsvarets etterretningsdoktrine (2025) s. 103"@nb ;
            skos:definition "kvalitativ beskrivelse av hvor sikker man er på konklusjonen(e) i en etterretningsvurdering"@nb ;
            skos:prefLabel "konfidens"@nb .
 
@@ -981,7 +981,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
                                         skos:Concept ;
                                skos:broader :sannsynlighet_ulykke ;
                                skos:inScheme :spn_terminologi ;
-                               dct:bibliografphicCitation "FFI-rapport 18/02058 kap. 2.2.1
+                               dct:bibliographicCitation "FFI-rapport 18-02058 kap. 2.2.1
 Aven (2009) Risikostyring. Unversitetsforslaget. 2. opplag. s. 52-56"@nb ;
                                skos:altLabel "semantisk sannsynlighet"@nb ,
                                              "subjektiv sannsynlighet"@nb ;
@@ -1024,7 +1024,7 @@ Aven (2009) Risikostyring. Unversitetsforslaget. 2. opplag. s. 52-56"@nb ;
                                     skos:Concept ;
                            skos:broader :innhenting_mot_person_og_virksomhet ;
                            skos:inScheme :spn_terminologi ;
-                           dct:bibliografphicCitation "Forsvarets etterretningsdoktrine (2025) s. 104"@nb ;
+                           dct:bibliographicCitation "Forsvarets etterretningsdoktrine (2025) s. 104"@nb ;
                            skos:altLabel "HUMINT"@nb ;
                            skos:definition "aktivitet der informasjon og data blir innhentet av mennesker, fra mennesker, og de etterretninger som dette fører til"@nb ;
                            skos:note "Begrepet menneskebasert innhenting brukes om aktiviteten der informasjon og data blir innhentet"@nb ;
@@ -1136,7 +1136,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan motså et angrep fra �
                     skos:Concept ;
            skos:broader :innhentingsbehov ;
            skos:inScheme :spn_terminologi ;
-           dct:bibliografphicCitation "Forsvarets etterretningsdoktrine (2025) s. 27"@nb ;
+           dct:bibliographicCitation "Forsvarets etterretningsdoktrine (2025) s. 27"@nb ;
            skos:definition """informasjon om utfall av fremtidige hendelser, intensjoner som ennå ikke har kommet
 til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
            skos:note "Eksempler på dette er spørsmål om i hvilken grad en stat er villig til å bruke militær makt for å oppnå politiske mål. All den tid en slik beslutning ennå ikke er tatt av den aktuelle statens ledere, vil en etterretningsorganisasjon bare være i stand til å estimere et slikt utfall."@nb ;
@@ -1391,7 +1391,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
                               skos:Concept ;
                      skos:broader :trussel ;
                      skos:inScheme :spn_terminologi ;
-                     dct:bibliografphicCitation "Meld. St. 10 ((2021–2022), s. 15)"@nb ;
+                     dct:bibliographicCitation "Meld. St. 10 ((2021–2022), s. 15)"@nb ;
                      skos:definition "betegnelse på strategier for konkurranse og konfrontasjon under terskelen for direkte væpnet konflikt som kan kombinere diplomatiske, informasjonsmessige, militære, økonomiske og finansielle, etterretningsmessige og juridiske virkemidler for å nå strategiske målsettinger. Virkemiddelbruken er gjerne distribuert bredt, er langsiktig i sin tilnærming og kombinerer åpne, fordekte og skjulte metoder."@nb ;
                      skos:note "Merknad: 'Håndbok i risikovurdering for funksjoner og konfidensialitet' dekker kun en bestanddel av sammensatte trusler."@nb ;
                      skos:prefLabel "sammensatte trusler"@nb .
@@ -1402,7 +1402,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
                                      skos:Concept ;
                             skos:broader :flerdisiplin ;
                             skos:inScheme :spn_terminologi ;
-                            dct:bibliografphicCitation "Forsvarets etterretningsdoktrine (2025) s. 105"@nb ;
+                            dct:bibliographicCitation "Forsvarets etterretningsdoktrine (2025) s. 105"@nb ;
                             skos:definition "beskrivelse av hvor sannsynlig det er at en gitt beskrivelse – i form av en etterretningsvurdering – vil være gyldig"@nb ;
                             skos:prefLabel "sannsynlighet [etterretning]"@nb .
 
