@@ -1,4 +1,4 @@
-@prefix : <http://www.johannesodegard.no/terminologi#> .
+@prefix : <https://www.johannesodegard.no/terminologi#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,7 +8,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @base <http://www.johannesodegard.no/terminologi#> .
 
-<http://www.johannesodegard.no/terminologi> rdf:type owl:Ontology .
+<https://www.johannesodegard.no/terminologi> rdf:type owl:Ontology .
 
 #################################################################
 #    Annotation properties
@@ -92,29 +92,30 @@ skos:ConceptScheme rdf:type owl:Class .
 #################################################################
 
 ###  http://www.johannesodegard.no/terminologi#Sikkerhet_på_norsk
-:Sikkerhet_på_norsk rdf:type owl:NamedIndividual ,
+:spn rdf:type owl:NamedIndividual ,
                              skos:Concept ;
-                    skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
-                    skos:topConceptOf :Sikkerhet_på_norsk_-_terminologi ;
+                    skos:inScheme :spn_terminologi ;
+                    skos:topConceptOf :spn_terminologi ;
                     skos:definition "uavhengig rammeverk og faglig initiativ for begrepsutvikling, metode og kunnskapsformidling innen forebyggende sikkerhet og nasjonal sikkerhet"@nb ;
                     skos:note "Sikkerhet på norsk (2023–) er et uavhengig prosjekt som har til hensikt å øke både kjennskap til og kunnskap om forebyggende sikkerhet. Prosjektet springer ut fra, men er ikke avgrenset til, forebyggende sikkerhetsarbeid etter sikkerhetsloven av 1. juni 2018 nr. 24. Rammeverket og begrepsbruken er primært tilpasset virksomheter av betydning for nasjonal sikkerhet, og er beskrevet i boken Angrepssikkerhet (2026) med tilhørende terminologi."@nb ;
                     skos:prefLabel "Sikkerhet på norsk"@nb .
 
 
-###  http://www.johannesodegard.no/terminologi#Sikkerhet_på_norsk_-_terminologi
-:Sikkerhet_på_norsk_-_terminologi
+###  http://www.johannesodegard.no/terminologi#spn_terminologi
+:spn_terminologi
     rdf:type owl:NamedIndividual , skos:ConceptScheme ;
     dct:title    "Sikkerhet på norsk – terminologi"@nb ;
-    skos:prefLabel "Sikkerhet på norsk – terminologi"@nb ;
-    dct:language "nb" ;
-    skos:hasTopConcept :Sikkerhet_på_norsk, :etterretning .
+    dct:creator "Johannes Ødegård"@nb ;
+    dct:created "2025-10-23"^^xsd:date ;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    skos:hasTopConcept :spn, :etterretning .
 
 
 ###  http://www.johannesodegard.no/terminologi#aksess
 :aksess rdf:type owl:NamedIndividual ,
                  skos:Concept ;
         skos:broader :innhenting ;
-        skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+        skos:inScheme :spn_terminologi ;
         skos:definition "etterretningsorganisasjonens eller en kildes tilgang til data og informasjon"@nb ;
         skos:prefLabel "aksess"@nb ;
         skos:scopeNote "etterretning"@nb .
@@ -124,7 +125,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :akustisk_etterretning rdf:type owl:NamedIndividual ,
                                 skos:Concept ;
                        skos:broader :innhenting_mot_fysisk_objekt ;
-                       skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                       skos:inScheme :spn_terminologi ;
                        skos:altLabel "akustisk innhenting"@nb ;
                        skos:prefLabel "ACINT"@nb .
 
@@ -133,7 +134,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :analyse rdf:type owl:NamedIndividual ,
                   skos:Concept ;
          skos:broader :etterretningshjulet ;
-         skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+         skos:inScheme :spn_terminologi ;
          dct:source "Forsvarets etterretningsdoktrine (2025) s. 100"@nb ;
          skos:definition "identifisering av de konkrete elementene i dataene, informasjonen eller etterretningene som er relevante for å besvare et etterretningsbehov"@nb ;
          skos:prefLabel "analyse"@nb ;
@@ -144,7 +145,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :analyseobjekt rdf:type owl:NamedIndividual ,
                         skos:Concept ;
                skos:broader :risikoanalyse ;
-               skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+               skos:inScheme :spn_terminologi ;
                skos:definition "fysisk eller organisatorisk system, enhet, fenomen eller aktivitet som er omfattet av risikovurderingen og som ved bortfall vil medføre skadefølger for et risikoobjekt"@nb ;
                skos:exactMatch <https://termlex.no/term/174963378809621/nb> ;
                skos:prefLabel "analyseobjekt"@nb .
@@ -154,7 +155,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :angrep rdf:type owl:NamedIndividual ,
                  skos:Concept ;
         skos:broader :trussel ;
-        skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+        skos:inScheme :spn_terminologi ;
         skos:altLabel "sikkerhetstruende virksomhet"@nb ,
                       "tilsiktet uønsket handling"@nb ;
         skos:definition "forsettlig handling som forårsaker en uønsket hendelse"@nb ;
@@ -165,7 +166,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :angrepsrisiko rdf:type owl:NamedIndividual ,
                         skos:Concept ;
                skos:broader :risikovurdering ;
-               skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+               skos:inScheme :spn_terminologi ;
                skos:definition "usikkerhet knyttet til om et angrep vil inntreffe, og hvilke konsekvenser det kan få"@nb ;
                skos:prefLabel "angrepsrisiko"@nb .
 
@@ -174,7 +175,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :angrepssikkerhet rdf:type owl:NamedIndividual ,
                            skos:Concept ;
                   skos:broader :angrepsrisiko ;
-                  skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                  skos:inScheme :spn_terminologi ;
                   dct:source "https://www.johannesodegard.no/2024/10/13/angrepssikkerhet/" ;
                   skos:definition "aktiviteter og tiltak for å forhindre angrep og redusere skadefølgene om angrep inntreffer"@nb ;
                   skos:prefLabel "angrepssikkerhet"@nb .
@@ -184,7 +185,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :angrepssikring rdf:type owl:NamedIndividual ,
                          skos:Concept ;
                 skos:broader :sikringstiltak ;
-                skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                skos:inScheme :spn_terminologi ;
                 skos:definition "tiltak som har til hensikt å forhindre et angrep i å inntreffe"@nb ;
                 skos:prefLabel "angrepssikring"@nb .
 
@@ -193,7 +194,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :anslag rdf:type owl:NamedIndividual ,
                  skos:Concept ;
         skos:broader :angrep ;
-        skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+        skos:inScheme :spn_terminologi ;
         skos:definition "angrep som kan føre til helt eller delvis bortfall av en verdi sin funksjon"@nb ;
         skos:prefLabel "anslag"@nb .
 
@@ -202,7 +203,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :autensitet rdf:type owl:NamedIndividual ,
                      skos:Concept ;
             skos:broader :funksjon ;
-            skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+            skos:inScheme :spn_terminologi ;
             skos:definition "egenskap ved verdi om at den er det den utgir seg for å være"@nb ;
             skos:prefLabel "autensitet"@nb .
 
@@ -211,7 +212,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :autorisasjon rdf:type owl:NamedIndividual ,
                        skos:Concept ;
               skos:broader :sikringstiltak ;
-              skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+              skos:inScheme :spn_terminologi ;
               skos:closeMatch <https://termlex.no/term/171137632800326/en> ;
               skos:definition "beslutning om at noen eller noe kan få tilgang til en verdi som ikke er åpent tilgjengelig"@nb ;
               skos:prefLabel "autorisasjon"@nb .
@@ -221,7 +222,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :bakgrunn rdf:type owl:NamedIndividual ,
                    skos:Concept ;
           skos:broader :etterretningsbehov ;
-          skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+          skos:inScheme :spn_terminologi ;
           skos:prefLabel "bakgrunn"@nb .
 
 
@@ -229,7 +230,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :begrunnelse rdf:type owl:NamedIndividual ,
                       skos:Concept ;
              skos:broader :etterretningsbehov ;
-             skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+             skos:inScheme :spn_terminologi ;
              skos:prefLabel "begrunnelse"@nb .
 
 
@@ -237,7 +238,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :beredskapslager rdf:type owl:NamedIndividual ,
                           skos:Concept ;
                  skos:broader :beredskapstiltak ;
-                 skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                 skos:inScheme :spn_terminologi ;
                  skos:definition "lager av utstyr, reservedeler eller varer for å sikre forsyning i en krisesituasjon eller ved bortfall av ordinær tilgang"@nb ;
                  skos:prefLabel "beredskapslager"@nb .
 
@@ -246,7 +247,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :beredskapsplan rdf:type owl:NamedIndividual ,
                          skos:Concept ;
                 skos:broader :håndtering ;
-                skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                skos:inScheme :spn_terminologi ;
                 skos:closeMatch <https://termlex.no/term/171137815306188/nb> ;
                 skos:definition "dokument eller samling av dokumenter som fastsetter den overordnede rammen for initiering, håndtering, koordinering og kontroll av personell og ressurser for å redusere, kontrollere eller redusere virkningene av en uønsket hendelse"@nb ;
                 skos:prefLabel "beredskapsplan"@nb .
@@ -256,7 +257,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :beredskapstiltak rdf:type owl:NamedIndividual ,
                            skos:Concept ;
                   skos:broader :implementering ;
-                  skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                  skos:inScheme :spn_terminologi ;
                   skos:definition "planlagte og forberedte tiltak for å håndtere hendelser og redusere skadefølgene av dem"@nb ;
                   skos:note "Sikringstiltak er i rammeverket avgrenset til tiltak for å forhindre at en uønsket hendelse skal inntreffe, mens beredskapstiltak er avgrenset til tiltak som iverksettes etter at en uønsket hendelse har inntruffet."@nb ;
                   skos:prefLabel "beredskapstiltak" .
@@ -267,7 +268,7 @@ skos:ConceptScheme rdf:type owl:Class .
                            skos:Concept ;
                   skos:broader :beredskapstiltak ,
                                :håndtering ;
-                  skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                  skos:inScheme :spn_terminologi ;
                   skos:definition "prosess for å øve på, vurdere og forbedre prestasjonen i en hendelseshåndtering"@nb ;
                   skos:prefLabel "beredskapsøvelse"@nb .
 
@@ -276,7 +277,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :bestanddel rdf:type owl:NamedIndividual ,
                      skos:Concept ;
             skos:broader :sårbarhetsvurdering ;
-            skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+            skos:inScheme :spn_terminologi ;
             skos:altLabel "mål"@nb ;
             skos:definition "liv og helse, materielle eller immaterielle størrelser som kan bli utsatt for en uønsket hendelse"@nb ;
             skos:prefLabel "bestanddel"@nb ;
@@ -287,7 +288,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :bilde-etterretning rdf:type owl:NamedIndividual ,
                              skos:Concept ;
                     skos:broader :innhenting_mot_fysisk_objekt ;
-                    skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                    skos:inScheme :spn_terminologi ;
                     skos:altLabel "bilde-etterretning"@nb ;
                     skos:prefLabel "IMINT"@nb .
 
@@ -296,7 +297,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :blandet_innhenting rdf:type owl:NamedIndividual ,
                              skos:Concept ;
                     skos:broader :innhentingsmetode ;
-                    skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                    skos:inScheme :spn_terminologi ;
                     skos:prefLabel "blandet innhenting"@nb .
 
 
@@ -304,7 +305,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :daglig_sikkerhetsmessig_ledelse rdf:type owl:NamedIndividual ,
                                           skos:Concept ;
                                  skos:broader :personellsikkerhet ;
-                                 skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                                 skos:inScheme :spn_terminologi ;
                                  skos:prefLabel "daglig sikkerhetsmessig ledelse"@nb ;
                                  skos:related :personellsårbarhet .
 
@@ -313,7 +314,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :deteksjon rdf:type owl:NamedIndividual ,
                     skos:Concept ;
            skos:broader :sikringstiltak ;
-           skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+           skos:inScheme :spn_terminologi ;
            skos:definition "observasjon eller registrering av en mulig uønsket hendelse"@nb ;
            skos:prefLabel "deteksjon"@nb .
 
@@ -322,7 +323,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :digital_sikkerhet rdf:type owl:NamedIndividual ,
                             skos:Concept ;
                    skos:broader :domene ;
-                   skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                   skos:inScheme :spn_terminologi ;
                    skos:definition "aktiviteter og tiltak for å redusere sårbarheter knyttet til digital infrastruktur som informasjon-, kommunikasjon- og teknologisystemer"@nb ;
                    skos:prefLabel "digital sikkerhet"@nb .
 
@@ -331,7 +332,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :digital_sårbarhet rdf:type owl:NamedIndividual ,
                             skos:Concept ;
                    skos:broader :sårbarhet ;
-                   skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                   skos:inScheme :spn_terminologi ;
                    skos:definition "sårbarhet knyttet til digital infrastruktur som informasjon-, kommunikasjon- og teknologisystemer"@nb ;
                    skos:prefLabel "digital sårbarhet"@nb ;
                    skos:related :digital_sikkerhet .
@@ -341,7 +342,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :dokumentasjon rdf:type owl:NamedIndividual ,
                         skos:Concept ;
                skos:broader :sikkerhetsstyring ;
-               skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+               skos:inScheme :spn_terminologi ;
                skos:prefLabel "dokumentasjon"@nb .
 
 
@@ -349,7 +350,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :domene rdf:type owl:NamedIndividual ,
                  skos:Concept ;
         skos:broader :sikringstiltak ;
-        skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+        skos:inScheme :spn_terminologi ;
         skos:altLabel "domene"@nb ;
         skos:closeMatch <http://www.johannesodegard.no/terminologi#https://termlex.no/term/171137528906133/nb> ;
         skos:definition "spesialkunnskapsfelt for sikringstiltak"@nb ;
@@ -362,7 +363,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :ekstremisme rdf:type owl:NamedIndividual ,
                       skos:Concept ;
              skos:broader :personellsårbarhet ;
-             skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+             skos:inScheme :spn_terminologi ;
              skos:definition "ytterliggående holdninger som rettferdiggjør ikke statlig sanksjonert bruk av vold eller kompromittering av informasjon"@nb ;
              skos:prefLabel "ekstremisme"@nb .
 
@@ -371,7 +372,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :elektronisk_etterretning rdf:type owl:NamedIndividual ,
                                    skos:Concept ;
                           skos:broader :innhenting_mot_fysisk_objekt ;
-                          skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                          skos:inScheme :spn_terminologi ;
                           skos:altLabel "elektronisk etterretning"@nb ;
                           skos:prefLabel "ELINT"@nb .
 
@@ -380,7 +381,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :endisiplin rdf:type owl:NamedIndividual ,
                      skos:Concept ;
             skos:broader :analyse ;
-            skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+            skos:inScheme :spn_terminologi ;
             skos:definition "data og informasjon innhentet fra én etterretningsdisiplin"@nb ;
             skos:prefLabel "endisiplin"@nb .
 
@@ -388,9 +389,9 @@ skos:ConceptScheme rdf:type owl:Class .
 ###  http://www.johannesodegard.no/terminologi#etterretning
 :etterretning rdf:type owl:NamedIndividual ,
                        skos:Concept ;
-              skos:broader :Sikkerhet_på_norsk ;
-              skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
-              skos:topConceptOf :Sikkerhet_på_norsk_-_terminologi ;
+              skos:broader :spn ;
+              skos:inScheme :spn_terminologi ;
+              skos:topConceptOf :spn_terminologi ;
               dct:source "Forsvarets etterretningsdoktrine (2025) s. 100"@nb ;
               skos:definition "resultatet av statlig sanksjonert innhenting, analyse og vurdering av data og informasjon som er generert åpent eller fordekt og utarbeidet for å gi fortrinn i beslutningsprosesser"@nb ;
               skos:note "Etterretningstermer er inkludert i rammeverket for å synliggjøre forholdet mellom forebyggende sikkerhetsarbeid og etterretning. Etterretningstermer er hentet fra Forsvarets etterrtningsdoktrine (2025) og skrevet om i henhold til Termlosen (Språkrådet, 2020) kap. 6.1. a-d."@nb ;
@@ -401,7 +402,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :etterretningsbehov rdf:type owl:NamedIndividual ,
                              skos:Concept ;
                     skos:broader :etterretningsdialog ;
-                    skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                    skos:inScheme :spn_terminologi ;
                     dct:source "Forsvarets etterretningsdoktrine (2025) s. 100"@nb ;
                     skos:definition "kunnskapsbehov som må bli besvart ved hjelp av etterretning"@nb ;
                     skos:prefLabel "etterretningsbehov"@nb .
@@ -411,7 +412,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :etterretningsdialog rdf:type owl:NamedIndividual ,
                               skos:Concept ;
                      skos:broader :etterretningsstyring ;
-                     skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                     skos:inScheme :spn_terminologi ;
                      skos:prefLabel "etterretningsdialog"@nb .
 
 
@@ -419,7 +420,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :etterretningshjulet rdf:type owl:NamedIndividual ,
                               skos:Concept ;
                      skos:broader :etterretning ;
-                     skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                     skos:inScheme :spn_terminologi ;
                      dct:source "Forsvarets etterretningsdoktrine (2025) s. 42"@nb ;
                      skos:altLabel "e-hjulet"@nb ,
                                    "etterretningsprosessen"@nb ;
@@ -432,7 +433,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :etterretningsstyring rdf:type owl:NamedIndividual ,
                                skos:Concept ;
                       skos:broader :etterretningshjulet ;
-                      skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                      skos:inScheme :spn_terminologi ;
                       skos:definition "prioritering av etterretningsbehov, identifisere etterretningsbehov som kan besvares fra eksisterende kunnskapsbase, identifisere innhentingsbehov og ta stilling til hvilke etterretningsressurser som skal brukes"@nb ;
                       skos:prefLabel "etterretningsstyring"@nb .
 
@@ -441,7 +442,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :evaluering rdf:type owl:NamedIndividual ,
                      skos:Concept ;
             skos:broader :sikkerhetshjulet ;
-            skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+            skos:inScheme :spn_terminologi ;
             skos:definition "prosess i sikkerhetshjulet som innebærer å vurdere om etablerte tiltak, prosedyrer og systemer fungerer som de er tiltenkt"@nb ;
             skos:prefLabel "evaluering"@nb .
 
@@ -450,7 +451,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :fare rdf:type owl:NamedIndividual ,
                skos:Concept ;
       skos:broader :sårbarhetsvurdering ;
-      skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+      skos:inScheme :spn_terminologi ;
       skos:closeMatch <https://termlex.no/term/174963378804193/nb> ;
       skos:definition "forhold som kan føre til en ulykke"@nb ;
       skos:prefLabel "fare"@nb .
@@ -460,7 +461,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :flerdisiplin rdf:type owl:NamedIndividual ,
                        skos:Concept ;
               skos:broader :analyse ;
-              skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+              skos:inScheme :spn_terminologi ;
               dct:source "Forsvarets etterretningsdoktrine (2025) s. 102"@nb ;
               skos:definition "analyse og vurdering av etterretning fra flere ulike etterretningsdisipliner"@nb ;
               skos:prefLabel "flerdisiplin"@nb ;
@@ -470,8 +471,8 @@ skos:ConceptScheme rdf:type owl:Class .
 ###  http://www.johannesodegard.no/terminologi#forebyggende_sikkerhet
 :forebyggende_sikkerhet rdf:type owl:NamedIndividual ,
                                  skos:Concept ;
-                        skos:broader :Sikkerhet_på_norsk ;
-                        skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                        skos:broader :spn ;
+                        skos:inScheme :spn_terminologi ;
                         skos:definition "planlegging, tilrettelegging, gjennomføring og kontroll av forebyggende tiltak mot uønskede hendelser og følger av disse"@nb ;
                         skos:note "I sikkerhetsloven av 1. juni 2018 nr. 24 er 'forebyggende sikkerhetsarbeid definert som \"planlegging, tilrettelegging, gjennomføring og kontroll av forebyggende tiltak mot sikkerhetstruende virksomhet og følger av slik virksomhet\" (§ 1-5 nr. 3). Selv om rammeverket i hovedsak springer ut fra sikkerhetsloven, omfatter termen i rammeverket både angrep og ulykker. Dette for å ivareta en helhetlig tilnærming til sikkerhetsarbeidet, i enkelte rammeverk omtalt som en \"all-hazards-approach\"."@nb ;
                         skos:prefLabel "forebyggende sikkerhetsarbeid"@nb .
@@ -481,7 +482,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :formidling rdf:type owl:NamedIndividual ,
                      skos:Concept ;
             skos:broader :etterretningshjulet ;
-            skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+            skos:inScheme :spn_terminologi ;
             dct:source "Forsvarets etterretningsdoktrine (2025) s. 77"@nb ;
             skos:definition "ferdigheter, aktiviteter og selve etterretningsproduktet som samlet kommuniserer den relevante kunnskapen fra etterretningsorganisasjonen til etterretningsbrukeren"@nb ;
             skos:prefLabel "formidling"@nb ;
@@ -492,7 +493,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :forsvarlig_sikkerhetsnivå rdf:type owl:NamedIndividual ,
                                     skos:Concept ;
                            skos:broader :risikovurdering ;
-                           skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                           skos:inScheme :spn_terminologi ;
                            skos:definition "tilstand hvor krav til forebyggende sikkerhetsarbeid er oppfylt og det ikke er identifisert uakseptabel risiko"@nb ;
                            skos:note "Forsvarlig sikkerhetsnivå er brukt flere steder i sikkerhetsloven (jf. §§ 4-3, 5-2, 6-2, 7-3, 7-6), og er en rettslig standard som følger prinsippet om forsvarlighet. \"Hva som vil utgjøre et forsvarlig sikkerhetsnivå for den enkelte virksomhet, og på de enkelte fagfeltene loven dekker, vil måtte vurderes opp mot hva som anses som god faglig praksis på de enkelte fagområdene, herunder informasjons- og informasjonssystemsikkerhet, objekt- og infrastruktursikkerhet og personellsikkerhet. Den nærmere grensedragningen bør, slik utvalget ser det utvikles i samarbeid mellom Sikkerhetsmyndigheten og de aktuelle sektormyndighetene. Dette vil også gi mulighet til å kunne gjøre sektorspesifikke tilpasninger der det er behov.\" (NOU 2016: 19, side 144)"@nb ;
                            skos:prefLabel "forsvarlig sikkerhetsnivå"@nb .
@@ -502,7 +503,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :fortifikasjon rdf:type owl:NamedIndividual ,
                         skos:Concept ;
                skos:broader :angrepssikring ;
-               skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+               skos:inScheme :spn_terminologi ;
                skos:definition "tiltak for å styrke en bestanddels motstandsdyktighet mot angrep, herunder armering av dører og kryptering av informasjon"@nb ;
                skos:prefLabel "fortifikasjon"@nb ;
                skos:related :motstandsdyktighet_handlemåtefaktor .
@@ -512,7 +513,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :frekvensbasert_sannsynlighet rdf:type owl:NamedIndividual ,
                                        skos:Concept ;
                               skos:broader :sannsynlighet_ulykke ;
-                              skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                              skos:inScheme :spn_terminologi ;
                               dct:source "FFI-rapport 18/02058 kap. 2.2.2"@nb ;
                               skos:altLabel "matematisk sannsynlighet"@nb ;
                               skos:prefLabel "frekvensbasert sannsynlighet"@nb .
@@ -522,7 +523,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :funksjon rdf:type owl:NamedIndividual ,
                    skos:Concept ;
           skos:broader :verdi ;
-          skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+          skos:inScheme :spn_terminologi ;
           skos:definition "egenskap ved verdi om at et bortfall vil få konsekvenser for leveransen av varer eller tjenester"@nb ;
           skos:note "Merknad: En funksjon må ha både autensitet, integritet og tilgjengelighet for å ikke falle bort."@nb ;
           skos:prefLabel "funksjon"@nb .
@@ -532,7 +533,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :fysisk_sikkerhet rdf:type owl:NamedIndividual ,
                            skos:Concept ;
                   skos:broader :domene ;
-                  skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                  skos:inScheme :spn_terminologi ;
                   skos:definition "aktiviteter og tiltak for å redusere sårbarheter knyttet til fysiske installasjoner og objekter"@nb ;
                   skos:prefLabel "fysisk sikkerhet"@nb .
 
@@ -541,7 +542,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :fysisk_sårbarhet rdf:type owl:NamedIndividual ,
                            skos:Concept ;
                   skos:broader :sårbarhet ;
-                  skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                  skos:inScheme :spn_terminologi ;
                   skos:definition "sårbarhet knyttet til fysiske installasjoner eller objekter"@nb ;
                   skos:prefLabel "fysisk sårbarhet"@nb ;
                   skos:related :fysisk_sikkerhet .
@@ -551,7 +552,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :geografisk_meteorologisk_og_oseanografisk_etterretning rdf:type owl:NamedIndividual ,
                                                                  skos:Concept ;
                                                         skos:broader :innhenting_mot_fysisk_objekt ;
-                                                        skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                                                        skos:inScheme :spn_terminologi ;
                                                         skos:altLabel "geografisk meteorologisk og oseanografisk etterretning"@nb ;
                                                         skos:prefLabel "GEOINT"@nb .
 
@@ -560,7 +561,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :gjenopprettingsevne rdf:type owl:NamedIndividual ,
                               skos:Concept ;
                      skos:broader :kritikalitetskonsekvensnivå ;
-                     skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                     skos:inScheme :spn_terminologi ;
                      skos:prefLabel "gjenopprettingsevne"@nb .
 
 
@@ -568,7 +569,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :godkjenning rdf:type owl:NamedIndividual ,
                       skos:Concept ;
              skos:broader :sikringstiltak ;
-             skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+             skos:inScheme :spn_terminologi ;
              skos:definition "beslutning om at noe eller noen oppfyller fastsattekrav til å forvalte eller behandle en verdi som kan få skadefølger ved bortfall av funksjon eller konfidensialitet"@nb ;
              skos:prefLabel "godkjenning"@nb ;
              skos:scopeNote "Jf. sikkerhetsloven av 1. juni 2018 nr. 24 § 6-3"@nb .
@@ -578,7 +579,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :grov_uaktsomhet rdf:type owl:NamedIndividual ,
                           skos:Concept ;
                  skos:broader :menneskeskapt_ulykke ;
-                 skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                 skos:inScheme :spn_terminologi ;
                  skos:definition "skjødesløshet som er årsak til en ulykke"@nb ;
                  skos:prefLabel "grov uaktsomhet"@nb .
 
@@ -587,7 +588,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :handlefrihet rdf:type owl:NamedIndividual ,
                        skos:Concept ;
               skos:broader :trussel ;
-              skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+              skos:inScheme :spn_terminologi ;
               dct:source "Se Forsvarets etterretningsdoktrine (2025) s. 73."@nb ;
               skos:definition "uttrykk for omfanget av eksterne forhold som påvirker en trussels evne eller vilje til å gjennomføre et angrep"@nb ;
               skos:example "Den fiendtlige bataljonsstridsgruppen har kapabiliteter til å krysse elven, men har ikke handlefrihet til å gjennomføre dette de neste 48 timene da broleggingskapabiliteten er bundet opp i en annen pågående elvekryssing."@nb ;
@@ -598,7 +599,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :handlemåte rdf:type owl:NamedIndividual ,
                      skos:Concept ;
             skos:broader :scenarioanalyse ;
-            skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+            skos:inScheme :spn_terminologi ;
             skos:definition "beskrivelse av hvordan en trussel kan gå frem for å gjennomføre et angrep"@nb ;
             skos:prefLabel "handlemåte"@nb .
 
@@ -607,7 +608,7 @@ skos:ConceptScheme rdf:type owl:Class .
 :handlemåte_enkel rdf:type owl:NamedIndividual ,
                            skos:Concept ;
                   skos:broader :handlemåtekompleksitet ;
-                  skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                  skos:inScheme :spn_terminologi ;
                   skos:definition "enkeltperson eller gruppe med noe spesialisert kompetanse og noe forutgående planlegging"@nb ;
                   skos:note """Anslag: Lovbrytere med tilgang på vinkelsliper og sirkelsag og kjennskap til verdiene.
 Historisk eksempel: Oslo Pride-angrepet 25. juni 2022.
@@ -621,7 +622,7 @@ Spionasje: Enkeltperson med tilgang på fotokamera med telelinse."""@nb ;
 :handlemåte_kompleks rdf:type owl:NamedIndividual ,
                               skos:Concept ;
                      skos:broader :handlemåtekompleksitet ;
-                     skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                     skos:inScheme :spn_terminologi ;
                      skos:definition "statlig eller statlig støttet organisasjon som anvender omfattende ressurser over tid for planlegging og gjennomføring"@nb ;
                      skos:note """Anslag: Spesialstyrker eller godt trent personell med logistikkstøtte.
 Historisk eksempel: Hamas' angrep 7. oktober 2023.
@@ -634,7 +635,7 @@ Spionasje: Utvikling av digitale null-dagssårbarheter eller utpressing og vold 
 :handlemåte_moderat rdf:type owl:NamedIndividual ,
                              skos:Concept ;
                     skos:broader :handlemåtekompleksitet ;
-                    skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                    skos:inScheme :spn_terminologi ;
                     skos:definition "enkeltperson eller gruppe med betydelig spesialisert kompetanse og omfattende planlegging"@nb ;
                     skos:note """Anslag: Organisert kriminell gruppe med tilgang på skytevåpen og større mengder sprengstoff.
 Historisk eksempel: Angrepet mot Regjeringskvartalet 22. juli 2011.
@@ -648,7 +649,7 @@ Spionasje: Sosial manipulering og utpressing av ansatte."""@nb ;
 :handlemåte_svært_enkel rdf:type owl:NamedIndividual ,
                                  skos:Concept ;
                         skos:broader :handlemåtekompleksitet ;
-                        skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                        skos:inScheme :spn_terminologi ;
                         skos:definition "enkeltperson uten spesialisert kompetanse og uten forutgående planlegging"@nb ;
                         skos:note """Anslag: Forbipasserende opportunistisk lovbryter med tilgang på brekkjern.
 Spionasje: Forbipasserende opportunist som snikfølger inn en dør."""@nb ;
@@ -659,7 +660,7 @@ Spionasje: Forbipasserende opportunist som snikfølger inn en dør."""@nb ;
 :handlemåte_svært_kompleks rdf:type owl:NamedIndividual ,
                                     skos:Concept ;
                            skos:broader :handlemåtekompleksitet ;
-                           skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                           skos:inScheme :spn_terminologi ;
                            skos:definition "global stormakt som anvender en betydelig andel av sine strategiske ressurser"@nb ;
                            skos:note """Anslag: Langtrekkende missiler eller spesialoperasjoner støttet av strategiske ressurser over tid.
 Historisk eksempel: Tungtvannsaksjonene på Vemork fra 1942 - 1943.
@@ -673,7 +674,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :handlemåtefaktor rdf:type owl:NamedIndividual ,
                            skos:Concept ;
                   skos:broader :handlemåte ;
-                  skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                  skos:inScheme :spn_terminologi ;
                   skos:definition "faktor som påvirker hvor kompleks en handlemåte må være for å gjennomføre et vellykket angrep"@nb ;
                   skos:prefLabel "handlemåtefaktor"@nb .
 
@@ -682,7 +683,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :handlemåtekompleksitet rdf:type owl:NamedIndividual ,
                                  skos:Concept ;
                         skos:broader :handlemåte ;
-                        skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                        skos:inScheme :spn_terminologi ;
                         skos:definition "uttrykk for kapabilitetesbehov og omfanget av ressurser nødvendig for å gjennomføre en handlemåte"@nb ;
                         skos:prefLabel "handlemåtekompleksitet"@nb .
 
@@ -691,7 +692,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :hemmelighet rdf:type owl:NamedIndividual ,
                       skos:Concept ;
              skos:broader :innhentingsbehov ;
-             skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+             skos:inScheme :spn_terminologi ;
              dct:source "Forsvarets etterretningsdoktrine (2025) s. 27"@nb ;
              skos:definition "data eller informasjon som eksisterer, men som en aktør ønsker å holde hemmelig, for eksempel hvilke kapasiteter nye våpensystemer har, hvor militære våpenplattformer er, eller hvem som sto bak et cyberangrep"@nb ;
              skos:prefLabel "hemmelighet"@nb .
@@ -701,7 +702,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :hendelseshåndtering rdf:type owl:NamedIndividual ,
                               skos:Concept ;
                      skos:broader :håndtering ;
-                     skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                     skos:inScheme :spn_terminologi ;
                      skos:definition "tiltak som iverksettes for å stoppe årsakene til en nært forestående uønsket hendelse og/eller redusere konsekvensene av hendelsen og for å gjenopprette en normal situasjon"@nb ;
                      skos:prefLabel "hendelseshåndtering"@nb .
 
@@ -710,7 +711,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :hinder rdf:type owl:NamedIndividual ,
                  skos:Concept ;
         skos:broader :angrepssikring ;
-        skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+        skos:inScheme :spn_terminologi ;
         skos:definition "tiltak for å redusere en bestanddels tilgjengelighet for en trussel, herunder perimetersikring, flytting av lokasjon til en utilgjengelig lokasjon og etablering av verifikasjonsstyrker"@nb ;
         skos:prefLabel "hinder"@nb ;
         skos:related :tilgjengelighet_handlemåtefaktor .
@@ -720,7 +721,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :håndtering rdf:type owl:NamedIndividual ,
                      skos:Concept ;
             skos:broader :sikkerhetshjulet ;
-            skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+            skos:inScheme :spn_terminologi ;
             skos:definition "prosess i sikkerhetshjulet som innebærer planlegging, tilrettelegging, gjennomføring og øving på initiering, håndtering, koordinering og kontroll av personell og ressurser for å redusere, kontrollere eller redusere virkningene av en uønsket hendelse"@nb ;
             skos:prefLabel "håndtering"@nb .
 
@@ -729,7 +730,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :implementering rdf:type owl:NamedIndividual ,
                          skos:Concept ;
                 skos:broader :sikkerhetshjulet ;
-                skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                skos:inScheme :spn_terminologi ;
                 skos:definition "prosess i sikkerhetshjulet som innebærer å omsette identifiserte tiltak til etablerte tiltak"@nb ;
                 skos:note "Kan være både sikringstiltak og beredskapstiltak"@nb ,
                           "Tiltak identifiseres som hovedregel i en risikovurdering."@nb ;
@@ -740,7 +741,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :innhenting rdf:type owl:NamedIndividual ,
                      skos:Concept ;
             skos:broader :etterretningshjulet ;
-            skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+            skos:inScheme :spn_terminologi ;
             dct:source "Forsvarets etterretningsdoktrine (2025) s. 103"@nb ;
             skos:definition "generisk betegnelse på aktivitetene knyttet til både målsøking og målrettet innhenting"@nb ;
             skos:prefLabel "innhenting"@nb ;
@@ -751,7 +752,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :innhenting_mot_fysisk_objekt rdf:type owl:NamedIndividual ,
                                        skos:Concept ;
                               skos:broader :innhentingsdisiplin ;
-                              skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                              skos:inScheme :spn_terminologi ;
                               skos:prefLabel "innhentingsdisiplin mot fysisk objekt"@nb .
 
 
@@ -759,7 +760,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :innhenting_mot_person_og_virksomhet rdf:type owl:NamedIndividual ,
                                               skos:Concept ;
                                      skos:broader :innhentingsdisiplin ;
-                                     skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                                     skos:inScheme :spn_terminologi ;
                                      skos:prefLabel "innhentingsdisiplin mot person og virksomhet"@nb .
 
 
@@ -767,7 +768,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :innhentingsbehov rdf:type owl:NamedIndividual ,
                            skos:Concept ;
                   skos:broader :innhenting ;
-                  skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                  skos:inScheme :spn_terminologi ;
                   skos:definition "de identifiserte hullene (manglene) i kunnskapsbasen som må fylles for å kunne besvare eller forbedre en besvarelse av et etterretningsbehov"@nb ;
                   skos:note "Innhentingsbehov består av etterretningsbehov eller informasjonsbehov og kan besvares enten av egne innhentingsressurser (for eksempel avlytting, fotografering osv.) eller ved å spørre andre organisasjoner eller partnere."@nb ;
                   skos:prefLabel "innhentingsbehov"@nb .
@@ -777,7 +778,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :innhentingsdisiplin rdf:type owl:NamedIndividual ,
                               skos:Concept ;
                      skos:broader :innhenting ;
-                     skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                     skos:inScheme :spn_terminologi ;
                      skos:prefLabel "innhentingsdisiplin"@nb .
 
 
@@ -785,7 +786,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :innhentingsmetode rdf:type owl:NamedIndividual ,
                             skos:Concept ;
                    skos:broader :innhenting ;
-                   skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                   skos:inScheme :spn_terminologi ;
                    skos:prefLabel "innhentingsmetode"@nb .
 
 
@@ -793,7 +794,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :integritet rdf:type owl:NamedIndividual ,
                      skos:Concept ;
             skos:broader :funksjon ;
-            skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+            skos:inScheme :spn_terminologi ;
             skos:closeMatch <https://termlex.no/term/171070581203231/nb> ;
             skos:definition "egenskap ved verdi om at den ikke er manipulert"@nb ;
             skos:prefLabel "integritet"@nb .
@@ -803,7 +804,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :intensjon rdf:type owl:NamedIndividual ,
                     skos:Concept ;
            skos:broader :trussel ;
-           skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+           skos:inScheme :spn_terminologi ;
            skos:altLabel "målbilde"@nb ;
            skos:definition "uttrykk for i hvilken grad en trussel har planlagt, eller har ønske om, å gjennomføre et angrep mot en konkret verdi"@nb ;
            skos:example "Etterretningen har avdekket at fienden har utarbeidet planer om et angrep på hovedkvarteret. Dette viser at fienden har en spesifikk intensjon om å angripe hovedkvartertet."@nb ;
@@ -814,7 +815,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :jordskjelv rdf:type owl:NamedIndividual ,
                      skos:Concept ;
             skos:broader :naturskapt_ulykke ;
-            skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+            skos:inScheme :spn_terminologi ;
             skos:definition "rystelser eller bevegelser i Jorden forårsaket av at to deler av litosfæren plutselig forskyver seg i forhold til hverandre"@nb ;
             skos:prefLabel "jordskjelv"@nb .
 
@@ -823,7 +824,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :kapabilitet rdf:type owl:NamedIndividual ,
                       skos:Concept ;
              skos:broader :trussel ;
-             skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+             skos:inScheme :spn_terminologi ;
              skos:definition "uttrykk for i hvilken grad en trussel teoretisk sett kan gjennomføre komplekse handlemåter"@nb ;
              skos:example "Den fiendtlige bataljonsstridsgruppen har kapabiliteter til å krysse elven, men har ikke handlefrihet til å gjennomføre dette de neste 48 timene da broleggingskapabiliteten er bundet opp i en annen pågående elvekryssing."@nb ;
              skos:prefLabel "kapabilitet"@nb .
@@ -833,7 +834,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :klarering rdf:type owl:NamedIndividual ,
                     skos:Concept ;
            skos:broader :sikringstiltak ;
-           skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+           skos:inScheme :spn_terminologi ;
            skos:definition "undersøkelse og beslutning om noe eller noen er sikkerhetsmessig skikket til å forvalte eller behandle verdier som kan få skadefølger ved bortfall av verdiens funksjon eller konfidensialitet"@nb ;
            skos:prefLabel "klarering"@nb ;
            skos:related :autorisasjon .
@@ -843,7 +844,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :kommunikasjons-etterretning rdf:type owl:NamedIndividual ,
                                       skos:Concept ;
                              skos:broader :innhenting_mot_person_og_virksomhet ;
-                             skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                             skos:inScheme :spn_terminologi ;
                              dct:source "Forsvarets etterretningsdoktrine (2025) s. 103"@nb ;
                              skos:altLabel "COMINT"@nb ;
                              skos:definition "etterretninger som er utvunnet av signaler fra elektroniske kommunikasjonssystemer (f.eks. telefoner og radioer), innsamlet eller oppfanget av andre enn tiltenkte brukere"@nb ;
@@ -854,7 +855,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :kompleksitet rdf:type owl:NamedIndividual ,
                        skos:Concept ;
               skos:broader :innhentingsbehov ;
-              skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+              skos:inScheme :spn_terminologi ;
               skos:prefLabel "kompleksitet"@nb .
 
 
@@ -862,7 +863,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :kompromat rdf:type owl:NamedIndividual ,
                     skos:Concept ;
            skos:broader :personellsårbarhet ;
-           skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+           skos:inScheme :spn_terminologi ;
            skos:definition "informasjon en trussel har kjennskap til, men som ikke er åpent kjent og kan utsette en person for tap av omdømme, relasjoner eller egenverd om den blir kjent for nærstående eller offentligheten"@nb ;
            skos:prefLabel "kompromat" .
 
@@ -871,7 +872,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :konfidens rdf:type owl:NamedIndividual ,
                     skos:Concept ;
            skos:broader :flerdisiplin ;
-           skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+           skos:inScheme :spn_terminologi ;
            dct:source "Forsvarets etterretningsdoktrine (2025) s. 103"@nb ;
            skos:definition "kvalitativ beskrivelse av hvor sikker man er på konklusjonen(e) i en etterretningsvurdering"@nb ;
            skos:prefLabel "konfidens"@nb .
@@ -881,7 +882,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :konfidensialitet rdf:type owl:NamedIndividual ,
                            skos:Concept ;
                   skos:broader :verdi ;
-                  skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                  skos:inScheme :spn_terminologi ;
                   skos:closeMatch <https://termlex.no/term/171137743607711/nb> ;
                   skos:definition "egenskap ved verdi som angir i hvilken grad verdien ikke er gjort tilgjengelig eller avslørt for uautoriserte personer, prosesser eller andre enheter"@nb ;
                   skos:prefLabel "konfidensialitet"@nb .
@@ -891,7 +892,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :konfidensialitetsbehov rdf:type owl:NamedIndividual ,
                                  skos:Concept ;
                         skos:broader :verdi ;
-                        skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                        skos:inScheme :spn_terminologi ;
                         skos:definition "egenskap ved verdi om at tilgjengeliggjøring eller avsløring for uautoriserte personer, prosesser eller andre enheter vil få skadefølger"@nb ;
                         skos:prefLabel "konfidensialitetsbehov"@nb .
 
@@ -900,7 +901,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :konfidensialitetskonsekvensnivå rdf:type owl:NamedIndividual ,
                                           skos:Concept ;
                                  skos:broader :konsekvens_handlemåte ;
-                                 skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                                 skos:inScheme :spn_terminologi ;
                                  skos:definition "uttrykk for omfanget av skadefølger for konfidensialitetsbehovet som følge av en handlemåte"@nb ;
                                  skos:note "Vurderes på bakgrunn av omfanget av sikkerhetsgradert informasjon og graderingsnivå (se tabell X i Angrepssikkerhet (2026))."@nb ;
                                  skos:prefLabel "konsekvensnivå for konfidensialitet"@nb .
@@ -910,7 +911,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :konfidensialitetsnivå rdf:type owl:NamedIndividual ,
                                 skos:Concept ;
                        skos:broader :skadevurdering ;
-                       skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                       skos:inScheme :spn_terminologi ;
                        skos:definition "uttrykk for omanget av skadefølger for et risikoobjekt ved helt bortfall av et analyseobjekts funksjon"@nb ;
                        skos:prefLabel "konfidensialitetsnivå"@nb .
 
@@ -919,7 +920,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :konsekvens_handlemåte rdf:type owl:NamedIndividual ,
                                 skos:Concept ;
                        skos:broader :scenarioanalyse ;
-                       skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                       skos:inScheme :spn_terminologi ;
                        skos:definition "beskrivelse av skadefølger og ringvirkninger av en bestemt handlemåte"@nb ;
                        skos:note "I rammeverket innbefatter termen 'konsekvens' både primære bortfall av en verdis funksjon eller konfidensialitet, omtalt som 'skadefølger', og sekundære og tertiære bortfall, omtalt som 'ringvirkninger'. Tiltak for å redusere konsekvenser omtales som 'beredskap'."@nb ;
                        skos:prefLabel "konsekvens"@nb ;
@@ -931,7 +932,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :konsentrasjonsrisiko rdf:type owl:NamedIndividual ,
                                skos:Concept ;
                       skos:broader :leverandørsårbarhet ;
-                      skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                      skos:inScheme :spn_terminologi ;
                       skos:definition "sårbarhet som følge av høy eksponering mot én leverandør eller leverandører fra én stat"@nb ;
                       skos:prefLabel "konsentrasjonsrisiko"@nb .
 
@@ -940,7 +941,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :krav rdf:type owl:NamedIndividual ,
                skos:Concept ;
       skos:broader :sikkerhetsstyring ;
-      skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+      skos:inScheme :spn_terminologi ;
       skos:definition "behov eller forventning som er angitt, vanligvis underforstått eller obligatorisk"@nb ;
       skos:exactMatch <https://termlex.no/term/173881663006115/nb> ;
       skos:prefLabel "krav"@nb ;
@@ -951,7 +952,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :kritikalitet rdf:type owl:NamedIndividual ,
                        skos:Concept ;
               skos:broader :verdi ;
-              skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+              skos:inScheme :spn_terminologi ;
               skos:definition "egenskap ved verdi som angir i hvilken grad et bortfall vil få skadefølger"@nb ;
               skos:prefLabel "kritikalitet"@nb .
 
@@ -960,7 +961,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :kritikalitetskonsekvensnivå rdf:type owl:NamedIndividual ,
                                       skos:Concept ;
                              skos:broader :konsekvens_handlemåte ;
-                             skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                             skos:inScheme :spn_terminologi ;
                              skos:definition "uttrykk for omfanget av skadefølger for en funksjon som følge av en handlemåte"@nb ;
                              skos:prefLabel "konsekvensnivå for kritikalitet"@nb .
 
@@ -970,7 +971,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
                             skos:Concept ;
                    skos:broader :kritikalitetskonsekvensnivå ,
                                 :skadevurdering ;
-                   skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                   skos:inScheme :spn_terminologi ;
                    skos:definition "uttrykk for omanget av skadefølger for et risikoobjekt ved helt bortfall av et analyseobjekts konfidensialitetsbehov"@nb ;
                    skos:prefLabel "kritikalitetsnivå"@nb .
 
@@ -979,7 +980,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 :kunnskapsbasert_sannsynlighet rdf:type owl:NamedIndividual ,
                                         skos:Concept ;
                                skos:broader :sannsynlighet_ulykke ;
-                               skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                               skos:inScheme :spn_terminologi ;
                                dct:source """FFI-rapport 18/02058 kap. 2.2.1
 Aven (2009) Risikostyring. Unversitetsforslaget. 2. opplag. s. 52-56"""@nb ;
                                skos:altLabel "semantisk sannsynlighet"@nb ,
@@ -991,7 +992,7 @@ Aven (2009) Risikostyring. Unversitetsforslaget. 2. opplag. s. 52-56"""@nb ;
 :leverandørklarering rdf:type owl:NamedIndividual ,
                               skos:Concept ;
                      skos:broader :leverandørsikkerhet ;
-                     skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                     skos:inScheme :spn_terminologi ;
                      skos:definition "bakgrunnssjekk av en leverandør før en anskaffelse iverksettes"@nb ;
                      skos:prefLabel "leverandørklarering"@nb ;
                      skos:related :klarering ;
@@ -1002,7 +1003,7 @@ Aven (2009) Risikostyring. Unversitetsforslaget. 2. opplag. s. 52-56"""@nb ;
 :leverandørsikkerhet rdf:type owl:NamedIndividual ,
                               skos:Concept ;
                      skos:broader :domene ;
-                     skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                     skos:inScheme :spn_terminologi ;
                      skos:definition "aktiviteter og tiltak for å redusere sårbarheter knyttet til kompromittering av informasjon i forbindelse med en anskaffelse eller bortfall av varer og tjenester fra en leverandør"@nb ;
                      skos:prefLabel "leverandørsikkerhet"@nb ;
                      skos:related :leverandørsårbarhet .
@@ -1012,7 +1013,7 @@ Aven (2009) Risikostyring. Unversitetsforslaget. 2. opplag. s. 52-56"""@nb ;
 :leverandørsårbarhet rdf:type owl:NamedIndividual ,
                               skos:Concept ;
                      skos:broader :sårbarhet ;
-                     skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                     skos:inScheme :spn_terminologi ;
                      skos:definition "sårbarheter forårsaket av eksponering av verdier gjennom en anskaffelse eller som følge av avhengigheter til en bestemt leverandør"@nb ;
                      skos:prefLabel "leverandørsårbarhet"@nb ;
                      skos:related :leverandørsikkerhet .
@@ -1022,7 +1023,7 @@ Aven (2009) Risikostyring. Unversitetsforslaget. 2. opplag. s. 52-56"""@nb ;
 :menneskebasert_innhenting rdf:type owl:NamedIndividual ,
                                     skos:Concept ;
                            skos:broader :innhenting_mot_person_og_virksomhet ;
-                           skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                           skos:inScheme :spn_terminologi ;
                            dct:source "Forsvarets etterretningsdoktrine (2025) s. 104"@nb ;
                            skos:altLabel "HUMINT"@nb ;
                            skos:definition "aktivitet der informasjon og data blir innhentet av mennesker, fra mennesker, og de etterretninger som dette fører til"@nb ;
@@ -1034,7 +1035,7 @@ Aven (2009) Risikostyring. Unversitetsforslaget. 2. opplag. s. 52-56"""@nb ;
 :menneskeskapt_ulykke rdf:type owl:NamedIndividual ,
                                skos:Concept ;
                       skos:broader :ulykke ;
-                      skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                      skos:inScheme :spn_terminologi ;
                       skos:prefLabel "menneskeskapt ulykke"@nb .
 
 
@@ -1042,7 +1043,7 @@ Aven (2009) Risikostyring. Unversitetsforslaget. 2. opplag. s. 52-56"""@nb ;
 :misforståelse rdf:type owl:NamedIndividual ,
                         skos:Concept ;
                skos:broader :menneskeskapt_ulykke ;
-               skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+               skos:inScheme :spn_terminologi ;
                skos:definition "uklarheter som er årsak til en ulykke"@nb ;
                skos:prefLabel "misforståelse"@nb .
 
@@ -1051,7 +1052,7 @@ Aven (2009) Risikostyring. Unversitetsforslaget. 2. opplag. s. 52-56"""@nb ;
 :misnøye rdf:type owl:NamedIndividual ,
                   skos:Concept ;
          skos:broader :personellsårbarhet ;
-         skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+         skos:inScheme :spn_terminologi ;
          skos:definition "psykososiale forhold som fører til manglende ønske om å etterleve retningslinjer"@nb ;
          skos:prefLabel "misnøye"@nb .
 
@@ -1060,7 +1061,7 @@ Aven (2009) Risikostyring. Unversitetsforslaget. 2. opplag. s. 52-56"""@nb ;
 :monitorering rdf:type owl:NamedIndividual ,
                        skos:Concept ;
               skos:broader :sikkerhetshjulet ;
-              skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+              skos:inScheme :spn_terminologi ;
               skos:definition "prosess i sikkerhetshjulet som innebærer å avdekke endringer i risikobildet"@nb ;
               skos:prefLabel "monitorering"@nb ;
               skos:related :risikobilde .
@@ -1079,7 +1080,7 @@ Aven (2009) Risikostyring. Unversitetsforslaget. 2. opplag. s. 52-56"""@nb ;
 :motstandsdyktighetsnivå rdf:type owl:NamedIndividual ,
                                   skos:Concept ;
                          skos:broader :motstandsdyktighet_handlemåtefaktor ;
-                         skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                         skos:inScheme :spn_terminologi ;
                          skos:definition "uttrykk for hvor mye ressurser som kreves for å forårsake et bortfall av bestanddelens funksjon eller konfidensialitet, gitt at en trusselaktør har funnet bestanddelen og har kommet seg til et sted hvor et angrep kan gjennomføres fra"@nb ;
                          skos:prefLabel "motstandsdyktighetsnivå"@nb .
 
@@ -1088,7 +1089,7 @@ Aven (2009) Risikostyring. Unversitetsforslaget. 2. opplag. s. 52-56"""@nb ;
 :motstandsdyktighetsnivå_høyt rdf:type owl:NamedIndividual ,
                                        skos:Concept ;
                               skos:broader :motstandsdyktighetsnivå ;
-                              skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                              skos:inScheme :spn_terminologi ;
                               skos:definition "bestanddelens funksjon kan motstå et angrep fra krumbane-artilleri og grupper bevæpnet med håndvåpen og vinkelsliper eller bestanddelens konfidensialitetsbehov kan motstå et angrep fra avanserte dekrypteringsteknikker"@nb ;
                               skos:prefLabel "høy motstandsdyktighet"@nb .
 
@@ -1097,7 +1098,7 @@ Aven (2009) Risikostyring. Unversitetsforslaget. 2. opplag. s. 52-56"""@nb ;
 :motstandsdyktighetsnivå_lavt rdf:type owl:NamedIndividual ,
                                        skos:Concept ;
                               skos:broader :motstandsdyktighetsnivå ;
-                              skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                              skos:inScheme :spn_terminologi ;
                               skos:definition "bestanddelens funksjon kan settes ut av drift av en mindre gruppe personer med enkle redskaper eller standard håandverktøy, eller informasjon med konfidensialitetsbehov kan avleses med enkle teknikker som ROT13 eller tilsvarende"@nb ;
                               skos:prefLabel "lav motstandsdyktighet"@nb .
 
@@ -1106,7 +1107,7 @@ Aven (2009) Risikostyring. Unversitetsforslaget. 2. opplag. s. 52-56"""@nb ;
 :motstandsdyktighetsnivå_moderat rdf:type owl:NamedIndividual ,
                                           skos:Concept ;
                                  skos:broader :motstandsdyktighetsnivå ;
-                                 skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                                 skos:inScheme :spn_terminologi ;
                                  skos:definition """bestanddelens funksjon kan motstå et angrep fra mindre grupper med håndvåppen, men vil kunne settes ut av drift ved bruk av lettere eksplosiver eller improviserte
 redskaper, eller bestanddelens konfidensialitetsbehov kan motså et angrep fra åpent tilgjengelige dekrypteringsverktøy"""@nb ;
                                  skos:prefLabel "moderat motstandsdyktighetsnivå"@nb .
@@ -1116,7 +1117,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan motså et angrep fra �
 :motstandsdyktighetsnivå_svært_høyt rdf:type owl:NamedIndividual ,
                                              skos:Concept ;
                                     skos:broader :motstandsdyktighetsnivå ;
-                                    skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                                    skos:inScheme :spn_terminologi ;
                                     skos:definition "bestanddelens funksjon kan motstå et angrep fra bunkerbomber og en spesialstyrke med omfattende forutgående planlegging eller bestanddelenes konfidensialitetsbehov kan motstå stormakters dekrypteringsteknikker"@nb ;
                                     skos:prefLabel "svært høy motstandsdyktighet"@nb .
 
@@ -1125,7 +1126,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan motså et angrep fra �
 :motstandsdyktighetsnivå_svært_lavt rdf:type owl:NamedIndividual ,
                                              skos:Concept ;
                                     skos:broader :motstandsdyktighetsnivå ;
-                                    skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                                    skos:inScheme :spn_terminologi ;
                                     skos:definition "bortfall av bestanddelens funksjon kan forårsakes av en enkeltperson uten redskaper og planlegging; bestanddelens informasjon med konfidensialitetsbehov står i klartekst"@nb ;
                                     skos:prefLabel "svært lav motstandsdyktighet"@nb .
 
@@ -1134,7 +1135,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan motså et angrep fra �
 :mysterium rdf:type owl:NamedIndividual ,
                     skos:Concept ;
            skos:broader :innhentingsbehov ;
-           skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+           skos:inScheme :spn_terminologi ;
            dct:source "Forsvarets etterretningsdoktrine (2025) s. 27"@nb ;
            skos:definition """informasjon om utfall av fremtidige hendelser, intensjoner som ennå ikke har kommet
 til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
@@ -1147,7 +1148,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :måle-_og_signatur-etterretning rdf:type owl:NamedIndividual ,
                                          skos:Concept ;
                                 skos:broader :innhenting_mot_fysisk_objekt ;
-                                skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                                skos:inScheme :spn_terminologi ;
                                 skos:altLabel "måle- og signaturetterretning"@nb ;
                                 skos:prefLabel "MASINT"@nb .
 
@@ -1156,7 +1157,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :naturskapt_ulykke rdf:type owl:NamedIndividual ,
                             skos:Concept ;
                    skos:broader :ulykke ;
-                   skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                   skos:inScheme :spn_terminologi ;
                    skos:prefLabel "naturskapt ulykke"@nb .
 
 
@@ -1164,7 +1165,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :nettverks-etterretning rdf:type owl:NamedIndividual ,
                                  skos:Concept ;
                         skos:broader :innhenting_mot_fysisk_objekt ;
-                        skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                        skos:inScheme :spn_terminologi ;
                         skos:altLabel "nettverks-etterretning"@nb ;
                         skos:prefLabel "NETINT"@nb .
 
@@ -1173,7 +1174,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :nulldagssårbarhet rdf:type owl:NamedIndividual ,
                             skos:Concept ;
                    skos:broader :digital_sårbarhet ;
-                   skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                   skos:inScheme :spn_terminologi ;
                    skos:definition "sårbarhet i en digital infrastruktur som hverken utvikleren eller cybersikkerhetsmiljøer er kjent med"@nb ;
                    skos:prefLabel "nulldagssårbarhet"@nb .
 
@@ -1182,7 +1183,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :oppkjøpssikkerhet rdf:type owl:NamedIndividual ,
                             skos:Concept ;
                    skos:broader :domene ;
-                   skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                   skos:inScheme :spn_terminologi ;
                    skos:definition "aktiviteter og tiltak for å redusere sårbarheter som følge av at en virksomhet av betydning for en risikoeier blir ervervet av en trussel"@nb ;
                    skos:prefLabel "oppkjøpssikkerhet"@nb ;
                    skos:scopeNote "jf. sikkerhetsloven av 1. juni 2018 nr. 24 kap. 10"@nb .
@@ -1192,7 +1193,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :personellautorisasjon rdf:type owl:NamedIndividual ,
                                 skos:Concept ;
                        skos:broader :personellsikkerhet ;
-                       skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                       skos:inScheme :spn_terminologi ;
                        skos:altLabel "autorisasjon"@nb ;
                        skos:definition "beslutning om personell kan få tilgang til en verdi som ikke er åpent tilgjengelig"@nb ;
                        skos:prefLabel "personellautorisasjon"@nb ;
@@ -1204,7 +1205,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :personellklarering rdf:type owl:NamedIndividual ,
                              skos:Concept ;
                     skos:broader :personellsikkerhet ;
-                    skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                    skos:inScheme :spn_terminologi ;
                     skos:altLabel "sikkerhetsklarering"@nb ;
                     skos:definition "beslutning om personell er sikkerhetsmessig skikket til å kunne bli autorisert"@nb ;
                     skos:prefLabel "personellklarering"@nb ;
@@ -1216,7 +1217,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :personellsikkerhet rdf:type owl:NamedIndividual ,
                              skos:Concept ;
                     skos:broader :domene ;
-                    skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                    skos:inScheme :spn_terminologi ;
                     skos:definition "aktiviteter og tiltak for å redusere sårbarheter knyttet til eget eller innleid personell"@nb ;
                     skos:prefLabel "personellsikkerhet"@nb ;
                     skos:related :personellsårbarhet ;
@@ -1227,7 +1228,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :personellsårbarhet rdf:type owl:NamedIndividual ,
                              skos:Concept ;
                     skos:broader :sårbarhet ;
-                    skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                    skos:inScheme :spn_terminologi ;
                     skos:definition "egenskap ved personell som gjør det mulig for en trussel å påvirke personellet til å gjennomføre et angrep"@nb ;
                     skos:prefLabel "personellsårbarhet"@nb ;
                     skos:related :personellsikkerhet .
@@ -1237,7 +1238,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :personkontroll rdf:type owl:NamedIndividual ,
                          skos:Concept ;
                 skos:broader :personellsikkerhet ;
-                skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                skos:inScheme :spn_terminologi ;
                 skos:definition "undersøkelse av forhold som kan ha betydning for vurderingen av om personen er sikkerhetsmessig skikket."@nb ;
                 skos:note "jf. sikkerhetsloven av 1. juni 2018 nr. 24 § 8-5."@nb ;
                 skos:prefLabel "personkontroll"@nb .
@@ -1247,7 +1248,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :pålitelighet rdf:type owl:NamedIndividual ,
                        skos:Concept ;
               skos:broader :endisiplin ;
-              skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+              skos:inScheme :spn_terminologi ;
               skos:definition "egenskap ved kilde om at den er til å stole på"@nb ;
               skos:prefLabel "pålitelighet"@nb .
 
@@ -1256,7 +1257,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :radar_etterretning rdf:type owl:NamedIndividual ,
                              skos:Concept ;
                     skos:broader :innhenting_mot_fysisk_objekt ;
-                    skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                    skos:inScheme :spn_terminologi ;
                     skos:altLabel "radar-etterretning"@nb ;
                     skos:prefLabel "RADINT"@nb .
 
@@ -1265,7 +1266,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :rapportering rdf:type owl:NamedIndividual ,
                        skos:Concept ;
               skos:broader :monitorering ;
-              skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+              skos:inScheme :spn_terminologi ;
               skos:prefLabel "rapportering"@nb ;
               skos:related :deteksjon ,
                            :sikkerhetsbrudd ,
@@ -1276,7 +1277,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :reaksjonsstyrke rdf:type owl:NamedIndividual ,
                           skos:Concept ;
                  skos:broader :skadereduserende_tiltak ;
-                 skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                 skos:inScheme :spn_terminologi ;
                  skos:definition "personell og ressurser spesielt forberedt og trent på å håndtere og avverge og en uønsket hendelse"@nb ;
                  skos:example "Lokalt politi er reaksjonsstyrke for dette objektet."@nb ;
                  skos:prefLabel "reaksjonsstyrke"@nb .
@@ -1286,14 +1287,14 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :redundant_innhenting rdf:type owl:NamedIndividual ,
                                skos:Concept ;
                       skos:broader :innhentingsmetode ;
-                      skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                      skos:inScheme :spn_terminologi ;
                       skos:prefLabel "redundant innhenting"@nb .
 
 
 ###  http://www.johannesodegard.no/terminologi#ref
 :ref rdf:type owl:NamedIndividual ,
               skos:Concept ;
-     skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+     skos:inScheme :spn_terminologi ;
      skos:prefLabel "ref"@nb .
 
 
@@ -1301,7 +1302,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :revisjon rdf:type owl:NamedIndividual ,
                    skos:Concept ;
           skos:broader :evaluering ;
-          skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+          skos:inScheme :spn_terminologi ;
           skos:definition "systematisk, uavhengig og dokumentert prosess for å framskaffe revisjonsbevis og bedømme det objektivt for å bestemme i hvilken grad revisjonskriteriene er oppfylt"@nb ;
           skos:exactMatch <https://termlex.no/term/170480776809727/nb> ;
           skos:prefLabel "revisjon"@nb .
@@ -1311,7 +1312,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :ringvirkning rdf:type owl:NamedIndividual ,
                        skos:Concept ;
               skos:broader :konsekvens_handlemåte ;
-              skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+              skos:inScheme :spn_terminologi ;
               skos:definition "sekundære og tertiære bortfall av verdier som følge av en uønsket hendelse"@nb ;
               skos:note "Tiltak for å redusere ringvirkninger omtales som 'ringvirkningsreduserende'."@nb ;
               skos:prefLabel "ringvirkning"@nb ;
@@ -1322,7 +1323,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :ringvirkningsreduserende_tiltak rdf:type owl:NamedIndividual ,
                                           skos:Concept ;
                                  skos:broader :beredskapstiltak ;
-                                 skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                                 skos:inScheme :spn_terminologi ;
                                  skos:definition "tiltak for å redusere varighet og omfang av skadefølger for et risikoobjekt som følge av en uønsket hendelse"@nb ;
                                  skos:prefLabel "ringvirkningsreduserende tiltak"@nb .
 
@@ -1331,7 +1332,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :risiko rdf:type owl:NamedIndividual ,
                  skos:Concept ;
         skos:broader :risikovurdering ;
-        skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+        skos:inScheme :spn_terminologi ;
         skos:definition "usikkerhet knyttet til om en uønsket hendelse vil inntreffe, og hvilke konsekvenser den kan få"@nb ;
         skos:exactMatch <https://termlex.no/term/174963378803589/nb> ;
         skos:prefLabel "risiko"@nb .
@@ -1341,7 +1342,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :risikoanalyse rdf:type owl:NamedIndividual ,
                         skos:Concept ;
                skos:broader :risikovurdering ;
-               skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+               skos:inScheme :spn_terminologi ;
                skos:definition "systematisk framgangsmåte for å beskrive risiko"@nb ;
                skos:exactMatch <https://termlex.no/term/174963378803581/nb> ;
                skos:note "Merknad 1: Innebærer å gjennomføre en skadevurdering, sårbarhetsvurdering, trusselvurdering og usikkerhetsvurdering som del av en risikovurdering"@nb ;
@@ -1352,7 +1353,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :risikobilde rdf:type owl:NamedIndividual ,
                       skos:Concept ;
              skos:broader :risikovurdering ;
-             skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+             skos:inScheme :spn_terminologi ;
              skos:definition "samlebetegnelse for verdier, sårbarheter, trusler og usikkerheter som kan analyseres i en risikovurdering"@nb ;
              skos:prefLabel "risikobilde"@nb .
 
@@ -1361,7 +1362,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :risikoeier rdf:type owl:NamedIndividual ,
                      skos:Concept ;
             skos:broader :risikovurdering ;
-            skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+            skos:inScheme :spn_terminologi ;
             skos:definition "den eller det som har myndighet til å akseptere risiko for et risikoobjekt"@nb ;
             skos:prefLabel "risikoeier"@nb .
 
@@ -1370,7 +1371,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :risikoobjekt rdf:type owl:NamedIndividual ,
                        skos:Concept ;
               skos:broader :risikovurdering ;
-              skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+              skos:inScheme :spn_terminologi ;
               skos:definition "den eller det i en risikovurdering som blir utsatt for skadefølgende ved helt eller delvis bortfall av et analyseobjekts funksjon eller konfidensialitet"@nb ;
               skos:prefLabel "risikoobjekt"@nb .
 
@@ -1379,7 +1380,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :risikovurdering rdf:type owl:NamedIndividual ,
                           skos:Concept ;
                  skos:broader :sikkerhetshjulet ;
-                 skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                 skos:inScheme :spn_terminologi ;
                  skos:closeMatch <https://termlex.no/term/171068858506771/nb> ;
                  skos:definition "prosess i sikkerhetshjulet som innebærer å kartlegge verdier, analysere risiko og evaluere om det er oppnådd et forsvarlig sikkerhetsnivå"@nb ;
                  skos:prefLabel "risikovurdering"@nb .
@@ -1389,7 +1390,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :sammensatte_trusler rdf:type owl:NamedIndividual ,
                               skos:Concept ;
                      skos:broader :trussel ;
-                     skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                     skos:inScheme :spn_terminologi ;
                      dct:source "Meld. St. 10 ((2021–2022), s. 15)"@nb ;
                      skos:definition "betegnelse på strategier for konkurranse og konfrontasjon under terskelen for direkte væpnet konflikt som kan kombinere diplomatiske, informasjonsmessige, militære, økonomiske og finansielle, etterretningsmessige og juridiske virkemidler for å nå strategiske målsettinger. Virkemiddelbruken er gjerne distribuert bredt, er langsiktig i sin tilnærming og kombinerer åpne, fordekte og skjulte metoder."@nb ;
                      skos:note "Merknad: 'Håndbok i risikovurdering for funksjoner og konfidensialitet' dekker kun en bestanddel av sammensatte trusler."@nb ;
@@ -1400,7 +1401,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :sannsynlighet_etterretning rdf:type owl:NamedIndividual ,
                                      skos:Concept ;
                             skos:broader :flerdisiplin ;
-                            skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                            skos:inScheme :spn_terminologi ;
                             dct:source "Forsvarets etterretningsdoktrine (2025) s. 105"@nb ;
                             skos:definition "beskrivelse av hvor sannsynlig det er at en gitt beskrivelse – i form av en etterretningsvurdering – vil være gyldig"@nb ;
                             skos:prefLabel "sannsynlighet [etterretning]"@nb .
@@ -1410,7 +1411,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :sannsynlighet_ulykke rdf:type owl:NamedIndividual ,
                                skos:Concept ;
                       skos:broader :fare ;
-                      skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                      skos:inScheme :spn_terminologi ;
                       skos:closeMatch <https://termlex.no/term/174963378806699/nb> ;
                       skos:definition "hvor trolig det er at en ulykke vil inntreffe"@nb ;
                       skos:prefLabel "sannsynlighet [ulykke]"@nb ;
@@ -1421,7 +1422,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :sannsynlighetsvurdering rdf:type owl:NamedIndividual ,
                                   skos:Concept ;
                          skos:broader :fare ;
-                         skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                         skos:inScheme :spn_terminologi ;
                          skos:definition "vurdering av hvor trolig det er at en ulykke vil inntreffe"@nb ;
                          skos:note "Merknad: kan være både kunnskapsbasert og frekvensbasert"@nb ;
                          skos:prefLabel "sannsynlighetsvurdering"@nb .
@@ -1431,7 +1432,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :scenarioanalyse rdf:type owl:NamedIndividual ,
                           skos:Concept ;
                  skos:broader :sårbarhetsvurdering ;
-                 skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                 skos:inScheme :spn_terminologi ;
                  skos:definition "analyse av en handlemåte og påfølgende skadefølger"@nb ;
                  skos:note "En scenarioanalyse er en strukturert analyseteknikk for å vurdere sårbarhetsnivå."@nb ;
                  skos:prefLabel "scenarioanalyse"@nb .
@@ -1441,7 +1442,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :sekvensiell_innhenting rdf:type owl:NamedIndividual ,
                                  skos:Concept ;
                         skos:broader :innhentingsmetode ;
-                        skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                        skos:inScheme :spn_terminologi ;
                         skos:prefLabel "sekvensiell innhenting"@nb .
 
 
@@ -1449,7 +1450,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :sikkerhetsavtale rdf:type owl:NamedIndividual ,
                            skos:Concept ;
                   skos:broader :leverandørsikkerhet ;
-                  skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                  skos:inScheme :spn_terminologi ;
                   skos:definition "avtale med leverandør som stiller krav til sikkerhetstiltak hos leverandøren og rapportering av sikkerhetsavik og uønskede hendelser"@nb ;
                   skos:prefLabel "sikkerhetsavtale"@nb ;
                   skos:scopeNote "jf. sikkerhetsloven av 1. juni 2018 nr. 24 § 9-2"@nb .
@@ -1459,7 +1460,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :sikkerhetsbrudd rdf:type owl:NamedIndividual ,
                           skos:Concept ;
                  skos:broader :sikringstiltak ;
-                 skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                 skos:inScheme :spn_terminologi ;
                  skos:definition "avvik fra etablerte sikringstiltak"@nb ;
                  skos:prefLabel "sikkerhetsbrudd"@nb .
 
@@ -1468,7 +1469,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :sikkerhetsgrad rdf:type owl:NamedIndividual ,
                          skos:Concept ;
                 skos:broader :sikkerhetsgradering ;
-                skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                skos:inScheme :spn_terminologi ;
                 skos:definition "uttrykk for omfanget av skadefølger om informasjon blir kjent for uvedkommende"@nb ;
                 skos:note "jf. sikkerhetsloven av 1. juni 2018 nr. 24 § 5-3."@nb ;
                 skos:prefLabel "sikkerhetsgrad"@nb .
@@ -1478,7 +1479,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :sikkerhetsgradering rdf:type owl:NamedIndividual ,
                               skos:Concept ;
                      skos:broader :sikringstiltak ;
-                     skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                     skos:inScheme :spn_terminologi ;
                      skos:definition "sikringstiltak som innebærer å stille krav om autorisasjon på et bestemt nivå for å få tilgang til informasjon"@nb ;
                      skos:note "jf. sikkerhetsloven av 1. juni 2018 nr. 24 § 5-3."@nb ;
                      skos:prefLabel "sikkerhetsgradering"@nb .
@@ -1488,7 +1489,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :sikkerhetshjulet rdf:type owl:NamedIndividual ,
                            skos:Concept ;
                   skos:broader :forebyggende_sikkerhet ;
-                  skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                  skos:inScheme :spn_terminologi ;
                   dct:source "https://www.johannesodegard.no/2025/04/30/et-hjul-for-sikkerhet/"@nb ;
                   skos:definition "en modell for et helhetlig rammeverk for forebyggende sikkerhetsarbeid som etablerer de ulike prosessene og fagområdene innen forebyggende sikkerhet i en felles kontekst"@nb ;
                   skos:note "Sikkerhetshjulet er inspirert av etterretningshjulet og illustrerer prosessene som sekvensielt, iterativt og syklisk dreier rundt sikkerhetsstyring som utgjør navet for de ulike prosessene. Prosessene tar utgangspunkt i en komparativ analyse av ulike tilnærminger til sikkerhets- og risikostyring."@nb ;
@@ -1499,7 +1500,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :sikkerhetsmål rdf:type owl:NamedIndividual ,
                         skos:Concept ;
                skos:broader :sikkerhetsstyring ;
-               skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+               skos:inScheme :spn_terminologi ;
                skos:definition "fastsatte mål for ivaretakelse av verdier"@nb ;
                skos:exactMatch <https://termlex.no/term/174963378804201/nb> ;
                skos:prefLabel "sikkerhetsmål"@nb ;
@@ -1510,7 +1511,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :sikkerhetssluse rdf:type owl:NamedIndividual ,
                           skos:Concept ;
                  skos:broader :fysisk_sikkerhet ;
-                 skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                 skos:inScheme :spn_terminologi ;
                  skos:definition "innretning som forhindrer muligheten for snikfølging"@nb ;
                  skos:prefLabel "sikkerhetssluse"@nb ;
                  skos:related :snikfølging .
@@ -1520,7 +1521,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :sikkerhetsstrategi rdf:type owl:NamedIndividual ,
                              skos:Concept ;
                     skos:broader :sikkerhetsstyring ;
-                    skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                    skos:inScheme :spn_terminologi ;
                     skos:definition "overordnet plan for å oppnå og opprettholde et forsvarlig sikkerhetsnivå"@nb ;
                     skos:prefLabel "sikkerhetsstrategi"@nb .
 
@@ -1529,7 +1530,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :sikkerhetsstyring rdf:type owl:NamedIndividual ,
                             skos:Concept ;
                    skos:broader :sikkerhetshjulet ;
-                   skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                   skos:inScheme :spn_terminologi ;
                    skos:definition "planlegging, tilrettelegging, gjennomføring og kontroll av forebyggende tiltak mot uønskede hendelser og påfølgende skadefølger"@nb ;
                    skos:note "Sikkerhetsstyring er navet i sikkerhetshjulet og premissleverandør for de øvrige prosessene."@nb ;
                    skos:prefLabel "sikkerhetsstyring"@nb .
@@ -1539,7 +1540,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :sikkerhetstruende_økonomisk_virkemiddelbruk rdf:type owl:NamedIndividual ,
                                                       skos:Concept ;
                                              skos:broader :trussel ;
-                                             skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                                             skos:inScheme :spn_terminologi ;
                                              skos:definition "bruk av økonomiske virkemidler, herunder belønning, straff og oppkjøp, for å fremme egne interesser på bekostning av en risikoeier"@nb ;
                                              skos:note "Merknad: 'Håndbok i risikovurdering for funksjoner og konfidensialitet' dekker kun en bestanddel av sammensatte trusler."@nb ;
                                              skos:prefLabel "sikkerhetstruende økonomisk virkemiddelbruk"@nb .
@@ -1549,7 +1550,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :sikringstiltak rdf:type owl:NamedIndividual ,
                          skos:Concept ;
                 skos:broader :implementering ;
-                skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                skos:inScheme :spn_terminologi ;
                 skos:closeMatch <https://termlex.no/term/171137815306188/nb> ;
                 skos:definition "tiltak som har til hensikt å forhindre en uønsket hendelse fra å inntreffe gjennom å redusere sårbarheter"@nb ;
                 skos:note "Sikringstiltak er i rammeverket avgrenset til tiltak for å forhindre at en uønsket hendelse skal inntreffe, mens beredskapstiltak er avgrenset til tiltak som iverksettes etter at en uønsket hendelse har inntruffet."@nb ;
@@ -1560,7 +1561,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :skadefølge rdf:type owl:NamedIndividual ,
                      skos:Concept ;
             skos:broader :konsekvens_handlemåte ;
-            skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+            skos:inScheme :spn_terminologi ;
             skos:definition "primære bortfall av en verdi som følge av en uønsket hendelse"@nb ;
             skos:note "Tiltak for å redusere skadefølger omtales som 'skadereduserende'."@nb ;
             skos:prefLabel "skadefølge"@nb ;
@@ -1571,7 +1572,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :skadereduserende_tiltak rdf:type owl:NamedIndividual ,
                                   skos:Concept ;
                          skos:broader :beredskapstiltak ;
-                         skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                         skos:inScheme :spn_terminologi ;
                          skos:definition "tiltak for å redusere omfanget av skade på bestanddeler i et analyseobjekt ved en uønsket hendelse"@nb ;
                          skos:prefLabel "skadereduserende tiltak"@nb .
 
@@ -1580,7 +1581,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :skadevurdering rdf:type owl:NamedIndividual ,
                          skos:Concept ;
                 skos:broader :analyseobjekt ;
-                skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                skos:inScheme :spn_terminologi ;
                 skos:definition "vurdering av skadefølgene for et risikoobjekt ved helt bortfall av et analyseobjekts funksjon eller konfidensialitetsbehov"@nb ;
                 skos:prefLabel "skadevurdering"@nb .
 
@@ -1589,7 +1590,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :skjerming rdf:type owl:NamedIndividual ,
                     skos:Concept ;
            skos:broader :angrepssikring ;
-           skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+           skos:inScheme :spn_terminologi ;
            skos:definition "tiltak for å redusere en bestanddels synlighet for en trussel, herunder å redusere eksponering av ansattes navn og roller samt villedende eller fravær av merking av dører og lokaler"@nb ;
            skos:prefLabel "skjerming"@nb ;
            skos:related :synlighet_handlemåtefaktor .
@@ -1599,7 +1600,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :snikfølging rdf:type owl:NamedIndividual ,
                       skos:Concept ;
              skos:broader :fysisk_sårbarhet ;
-             skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+             skos:inScheme :spn_terminologi ;
              skos:definition "å følge etter autorisert personell inn i et område du ikke er autorisert for"@nb ;
              skos:example "Inntregeren kom seg inn i lokalene gjennom å snikfølge en ansatt inn i garasjen."@nb ;
              skos:prefLabel "snikfølging" .
@@ -1609,7 +1610,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :solstorm rdf:type owl:NamedIndividual ,
                    skos:Concept ;
           skos:broader :naturskapt_ulykke ;
-          skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+          skos:inScheme :spn_terminologi ;
           skos:definition "eksplosjon av protoner, elektroner, magnetfelt og stråling som blir slynget fra Solen og utover i solsystemet"@nb ;
           skos:note "Merknad: kan føre til skade på moderne navigasjonssystemer, kraftnett og satelitter"@nb ;
           skos:prefLabel "solstorm"@nb .
@@ -1619,7 +1620,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :spionasje rdf:type owl:NamedIndividual ,
                     skos:Concept ;
            skos:broader :angrep ;
-           skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+           skos:inScheme :spn_terminologi ;
            skos:definition "angrep som kan føre til bortfall av en verdis konfidensialitet"@nb ;
            skos:prefLabel "spionasje"@nb .
 
@@ -1628,7 +1629,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :styringsdokument_for_sikkerhet rdf:type owl:NamedIndividual ,
                                          skos:Concept ;
                                 skos:broader :sikkerhetsstyring ;
-                                skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                                skos:inScheme :spn_terminologi ;
                                 skos:definition "et dokument som beskriver overordnende føringer for det forebyggende sikkerhetsarbeidet, herunder eksterne krav, fastsatte sikkerhetsmål, roller, ansvar og myndighet"@nb ;
                                 skos:prefLabel "styringsdokument for sikkerhet"@nb .
 
@@ -1637,7 +1638,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :synlighet_handlemåtefaktor rdf:type owl:NamedIndividual ,
                                      skos:Concept ;
                             skos:broader :bestanddel ;
-                            skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                            skos:inScheme :spn_terminologi ;
                             skos:definition "egenskap ved verdi om hvor lett gjenkjennelig verdien er og hvor enkelt det er å oppdage verdien om man er innen rekkevidde av den"@nb ;
                             skos:prefLabel "synlighet for trussel"@nb .
 
@@ -1646,7 +1647,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :synlighet_høy rdf:type owl:NamedIndividual ,
                         skos:Concept ;
                skos:broader :synlighetsnivå ;
-               skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+               skos:inScheme :spn_terminologi ;
                skos:definition "godt skiltet. eksempelvis kjøpesenter og gullsmedforretning."@nb ;
                skos:prefLabel "høy synlighet"@nb .
 
@@ -1655,7 +1656,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :synlighet_lav rdf:type owl:NamedIndividual ,
                         skos:Concept ;
                skos:broader :synlighetsnivå ;
-               skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+               skos:inScheme :spn_terminologi ;
                skos:definition "ugjenkjennelig. eksempelvis lokaler i et næringsbygg uten merking"@nb ;
                skos:prefLabel "lav synlighet"@nb .
 
@@ -1664,7 +1665,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :synlighet_moderat rdf:type owl:NamedIndividual ,
                             skos:Concept ;
                    skos:broader :synlighetsnivå ;
-                   skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                   skos:inScheme :spn_terminologi ;
                    skos:definition "gjenkjennelig. eksempelvis leilighet med beboeroversikt på utsiden av blokken"@nb ;
                    skos:prefLabel "moderat synlighet"@nb .
 
@@ -1673,7 +1674,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :synlighet_svært_høy rdf:type owl:NamedIndividual ,
                               skos:Concept ;
                      skos:broader :synlighetsnivå ;
-                     skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                     skos:inScheme :spn_terminologi ;
                      skos:definition "signalbygg. eksempelvis slottet, stortinget og rådhus"@nb ;
                      skos:prefLabel "svært høy synlighet"@nb .
 
@@ -1682,7 +1683,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :synlighet_svært_lav rdf:type owl:NamedIndividual ,
                               skos:Concept ;
                      skos:broader :synlighetsnivå ;
-                     skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                     skos:inScheme :spn_terminologi ;
                      skos:definition "usynlig. eksempelvis fjellanlegg med skjult inngang uten elektromagnetisk emisjon"@nb ;
                      skos:prefLabel "svært lav synlighet"@nb .
 
@@ -1691,7 +1692,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :synlighetsnivå rdf:type owl:NamedIndividual ,
                          skos:Concept ;
                 skos:broader :synlighet_handlemåtefaktor ;
-                skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                skos:inScheme :spn_terminologi ;
                 skos:definition "uttrykk for hvor lett gjenkjennelig en verdi er og hvorr enkelt det er å oppdage den om man er innen rekkevidde av verdien"@nb ;
                 skos:prefLabel "synlighetsnivå"@nb .
 
@@ -1700,7 +1701,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :systemøvelse rdf:type owl:NamedIndividual ,
                        skos:Concept ;
               skos:broader :evaluering ;
-              skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+              skos:inScheme :spn_terminologi ;
               skos:definition "prosess for å øve på, vurdere og forbedre prestasjonen til et system av sikkerhets- og beredskapstiltak"@nb ;
               skos:prefLabel "systemøvelse"@nb .
 
@@ -1709,7 +1710,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :sårbarhet rdf:type owl:NamedIndividual ,
                     skos:Concept ;
            skos:broader :bestanddel ;
-           skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+           skos:inScheme :spn_terminologi ;
            skos:closeMatch <https://termlex.no/term/170456818006600/nb> ;
            skos:definition "svakhet i en verdi eller et sikkerhetstiltak som kan utnyttes av en trussel for å forårsake en uønsket hendelse, eller svakhet i en verdi eller et sikkerhetstiltak som gjør at en fare kan forårsake en uønsket hendelse"@nb ;
            skos:note "Sårbarhet er i rammeverket avgrenset til egenskaper ved en bestanddel som en trussel kan påvirke for å forårsake bortfall av funksjon eller konfidensialitet, eller som kan muliggjøre en fare i å forårsake bortfall av funksjon eller konfidensialitet. Manglende evne til å iverksette skade- og konsekvensreduserende tiltak inngår i rammeverket i termen 'skadefølger'."@nb ;
@@ -1720,7 +1721,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :sårbarhetsnivå rdf:type owl:NamedIndividual ,
                          skos:Concept ;
                 skos:broader :sårbarhetsvurdering ;
-                skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                skos:inScheme :spn_terminologi ;
                 skos:prefLabel "sårbarhetsnivå"@nb .
 
 
@@ -1728,7 +1729,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :sårbarhetsvurdering rdf:type owl:NamedIndividual ,
                               skos:Concept ;
                      skos:broader :analyseobjekt ;
-                     skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                     skos:inScheme :spn_terminologi ;
                      skos:definition "samlet vurdering av forholdet mellom kompleksitet i handlemåter og skadefølger om handlemåten blir gjennomført"@nb ;
                      skos:note "Merknad 1: En enkel handlemåte som kan føre til omfattende skadefølger gir et høyt sårbarhetsnivå."@nb ;
                      skos:prefLabel "sårbarhetsvurdering"@nb .
@@ -1738,7 +1739,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :tilgjengelighet rdf:type owl:NamedIndividual ,
                           skos:Concept ;
                  skos:broader :funksjon ;
-                 skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                 skos:inScheme :spn_terminologi ;
                  skos:definition "egenskap ved verdi om at den er tilgjengelig ved behov"@nb ;
                  skos:prefLabel "tilgjengelighet"@nb .
 
@@ -1747,7 +1748,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :tilgjengelighet_handlemåtefaktor rdf:type owl:NamedIndividual ,
                                            skos:Concept ;
                                   skos:broader :bestanddel ;
-                                  skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                                  skos:inScheme :spn_terminologi ;
                                   skos:definition "egenskap ved verdi om hvor enkelt det er å komme seg til et sted fra hvor verdien kan angripes"@nb ;
                                   skos:note "Vurderingen innbefatter blant annet en vurdering av perimetersikring og deteksjonssystemer i tillegg til fremføringsakser og geografisk plassering."@nb ;
                                   skos:prefLabel "tilgjengelighet for trussel"@nb .
@@ -1757,7 +1758,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :tilgjengelighet_høy rdf:type owl:NamedIndividual ,
                               skos:Concept ;
                      skos:broader :tilgjengelighetsnivå ;
-                     skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                     skos:inScheme :spn_terminologi ;
                      skos:prefLabel "høy tilgjengelighet"@nb .
 
 
@@ -1765,7 +1766,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :tilgjengelighet_lav rdf:type owl:NamedIndividual ,
                               skos:Concept ;
                      skos:broader :tilgjengelighetsnivå ;
-                     skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                     skos:inScheme :spn_terminologi ;
                      skos:prefLabel "lav tilgjengelighet"@nb .
 
 
@@ -1773,7 +1774,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :tilgjengelighet_moderat rdf:type owl:NamedIndividual ,
                                   skos:Concept ;
                          skos:broader :tilgjengelighetsnivå ;
-                         skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                         skos:inScheme :spn_terminologi ;
                          skos:prefLabel "moderat tilgjengelighet"@nb .
 
 
@@ -1781,7 +1782,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :tilgjengelighet_svært_høy rdf:type owl:NamedIndividual ,
                                     skos:Concept ;
                            skos:broader :tilgjengelighetsnivå ;
-                           skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                           skos:inScheme :spn_terminologi ;
                            skos:prefLabel "svært høy tilgjengelighet"@nb .
 
 
@@ -1789,7 +1790,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :tilgjengelighet_svært_lav rdf:type owl:NamedIndividual ,
                                     skos:Concept ;
                            skos:broader :tilgjengelighetsnivå ;
-                           skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                           skos:inScheme :spn_terminologi ;
                            skos:prefLabel "svært lav tilgjengelighet"@nb .
 
 
@@ -1797,7 +1798,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :tilgjengelighetsnivå rdf:type owl:NamedIndividual ,
                                skos:Concept ;
                       skos:broader :tilgjengelighet_handlemåtefaktor ;
-                      skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                      skos:inScheme :spn_terminologi ;
                       skos:definition "uttrykk for hvor tilgjengelig en verdi er for en trussel"@nb ;
                       skos:prefLabel "tilgjengelighetsnivå"@nb .
 
@@ -1806,7 +1807,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :to-faktor-autentisering rdf:type owl:NamedIndividual ,
                                   skos:Concept ;
                          skos:broader :digital_sikkerhet ;
-                         skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                         skos:inScheme :spn_terminologi ;
                          skos:altLabel "2FA"@nb ;
                          skos:definition "metode for å autentisere en bruker, tjeneste eller komponent gjennom to ulike kategorier av autentifikasjon"@nb ;
                          skos:exactMatch <https://termlex.no/term/170472640608379/en> ;
@@ -1817,7 +1818,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :troverdighet rdf:type owl:NamedIndividual ,
                        skos:Concept ;
               skos:broader :endisiplin ;
-              skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+              skos:inScheme :spn_terminologi ;
               skos:definition "egenskap ved informasjon om at den er riktig"@nb ;
               skos:prefLabel "troverdighet"@nb ;
               skos:scopeNote "etterretning"@nb .
@@ -1827,7 +1828,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :trussel rdf:type owl:NamedIndividual ,
                   skos:Concept ;
          skos:broader :trusselvurdering ;
-         skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+         skos:inScheme :spn_terminologi ;
          skos:closeMatch <https://termlex.no/term/174124350309433/nb> ;
          skos:definition "aktør som kan ha intensjon om å gjennomføre et angrep"@nb ;
          skos:prefLabel "trussel"@nb .
@@ -1837,7 +1838,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :trusselnivå rdf:type owl:NamedIndividual ,
                       skos:Concept ;
              skos:broader :trusselvurdering ;
-             skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+             skos:inScheme :spn_terminologi ;
              skos:definition "uttrykk for omfanget av trusler med intensjon om å gjennomføre et angrep og deres respektive kapabiltieter og handlefrihet"@nb ;
              skos:note "Merknad: Trusselnivået angir ikke hvem som vil gjennomføre et angrep eller hvor omfattende et angrep vil være. Aktør og handlemåte ved et eventuelt angrep påvirkes av identifiserte verdier i verdikartleggingen og deres funksjon og konfidensialitetsbehov, samt omfanget av sårbarheter."@nb ;
              skos:prefLabel "trusselnivå"@nb .
@@ -1847,7 +1848,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :trusselnivå_høyt rdf:type owl:NamedIndividual ,
                            skos:Concept ;
                   skos:broader :trusselnivå ;
-                  skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                  skos:inScheme :spn_terminologi ;
                   skos:definition "omfanget av aktører med intensjon og kapabilitet og deres respektive handlefrihet gjør at det er god grunn til å forvente et angrep fra en aktør som har kapabilitet til å gjennomføre en kompleks handlemåte eller høyere, alternativt er det veldig god grunn til å forvente et nærstående angrep fra en aktør som har kapabilitet til å gjennomføre et angrep med enkel kompleksitet"@nb ;
                   skos:prefLabel "høyt trusselnivå"@nb .
 
@@ -1856,7 +1857,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :trusselnivå_lavt rdf:type owl:NamedIndividual ,
                            skos:Concept ;
                   skos:broader :trusselnivå ;
-                  skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                  skos:inScheme :spn_terminologi ;
                   skos:definition "omfanget av aktører med intensjon og kapabilitet og deres respektive handlefrihet gjør at det er liten grunn til å forvente et angrep gjennomført av en aktør som har kapabilitet til å gjennomføre en enkel handlemåte eller høyere"@nb ;
                   skos:prefLabel "lavt trusselnivå"@nb .
 
@@ -1865,7 +1866,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :trusselnivå_moderat rdf:type owl:NamedIndividual ,
                               skos:Concept ;
                      skos:broader :trusselnivå ;
-                     skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                     skos:inScheme :spn_terminologi ;
                      skos:definition "omfanget av aktører med intensjon og kapabilitet og deres respektive handlefrihet gjør at det er god grunn til å forvente et angrep fra en aktør som har kapabilitet til å gjennomføre en enkel handlemåte, men det er liten grunn til å forvente et angrep fra en aktør som har kapabilitet til å gjennomføre en moderat kompleks handlemåte eller høyere"@nb ;
                      skos:prefLabel "moderat trusselnivå"@nb .
 
@@ -1874,7 +1875,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :trusselnivå_svært_høyt rdf:type owl:NamedIndividual ,
                                  skos:Concept ;
                         skos:broader :trusselnivå ;
-                        skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                        skos:inScheme :spn_terminologi ;
                         skos:definition "omfanget av aktører med intensjon og kapabilitet og deres respektive handlefrihet gjør at det er veldig god grunn til å forvente et nærstående angrep fra en aktør som har kapabilitet til å gjennomføre et angrep med en moderat kompleks handlemåte, eller høyere"@nb ;
                         skos:prefLabel "svært høyt trusselnivå"@nb .
 
@@ -1883,7 +1884,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :trusselnivå_svært_lavt rdf:type owl:NamedIndividual ,
                                  skos:Concept ;
                         skos:broader :trusselnivå ;
-                        skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                        skos:inScheme :spn_terminologi ;
                         skos:definition "omfanget av aktører med intensjon og kapabilitet og deres respektive handlefrihet gjør at det er meget liten grunn til å forvente et angrep, selv med en svært enkel handlemåte"@nb ;
                         skos:prefLabel "svært lavt trusselnivå"@nb .
 
@@ -1892,7 +1893,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :trusselvurdering rdf:type owl:NamedIndividual ,
                            skos:Concept ;
                   skos:broader :analyseobjekt ;
-                  skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                  skos:inScheme :spn_terminologi ;
                   dct:source "Forsvarets etterretningsdoktrine (2025) s. 106"@nb ;
                   skos:definition "samlet vurdering av omfanget av trusler med intensjon om å gjennomføre et angrep og deres respektive kapabiltieter og handlefrihet"@nb ;
                   skos:prefLabel "trusselvurdering"@nb ;
@@ -1903,7 +1904,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :uaktsomhet rdf:type owl:NamedIndividual ,
                      skos:Concept ;
             skos:broader :menneskeskapt_ulykke ;
-            skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+            skos:inScheme :spn_terminologi ;
             skos:definition "fravær av årvåkenhet som er årsak til en ulykke"@nb ;
             skos:prefLabel "uaktsomhet"@nb .
 
@@ -1912,7 +1913,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :ulykke rdf:type owl:NamedIndividual ,
                  skos:Concept ;
         skos:broader :fare ;
-        skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+        skos:inScheme :spn_terminologi ;
         skos:definition "en handling som kan utilsiktet føre til en uønsket hendelse, eller en naturskapt hendelse som forårsaker en uønsket hendelse"@nb ;
         skos:prefLabel "ulykke"@nb .
 
@@ -1921,7 +1922,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :ulykkesrisiko rdf:type owl:NamedIndividual ,
                         skos:Concept ;
                skos:broader :risikovurdering ;
-               skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+               skos:inScheme :spn_terminologi ;
                skos:definition "usikkerhet knyttet til om en ulykke vil inntreffe, og hvilke konsekvenser den kan få"@nb ;
                skos:prefLabel "ulykkesrisiko"@nb .
 
@@ -1930,7 +1931,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :ulykkessikkerhet rdf:type owl:NamedIndividual ,
                            skos:Concept ;
                   skos:broader :ulykkesrisiko ;
-                  skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                  skos:inScheme :spn_terminologi ;
                   skos:definition "aktiviteter og tiltak for å forhindre ulykker og redusere skadefølgene om en ulykke inntreffer"@nb ;
                   skos:prefLabel "ulykkessikkerhet"@nb .
 
@@ -1939,7 +1940,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :ulykkessikring rdf:type owl:NamedIndividual ,
                          skos:Concept ;
                 skos:broader :sikringstiltak ;
-                skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                skos:inScheme :spn_terminologi ;
                 skos:prefLabel "ulykkessikring"@nb .
 
 
@@ -1947,7 +1948,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :usikkerhet rdf:type owl:NamedIndividual ,
                      skos:Concept ;
             skos:broader :risikovurdering ;
-            skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+            skos:inScheme :spn_terminologi ;
             skos:definition "tilstand med underskudd på informasjon, forståelse eller kunnskap"@nb ;
             skos:exactMatch <https://termlex.no/term/171070689706260/nb> ;
             skos:prefLabel "usikkerhet"@nb .
@@ -1957,7 +1958,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :usikkerhetsnivå rdf:type owl:NamedIndividual ,
                           skos:Concept ;
                  skos:broader :usikkerhet ;
-                 skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                 skos:inScheme :spn_terminologi ;
                  skos:definition "uttrykk for omfanget av usikkerhet i en risikovurdering"@nb ;
                  skos:note "Merknad: Usikkerhetsnivå uttrykker hvor mye høyere konsekvensnivå, trusselnivå og sårbarhetsnivå kan være enn det som er lagt til grunn i risikoanalysen."@nb ;
                  skos:prefLabel "usikkerhetsnivå"@nb .
@@ -1967,7 +1968,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :uønsket_hendelse rdf:type owl:NamedIndividual ,
                            skos:Concept ;
                   skos:broader :verdi ;
-                  skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                  skos:inScheme :spn_terminologi ;
                   skos:closeMatch <https://termlex.no/term/174963378805210/nb> ;
                   skos:definition "hendelse som kan medføre tap av en verdi"@nb ;
                   skos:prefLabel "uønsket hendelse"@nb ;
@@ -1978,7 +1979,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :verdi rdf:type owl:NamedIndividual ,
                 skos:Concept ;
        skos:broader :risikovurdering ;
-       skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+       skos:inScheme :spn_terminologi ;
        skos:definition "liv og helse, materielle eller immaterielle størrelser som vil få skadefølger for en risikoeier om det faller bort"@nb ;
        skos:note "Merknad 1: 'liv og helse, materielle eller immaterielle størrelser' omtales som 'verdi' når det vurderes fra en risikoeiers perspektiv, og som 'bestanddel' eller 'mål' når det vurderes fra perspektivet til en trussel eller fare. Sårbarhet er derfor knyttet til bestanddel og ikke til verdi."@nb ,
                  "Merknad 2: alt som vil få negative konsekvenser om det slutter å eksistere eller fungere som det er tiltenkt"@nb ;
@@ -1989,7 +1990,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :verdikartlegging rdf:type owl:NamedIndividual ,
                            skos:Concept ;
                   skos:broader :risikovurdering ;
-                  skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                  skos:inScheme :spn_terminologi ;
                   skos:definition "prosess som innebærer å identifisere verdier som ved bortfall kan få skadefølger for et risikoobjekt"@nb ;
                   skos:prefLabel "verdikartlegging"@nb .
 
@@ -1998,7 +1999,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :verifikasjon rdf:type owl:NamedIndividual ,
                        skos:Concept ;
               skos:broader :sikringstiltak ;
-              skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+              skos:inScheme :spn_terminologi ;
               skos:definition "bekreftelse eller avkreftelse på om en hendelse er uønsket"@nb ;
               skos:prefLabel "verifikasjon"@nb .
 
@@ -2007,7 +2008,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :verifikasjonsstyrke rdf:type owl:NamedIndividual ,
                               skos:Concept ;
                      skos:broader :verifikasjon ;
-                     skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+                     skos:inScheme :spn_terminologi ;
                      skos:definition "personell og ressurser trent på å bekrefte eller avkrefte om en uønsket hendelse har oppstått og forberedt på å forstyrre en eventuell trussel"@nb ;
                      skos:note "Ikke forveksles med reaksjonstyrke"@nb ;
                      skos:prefLabel "verifikasjonsstyrke"@nb ;
@@ -2018,7 +2019,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
 :vulkanutbrudd rdf:type owl:NamedIndividual ,
                         skos:Concept ;
                skos:broader :naturskapt_ulykke ;
-               skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
+               skos:inScheme :spn_terminologi ;
                skos:definition "ukontrollert utslipp av lava og store mengder gass og pyroklastisk materiale fra jordens indre"@nb ;
                skos:note "Merknad: kan føre til en ulykke som følge av ringvirkningene av utbruddet"@nb ;
                skos:prefLabel "vulkanutbrudd"@nb .
