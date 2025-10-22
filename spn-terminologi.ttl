@@ -4,9 +4,9 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 spn-terminologi: a skos:ConceptScheme ;
-    dct:title "colour2 Vocabulary"@en, "Farbvokabular"@de ;
-    dct:creator "Hans Dampf"@de ;
-    dct:created "2021-11-02"^^xsd:date ;
+    dct:title "Sikkerhet på norsk - terminologi"@nb ;
+    dct:creator "Johannes Ødegård"@nb ;
+    dct:created "2025-10-22"^^xsd:date ;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
     skos:hasTopConcept spn-terminologi:violet, spn-terminologi:blue .
 
