@@ -1601,7 +1601,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
              skos:inScheme :spn_terminologi ;
              skos:definition "å følge etter autorisert personell inn i et område du ikke er autorisert for"@nb ;
              skos:example "Inntregeren kom seg inn i lokalene gjennom å snikfølge en ansatt inn i garasjen."@nb ;
-             skos:prefLabel "snikfølging"@ .
+             skos:prefLabel "snikfølging"@nb .
 
 
 ###  http://www.johannesodegard.no/terminologi#solstorm
