@@ -1,5 +1,5 @@
 {
-  "id": "https://example.org/colour2/violet",
+  "id": "https://www.johannesodegard.no/terminologi/violet",
   "type": "Concept",
   "prefLabel": {
     "en": "violet",
@@ -15,7 +15,7 @@
   },
   "inScheme": [
     {
-      "id": "https://example.org/colour2/",
+      "id": "https://www.johannesodegard.no/terminologi/",
       "title": {
         "en": "colour2 Vocabulary",
         "de": "Farbvokabular"
@@ -24,12 +24,12 @@
   ],
   "inSchemeAll": [
     {
-      "id": "https://example.org/colour2/"
+      "id": "https://www.johannesodegard.no/terminologi/"
     }
   ],
   "topConceptOf": [
     {
-      "id": "https://example.org/colour2/",
+      "id": "https://www.johannesodegard.no/terminologi/",
       "title": {
         "en": "colour2 Vocabulary",
         "de": "Farbvokabular"
