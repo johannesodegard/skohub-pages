@@ -102,11 +102,12 @@ skos:ConceptScheme rdf:type owl:Class .
 
 
 ###  http://www.johannesodegard.no/terminologi#Sikkerhet_på_norsk_-_terminologi
-:Sikkerhet_på_norsk_-_terminologi rdf:type owl:NamedIndividual ,
-                                           skos:ConceptScheme ;
-    dct:title "Sikkerhet på norsk - terminologi"@nb ;
+:Sikkerhet_på_norsk_-_terminologi
+    rdf:type owl:NamedIndividual , skos:ConceptScheme ;
+    dct:title    "Sikkerhet på norsk – terminologi"@nb ;
+    skos:prefLabel "Sikkerhet på norsk – terminologi"@nb ;
     dct:language "nb" ;
-    dct:description "Terminologi for Sikkerhet på norsk."@nb .
+    skos:hasTopConcept :Sikkerhet_på_norsk, :etterretning .
 
 
 ###  http://www.johannesodegard.no/terminologi#aksess
