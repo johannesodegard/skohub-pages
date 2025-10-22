@@ -103,7 +103,10 @@ skos:ConceptScheme rdf:type owl:Class .
 
 ###  http://www.johannesodegard.no/terminologi#Sikkerhet_på_norsk_-_terminologi
 :Sikkerhet_på_norsk_-_terminologi rdf:type owl:NamedIndividual ,
-                                           skos:ConceptScheme .
+                                           skos:ConceptScheme ;
+    dct:title "Sikkerhet på norsk - terminologi"@nb ;
+    dct:language "nb" ;
+    dct:description "Terminologi for Sikkerhet på norsk."@nb .
 
 
 ###  http://www.johannesodegard.no/terminologi#aksess
@@ -218,7 +221,6 @@ skos:ConceptScheme rdf:type owl:Class .
                    skos:Concept ;
           skos:broader :etterretningsbehov ;
           skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
-          skos:definition "" ;
           skos:prefLabel "bakgrunn"@nb .
 
 
@@ -648,7 +650,7 @@ Spionasje: Sosial manipulering og utpressing av ansatte."""@nb ;
                         skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
                         skos:definition "enkeltperson uten spesialisert kompetanse og uten forutgående planlegging"@nb ;
                         skos:note """Anslag: Forbipasserende opportunistisk lovbryter med tilgang på brekkjern.
-Spionasje: Forbipasserende opportunist som snikfølger inn en dør.""" ;
+Spionasje: Forbipasserende opportunist som snikfølger inn en dør."""@nb ;
                         skos:prefLabel "svært enkel handlemåte"@nb .
 
 
@@ -729,7 +731,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
                 skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
                 skos:definition "prosess i sikkerhetshjulet som innebærer å omsette identifiserte tiltak til etablerte tiltak"@nb ;
                 skos:note "Kan være både sikringstiltak og beredskapstiltak"@nb ,
-                          "Tiltak identifiseres som hovedregel i en risikovurdering." ;
+                          "Tiltak identifiseres som hovedregel i en risikovurdering."@nb ;
                 skos:prefLabel "implementering"@nb .
 
 
@@ -1136,7 +1138,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan motså et angrep fra �
            skos:definition """informasjon om utfall av fremtidige hendelser, intensjoner som ennå ikke har kommet
 til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
            skos:note "Eksempler på dette er spørsmål om i hvilken grad en stat er villig til å bruke militær makt for å oppnå politiske mål. All den tid en slik beslutning ennå ikke er tatt av den aktuelle statens ledere, vil en etterretningsorganisasjon bare være i stand til å estimere et slikt utfall."@nb ;
-           skos:prefLabel "mysterium" ;
+           skos:prefLabel "mysterium"@nb ;
            skos:scopeNote "etterretning"@nb .
 
 
@@ -1430,6 +1432,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
                  skos:broader :sårbarhetsvurdering ;
                  skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
                  skos:definition "analyse av en handlemåte og påfølgende skadefølger"@nb ;
+                 skos:note "En scenarioanalyse er en strukturert analyseteknikk for å vurdere sårbarhetsnivå."@nb ;
                  skos:prefLabel "scenarioanalyse"@nb .
 
 
@@ -1803,7 +1806,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
                                   skos:Concept ;
                          skos:broader :digital_sikkerhet ;
                          skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
-                         skos:altLabel "2FA" ;
+                         skos:altLabel "2FA"@nb ;
                          skos:definition "metode for å autentisere en bruker, tjeneste eller komponent gjennom to ulike kategorier av autentifikasjon"@nb ;
                          skos:exactMatch <https://termlex.no/term/170472640608379/en> ;
                          skos:prefLabel "to-faktor-autentisering"@nb .
@@ -1834,7 +1837,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
                       skos:Concept ;
              skos:broader :trusselvurdering ;
              skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
-             skos:definition "uttrykk for omfanget av trusler med intensjon om å gjennomføre et angrep og deres respektive kapabiltieter og handlefrihet" ;
+             skos:definition "uttrykk for omfanget av trusler med intensjon om å gjennomføre et angrep og deres respektive kapabiltieter og handlefrihet"@nb ;
              skos:note "Merknad: Trusselnivået angir ikke hvem som vil gjennomføre et angrep eller hvor omfattende et angrep vil være. Aktør og handlemåte ved et eventuelt angrep påvirkes av identifiserte verdier i verdikartleggingen og deres funksjon og konfidensialitetsbehov, samt omfanget av sårbarheter."@nb ;
              skos:prefLabel "trusselnivå"@nb .
 
@@ -1976,7 +1979,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
        skos:broader :risikovurdering ;
        skos:inScheme :Sikkerhet_på_norsk_-_terminologi ;
        skos:definition "liv og helse, materielle eller immaterielle størrelser som vil få skadefølger for en risikoeier om det faller bort"@nb ;
-       skos:note "Merknad 1: 'liv og helse, materielle eller immaterielle størrelser' omtales som 'verdi' når det vurderes fra en risikoeiers perspektiv, og som 'bestanddel' eller 'mål' når det vurderes fra perspektivet til en trussel eller fare"@nb ,
+       skos:note "Merknad 1: 'liv og helse, materielle eller immaterielle størrelser' omtales som 'verdi' når det vurderes fra en risikoeiers perspektiv, og som 'bestanddel' eller 'mål' når det vurderes fra perspektivet til en trussel eller fare. Sårbarhet er derfor knyttet til bestanddel og ikke til verdi."@nb ,
                  "Merknad 2: alt som vil få negative konsekvenser om det slutter å eksistere eller fungere som det er tiltenkt"@nb ;
        skos:prefLabel "verdi"@nb .
 
