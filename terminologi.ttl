@@ -981,8 +981,6 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
                                         skos:Concept ;
                                skos:broader :sannsynlighet_ulykke ;
                                skos:inScheme :spn_terminologi ;
-                               dct:bibliographicCitation "FFI-rapport 18-02058 kap. 2.2.1
-Aven (2009) Risikostyring. Unversitetsforslaget. 2. opplag. s. 52-56"@nb ;
                                skos:altLabel "semantisk sannsynlighet"@nb ,
                                              "subjektiv sannsynlighet"@nb ;
                                skos:prefLabel "kunnskapsbasert sannsynlighet"@nb .
