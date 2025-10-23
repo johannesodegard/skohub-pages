@@ -9,7 +9,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#spn_terminologi
-:spn_terminologi rdf:type owl:NamedIndividual ,
+:spn_terminologi a
                           skos:ConceptScheme ;
                  dct:created "2025-10-23"^^xsd:date ;
                  dct:creator "Johannes √òdeg√•rd"@nb ;
@@ -19,7 +19,7 @@
                  skos:hasTopConcept :spn .
 
 ###  https://www.johannesodegard.no/terminologi#spn
-:spn rdf:type owl:NamedIndividual ,
+:spn a
               skos:Concept ;
      skos:inScheme :spn_terminologi ;
      skos:topConceptOf :spn_terminologi ;
@@ -38,7 +38,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#analyseobjekt
-:analyseobjekt rdf:type owl:NamedIndividual ,
+:analyseobjekt a
                         skos:Concept ;
                skos:broader :risikoanalyse ;
                skos:inScheme :spn_terminologi ;
@@ -48,7 +48,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#angrep
-:angrep rdf:type owl:NamedIndividual ,
+:angrep a
                  skos:Concept ;
         skos:broader :trussel ;
         skos:inScheme :spn_terminologi ;
@@ -59,7 +59,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#angrepsrisiko
-:angrepsrisiko rdf:type owl:NamedIndividual ,
+:angrepsrisiko a
                         skos:Concept ;
                skos:broader :risikovurdering ;
                skos:inScheme :spn_terminologi ;
@@ -68,7 +68,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#angrepssikkerhet
-:angrepssikkerhet rdf:type owl:NamedIndividual ,
+:angrepssikkerhet a
                            skos:Concept ;
                   skos:broader :angrepsrisiko ;
                   skos:inScheme :spn_terminologi ;
@@ -78,7 +78,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#angrepssikring
-:angrepssikring rdf:type owl:NamedIndividual ,
+:angrepssikring a
                          skos:Concept ;
                 skos:broader :sikringstiltak ;
                 skos:inScheme :spn_terminologi ;
@@ -87,7 +87,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#anslag
-:anslag rdf:type owl:NamedIndividual ,
+:anslag a
                  skos:Concept ;
         skos:broader :angrep ;
         skos:inScheme :spn_terminologi ;
@@ -96,7 +96,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#autensitet
-:autensitet rdf:type owl:NamedIndividual ,
+:autensitet a
                      skos:Concept ;
             skos:broader :funksjon ;
             skos:inScheme :spn_terminologi ;
@@ -105,7 +105,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#autorisasjon
-:autorisasjon rdf:type owl:NamedIndividual ,
+:autorisasjon a
                        skos:Concept ;
               skos:broader :sikringstiltak ;
               skos:inScheme :spn_terminologi ;
@@ -115,7 +115,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#beredskapslager
-:beredskapslager rdf:type owl:NamedIndividual ,
+:beredskapslager a
                           skos:Concept ;
                  skos:broader :beredskapstiltak ;
                  skos:inScheme :spn_terminologi ;
@@ -124,7 +124,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#beredskapsplan
-:beredskapsplan rdf:type owl:NamedIndividual ,
+:beredskapsplan a
                          skos:Concept ;
                 skos:broader :haandtering ;
                 skos:inScheme :spn_terminologi ;
@@ -134,7 +134,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#beredskapstiltak
-:beredskapstiltak rdf:type owl:NamedIndividual ,
+:beredskapstiltak a
                            skos:Concept ;
                   skos:broader :implementering ;
                   skos:inScheme :spn_terminologi ;
@@ -144,7 +144,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#beredskapsoevelse
-:beredskapsoevelse rdf:type owl:NamedIndividual ,
+:beredskapsoevelse a
                            skos:Concept ;
                   skos:broader :beredskapstiltak ,
                                :haandtering ;
@@ -154,7 +154,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#bestanddel
-:bestanddel rdf:type owl:NamedIndividual ,
+:bestanddel a
                      skos:Concept ;
             skos:broader :saarbarhetsvurdering ;
             skos:inScheme :spn_terminologi ;
@@ -165,7 +165,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#daglig_sikkerhetsmessig_ledelse
-:daglig_sikkerhetsmessig_ledelse rdf:type owl:NamedIndividual ,
+:daglig_sikkerhetsmessig_ledelse a
                                           skos:Concept ;
                                  skos:broader :personellsikkerhet ;
                                  skos:inScheme :spn_terminologi ;
@@ -174,7 +174,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#deteksjon
-:deteksjon rdf:type owl:NamedIndividual ,
+:deteksjon a
                     skos:Concept ;
            skos:broader :sikringstiltak ;
            skos:inScheme :spn_terminologi ;
@@ -183,7 +183,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#digital_sikkerhet
-:digital_sikkerhet rdf:type owl:NamedIndividual ,
+:digital_sikkerhet a
                             skos:Concept ;
                    skos:broader :domene ;
                    skos:inScheme :spn_terminologi ;
@@ -192,7 +192,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#digital_saarbarhet
-:digital_saarbarhet rdf:type owl:NamedIndividual ,
+:digital_saarbarhet a
                             skos:Concept ;
                    skos:broader :saarbarhet ;
                    skos:inScheme :spn_terminologi ;
@@ -202,7 +202,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#dokumentasjon
-:dokumentasjon rdf:type owl:NamedIndividual ,
+:dokumentasjon a
                         skos:Concept ;
                skos:broader :sikkerhetsstyring ;
                skos:inScheme :spn_terminologi ;
@@ -210,7 +210,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#domene
-:domene rdf:type owl:NamedIndividual ,
+:domene a
                  skos:Concept ;
         skos:broader :sikringstiltak ;
         skos:inScheme :spn_terminologi ;
@@ -223,7 +223,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#ekstremisme
-:ekstremisme rdf:type owl:NamedIndividual ,
+:ekstremisme a
                       skos:Concept ;
              skos:broader :personellsaarbarhet ;
              skos:inScheme :spn_terminologi ;
@@ -232,7 +232,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#evaluering
-:evaluering rdf:type owl:NamedIndividual ,
+:evaluering a
                      skos:Concept ;
             skos:broader :sikkerhetshjulet ;
             skos:inScheme :spn_terminologi ;
@@ -241,7 +241,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#fare
-:fare rdf:type owl:NamedIndividual ,
+:fare a
                skos:Concept ;
       skos:broader :saarbarhetsvurdering ;
       skos:inScheme :spn_terminologi ;
@@ -251,7 +251,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#forebyggende_sikkerhet
-:forebyggende_sikkerhet rdf:type owl:NamedIndividual ,
+:forebyggende_sikkerhet a
                                  skos:Concept ;
                         skos:broader :spn ;
                         skos:inScheme :spn_terminologi ;
@@ -261,7 +261,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#forsvarlig_sikkerhetsnivaa
-:forsvarlig_sikkerhetsnivaa rdf:type owl:NamedIndividual ,
+:forsvarlig_sikkerhetsnivaa a
                                     skos:Concept ;
                            skos:broader :risikovurdering ;
                            skos:inScheme :spn_terminologi ;
@@ -271,7 +271,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#fortifikasjon
-:fortifikasjon rdf:type owl:NamedIndividual ,
+:fortifikasjon a
                         skos:Concept ;
                skos:broader :angrepssikring ;
                skos:inScheme :spn_terminologi ;
@@ -281,7 +281,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#frekvensbasert_sannsynlighet
-:frekvensbasert_sannsynlighet rdf:type owl:NamedIndividual ,
+:frekvensbasert_sannsynlighet a
                                        skos:Concept ;
                               skos:broader :sannsynlighet_ulykke ;
                               skos:inScheme :spn_terminologi ;
@@ -291,7 +291,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#funksjon
-:funksjon rdf:type owl:NamedIndividual ,
+:funksjon a
                    skos:Concept ;
           skos:broader :verdi ;
           skos:inScheme :spn_terminologi ;
@@ -301,7 +301,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#fysisk_sikkerhet
-:fysisk_sikkerhet rdf:type owl:NamedIndividual ,
+:fysisk_sikkerhet a
                            skos:Concept ;
                   skos:broader :domene ;
                   skos:inScheme :spn_terminologi ;
@@ -310,7 +310,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#fysisk_saarbarhet
-:fysisk_saarbarhet rdf:type owl:NamedIndividual ,
+:fysisk_saarbarhet a
                            skos:Concept ;
                   skos:broader :saarbarhet ;
                   skos:inScheme :spn_terminologi ;
@@ -320,7 +320,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#gjenopprettingsevne
-:gjenopprettingsevne rdf:type owl:NamedIndividual ,
+:gjenopprettingsevne a
                               skos:Concept ;
                      skos:broader :kritikalitetskonsekvensnivaa ;
                      skos:inScheme :spn_terminologi ;
@@ -328,7 +328,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#godkjenning
-:godkjenning rdf:type owl:NamedIndividual ,
+:godkjenning a
                       skos:Concept ;
              skos:broader :sikringstiltak ;
              skos:inScheme :spn_terminologi ;
@@ -338,7 +338,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#grov_uaktsomhet
-:grov_uaktsomhet rdf:type owl:NamedIndividual ,
+:grov_uaktsomhet a
                           skos:Concept ;
                  skos:broader :menneskeskapt_ulykke ;
                  skos:inScheme :spn_terminologi ;
@@ -347,7 +347,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#handlefrihet
-:handlefrihet rdf:type owl:NamedIndividual ,
+:handlefrihet a
                        skos:Concept ;
               skos:broader :trussel ;
               skos:inScheme :spn_terminologi ;
@@ -358,7 +358,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#handlem√•te
-:handlem√•te rdf:type owl:NamedIndividual ,
+:handlem√•te a
                      skos:Concept ;
             skos:broader :scenarioanalyse ;
             skos:inScheme :spn_terminologi ;
@@ -367,7 +367,7 @@
 
 
 ###  https://www.johannesodegard.no/terminologi#handlem√•te_enkel
-:handlem√•te_enkel rdf:type owl:NamedIndividual ,
+:handlem√•te_enkel a
                            skos:Concept ;
                   skos:broader :handlem√•tekompleksitet ;
                   skos:inScheme :spn_terminologi ;
@@ -381,7 +381,7 @@ Spionasje: Enkeltperson med tilgang p√• fotokamera med telelinse."""@nb ;
 
 
 ###  https://www.johannesodegard.no/terminologi#handlem√•te_kompleks
-:handlem√•te_kompleks rdf:type owl:NamedIndividual ,
+:handlem√•te_kompleks a
                               skos:Concept ;
                      skos:broader :handlem√•tekompleksitet ;
                      skos:inScheme :spn_terminologi ;
@@ -394,7 +394,7 @@ Spionasje: Utvikling av digitale null-dagss√•rbarheter eller utpressing og vold 
 
 
 ###  https://www.johannesodegard.no/terminologi#handlem√•te_moderat
-:handlem√•te_moderat rdf:type owl:NamedIndividual ,
+:handlem√•te_moderat a
                              skos:Concept ;
                     skos:broader :handlem√•tekompleksitet ;
                     skos:inScheme :spn_terminologi ;
@@ -408,7 +408,7 @@ Spionasje: Sosial manipulering og utpressing av ansatte."""@nb ;
 
 
 ###  https://www.johannesodegard.no/terminologi#handlemaate_svaert_enkel
-:handlemaate_svaert_enkel rdf:type owl:NamedIndividual ,
+:handlemaate_svaert_enkel a
                                  skos:Concept ;
                         skos:broader :handlem√•tekompleksitet ;
                         skos:inScheme :spn_terminologi ;
@@ -419,7 +419,7 @@ Spionasje: Forbipasserende opportunist som snikf√∏lger inn en d√∏r."""@nb ;
 
 
 ###  https://www.johannesodegard.no/terminologi#handlemaate_svaert_kompleks
-:handlemaate_svaert_kompleks rdf:type owl:NamedIndividual ,
+:handlemaate_svaert_kompleks a
                                     skos:Concept ;
                            skos:broader :handlem√•tekompleksitet ;
                            skos:inScheme :spn_terminologi ;
@@ -433,7 +433,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#handlem√•tefaktor
-:handlem√•tefaktor rdf:type owl:NamedIndividual ,
+:handlem√•tefaktor a
                            skos:Concept ;
                   skos:broader :handlem√•te ;
                   skos:inScheme :spn_terminologi ;
@@ -442,7 +442,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#handlem√•tekompleksitet
-:handlem√•tekompleksitet rdf:type owl:NamedIndividual ,
+:handlem√•tekompleksitet a
                                  skos:Concept ;
                         skos:broader :handlem√•te ;
                         skos:inScheme :spn_terminologi ;
@@ -451,7 +451,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#hendelsesh√•ndtering
-:hendelsesh√•ndtering rdf:type owl:NamedIndividual ,
+:hendelsesh√•ndtering a
                               skos:Concept ;
                      skos:broader :haandtering ;
                      skos:inScheme :spn_terminologi ;
@@ -460,7 +460,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#hinder
-:hinder rdf:type owl:NamedIndividual ,
+:hinder a
                  skos:Concept ;
         skos:broader :angrepssikring ;
         skos:inScheme :spn_terminologi ;
@@ -470,7 +470,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#haandtering
-:haandtering rdf:type owl:NamedIndividual ,
+:haandtering a
                      skos:Concept ;
             skos:broader :sikkerhetshjulet ;
             skos:inScheme :spn_terminologi ;
@@ -479,7 +479,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#implementering
-:implementering rdf:type owl:NamedIndividual ,
+:implementering a
                          skos:Concept ;
                 skos:broader :sikkerhetshjulet ;
                 skos:inScheme :spn_terminologi ;
@@ -490,7 +490,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#integritet
-:integritet rdf:type owl:NamedIndividual ,
+:integritet a
                      skos:Concept ;
             skos:broader :funksjon ;
             skos:inScheme :spn_terminologi ;
@@ -500,7 +500,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#intensjon
-:intensjon rdf:type owl:NamedIndividual ,
+:intensjon a
                     skos:Concept ;
            skos:broader :trussel ;
            skos:inScheme :spn_terminologi ;
@@ -511,7 +511,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#jordskjelv
-:jordskjelv rdf:type owl:NamedIndividual ,
+:jordskjelv a
                      skos:Concept ;
             skos:broader :naturskapt_ulykke ;
             skos:inScheme :spn_terminologi ;
@@ -520,7 +520,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#kapabilitet
-:kapabilitet rdf:type owl:NamedIndividual ,
+:kapabilitet a
                       skos:Concept ;
              skos:broader :trussel ;
              skos:inScheme :spn_terminologi ;
@@ -530,7 +530,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#klarering
-:klarering rdf:type owl:NamedIndividual ,
+:klarering a
                     skos:Concept ;
            skos:broader :sikringstiltak ;
            skos:inScheme :spn_terminologi ;
@@ -540,7 +540,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#kompromat
-:kompromat rdf:type owl:NamedIndividual ,
+:kompromat a
                     skos:Concept ;
            skos:broader :personellsaarbarhet ;
            skos:inScheme :spn_terminologi ;
@@ -549,7 +549,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#konfidensialitet
-:konfidensialitet rdf:type owl:NamedIndividual ,
+:konfidensialitet a
                            skos:Concept ;
                   skos:broader :verdi ;
                   skos:inScheme :spn_terminologi ;
@@ -559,7 +559,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#konfidensialitetsbehov
-:konfidensialitetsbehov rdf:type owl:NamedIndividual ,
+:konfidensialitetsbehov a
                                  skos:Concept ;
                         skos:broader :verdi ;
                         skos:inScheme :spn_terminologi ;
@@ -568,7 +568,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#konfidensialitetskonsekvensnivaa
-:konfidensialitetskonsekvensnivaa rdf:type owl:NamedIndividual ,
+:konfidensialitetskonsekvensnivaa a
                                           skos:Concept ;
                                  skos:broader :konsekvens_handlemaate ;
                                  skos:inScheme :spn_terminologi ;
@@ -578,7 +578,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#konfidensialitetsnivaa
-:konfidensialitetsnivaa rdf:type owl:NamedIndividual ,
+:konfidensialitetsnivaa a
                                 skos:Concept ;
                        skos:broader :skadevurdering ;
                        skos:inScheme :spn_terminologi ;
@@ -587,7 +587,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#konsekvens_handlemaate
-:konsekvens_handlemaate rdf:type owl:NamedIndividual ,
+:konsekvens_handlemaate a
                                 skos:Concept ;
                        skos:broader :scenarioanalyse ;
                        skos:inScheme :spn_terminologi ;
@@ -599,7 +599,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#konsentrasjonsrisiko
-:konsentrasjonsrisiko rdf:type owl:NamedIndividual ,
+:konsentrasjonsrisiko a
                                skos:Concept ;
                       skos:broader :leverandoersaarbarhet ;
                       skos:inScheme :spn_terminologi ;
@@ -608,7 +608,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#krav
-:krav rdf:type owl:NamedIndividual ,
+:krav a
                skos:Concept ;
       skos:broader :sikkerhetsstyring ;
       skos:inScheme :spn_terminologi ;
@@ -619,7 +619,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#kritikalitet
-:kritikalitet rdf:type owl:NamedIndividual ,
+:kritikalitet a
                        skos:Concept ;
               skos:broader :verdi ;
               skos:inScheme :spn_terminologi ;
@@ -628,7 +628,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#kritikalitetskonsekvensnivaa
-:kritikalitetskonsekvensnivaa rdf:type owl:NamedIndividual ,
+:kritikalitetskonsekvensnivaa a
                                       skos:Concept ;
                              skos:broader :konsekvens_handlemaate ;
                              skos:inScheme :spn_terminologi ;
@@ -637,7 +637,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#kritikalitetsnivaa
-:kritikalitetsnivaa rdf:type owl:NamedIndividual ,
+:kritikalitetsnivaa a
                             skos:Concept ;
                    skos:broader :kritikalitetskonsekvensnivaa ,
                                 :skadevurdering ;
@@ -647,7 +647,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#kunnskapsbasert_sannsynlighet
-:kunnskapsbasert_sannsynlighet rdf:type owl:NamedIndividual ,
+:kunnskapsbasert_sannsynlighet a
                                         skos:Concept ;
                                skos:broader :sannsynlighet_ulykke ;
                                skos:inScheme :spn_terminologi ;
@@ -657,7 +657,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#leverandoerklarering
-:leverandoerklarering rdf:type owl:NamedIndividual ,
+:leverandoerklarering a
                               skos:Concept ;
                      skos:broader :leverandoersikkerhet ;
                      skos:inScheme :spn_terminologi ;
@@ -668,7 +668,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#leverandoersikkerhet
-:leverandoersikkerhet rdf:type owl:NamedIndividual ,
+:leverandoersikkerhet a
                               skos:Concept ;
                      skos:broader :domene ;
                      skos:inScheme :spn_terminologi ;
@@ -678,7 +678,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#leverandoersaarbarhet
-:leverandoersaarbarhet rdf:type owl:NamedIndividual ,
+:leverandoersaarbarhet a
                               skos:Concept ;
                      skos:broader :saarbarhet ;
                      skos:inScheme :spn_terminologi ;
@@ -688,7 +688,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#menneskeskapt_ulykke
-:menneskeskapt_ulykke rdf:type owl:NamedIndividual ,
+:menneskeskapt_ulykke a
                                skos:Concept ;
                       skos:broader :ulykke ;
                       skos:inScheme :spn_terminologi ;
@@ -696,7 +696,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#misforstaaelse
-:misforstaaelse rdf:type owl:NamedIndividual ,
+:misforstaaelse a
                         skos:Concept ;
                skos:broader :menneskeskapt_ulykke ;
                skos:inScheme :spn_terminologi ;
@@ -705,7 +705,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#misnoeye
-:misnoeye rdf:type owl:NamedIndividual ,
+:misnoeye a
                   skos:Concept ;
          skos:broader :personellsaarbarhet ;
          skos:inScheme :spn_terminologi ;
@@ -714,7 +714,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#monitorering
-:monitorering rdf:type owl:NamedIndividual ,
+:monitorering a
                        skos:Concept ;
               skos:broader :sikkerhetshjulet ;
               skos:inScheme :spn_terminologi ;
@@ -724,7 +724,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#motstandsdyktighet_handlemaatefaktor
-:motstandsdyktighet_handlemaatefaktor rdf:type owl:NamedIndividual ,
+:motstandsdyktighet_handlemaatefaktor a
                                               skos:Concept ;
                                      skos:broader :bestanddel ;
                                      skos:definition "egenskap ved verdi om at det kreves ressurser for √• for√•rsake et bortfall av verdiens funksjon eller konfidensialitet, gitt at en trusselakt√∏r har funnet verdien og har kommet seg til et sted hvor et angrep kan gjennomf√∏res fra"@nb ;
@@ -733,7 +733,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#motstandsdyktighetsnivaa
-:motstandsdyktighetsnivaa rdf:type owl:NamedIndividual ,
+:motstandsdyktighetsnivaa a
                                   skos:Concept ;
                          skos:broader :motstandsdyktighet_handlemaatefaktor ;
                          skos:inScheme :spn_terminologi ;
@@ -742,7 +742,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#motstandsdyktighetsnivaa_hoeyt
-:motstandsdyktighetsnivaa_hoeyt rdf:type owl:NamedIndividual ,
+:motstandsdyktighetsnivaa_hoeyt a
                                        skos:Concept ;
                               skos:broader :motstandsdyktighetsnivaa ;
                               skos:inScheme :spn_terminologi ;
@@ -751,7 +751,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#motstandsdyktighetsnivaa_lavt
-:motstandsdyktighetsnivaa_lavt rdf:type owl:NamedIndividual ,
+:motstandsdyktighetsnivaa_lavt a
                                        skos:Concept ;
                               skos:broader :motstandsdyktighetsnivaa ;
                               skos:inScheme :spn_terminologi ;
@@ -760,7 +760,7 @@ Historisk eksempel: CIAs fordekte oppkj√∏p og utnyttelse av Crypto AG fra 1970 -
 
 
 ###  https://www.johannesodegard.no/terminologi#motstandsdyktighetsnivaa_moderat
-:motstandsdyktighetsnivaa_moderat rdf:type owl:NamedIndividual ,
+:motstandsdyktighetsnivaa_moderat a
                                           skos:Concept ;
                                  skos:broader :motstandsdyktighetsnivaa ;
                                  skos:inScheme :spn_terminologi ;
@@ -770,7 +770,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#motstandsdyktighetsnivaa_svaert_hoeyt
-:motstandsdyktighetsnivaa_svaert_hoeyt rdf:type owl:NamedIndividual ,
+:motstandsdyktighetsnivaa_svaert_hoeyt a
                                              skos:Concept ;
                                     skos:broader :motstandsdyktighetsnivaa ;
                                     skos:inScheme :spn_terminologi ;
@@ -779,7 +779,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#motstandsdyktighetsnivaa_svaert_lavt
-:motstandsdyktighetsnivaa_svaert_lavt rdf:type owl:NamedIndividual ,
+:motstandsdyktighetsnivaa_svaert_lavt a
                                              skos:Concept ;
                                     skos:broader :motstandsdyktighetsnivaa ;
                                     skos:inScheme :spn_terminologi ;
@@ -788,7 +788,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#naturskapt_ulykke
-:naturskapt_ulykke rdf:type owl:NamedIndividual ,
+:naturskapt_ulykke a
                             skos:Concept ;
                    skos:broader :ulykke ;
                    skos:inScheme :spn_terminologi ;
@@ -796,7 +796,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#nulldagssaarbarhet
-:nulldagssaarbarhet rdf:type owl:NamedIndividual ,
+:nulldagssaarbarhet a
                             skos:Concept ;
                    skos:broader :digital_saarbarhet ;
                    skos:inScheme :spn_terminologi ;
@@ -805,7 +805,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#oppkjoepssikkerhet
-:oppkjoepssikkerhet rdf:type owl:NamedIndividual ,
+:oppkjoepssikkerhet a
                             skos:Concept ;
                    skos:broader :domene ;
                    skos:inScheme :spn_terminologi ;
@@ -815,7 +815,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#personellautorisasjon
-:personellautorisasjon rdf:type owl:NamedIndividual ,
+:personellautorisasjon a
                                 skos:Concept ;
                        skos:broader :personellsikkerhet ;
                        skos:inScheme :spn_terminologi ;
@@ -827,7 +827,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#personellklarering
-:personellklarering rdf:type owl:NamedIndividual ,
+:personellklarering a
                              skos:Concept ;
                     skos:broader :personellsikkerhet ;
                     skos:inScheme :spn_terminologi ;
@@ -839,7 +839,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#personellsikkerhet
-:personellsikkerhet rdf:type owl:NamedIndividual ,
+:personellsikkerhet a
                              skos:Concept ;
                     skos:broader :domene ;
                     skos:inScheme :spn_terminologi ;
@@ -850,7 +850,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#personellsaarbarhet
-:personellsaarbarhet rdf:type owl:NamedIndividual ,
+:personellsaarbarhet a
                              skos:Concept ;
                     skos:broader :saarbarhet ;
                     skos:inScheme :spn_terminologi ;
@@ -860,7 +860,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#personkontroll
-:personkontroll rdf:type owl:NamedIndividual ,
+:personkontroll a
                          skos:Concept ;
                 skos:broader :personellsikkerhet ;
                 skos:inScheme :spn_terminologi ;
@@ -870,7 +870,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#rapportering
-:rapportering rdf:type owl:NamedIndividual ,
+:rapportering a
                        skos:Concept ;
               skos:broader :monitorering ;
               skos:inScheme :spn_terminologi ;
@@ -881,7 +881,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#reaksjonsstyrke
-:reaksjonsstyrke rdf:type owl:NamedIndividual ,
+:reaksjonsstyrke a
                           skos:Concept ;
                  skos:broader :skadereduserende_tiltak ;
                  skos:inScheme :spn_terminologi ;
@@ -891,14 +891,14 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#ref
-:ref rdf:type owl:NamedIndividual ,
+:ref a
               skos:Concept ;
      skos:inScheme :spn_terminologi ;
      skos:prefLabel "ref"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#revisjon
-:revisjon rdf:type owl:NamedIndividual ,
+:revisjon a
                    skos:Concept ;
           skos:broader :evaluering ;
           skos:inScheme :spn_terminologi ;
@@ -908,7 +908,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#ringvirkning
-:ringvirkning rdf:type owl:NamedIndividual ,
+:ringvirkning a
                        skos:Concept ;
               skos:broader :konsekvens_handlemaate ;
               skos:inScheme :spn_terminologi ;
@@ -919,7 +919,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#ringvirkningsreduserende_tiltak
-:ringvirkningsreduserende_tiltak rdf:type owl:NamedIndividual ,
+:ringvirkningsreduserende_tiltak a
                                           skos:Concept ;
                                  skos:broader :beredskapstiltak ;
                                  skos:inScheme :spn_terminologi ;
@@ -928,7 +928,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#risiko
-:risiko rdf:type owl:NamedIndividual ,
+:risiko a
                  skos:Concept ;
         skos:broader :risikovurdering ;
         skos:inScheme :spn_terminologi ;
@@ -938,7 +938,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#risikoanalyse
-:risikoanalyse rdf:type owl:NamedIndividual ,
+:risikoanalyse a
                         skos:Concept ;
                skos:broader :risikovurdering ;
                skos:inScheme :spn_terminologi ;
@@ -949,7 +949,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#risikobilde
-:risikobilde rdf:type owl:NamedIndividual ,
+:risikobilde a
                       skos:Concept ;
              skos:broader :risikovurdering ;
              skos:inScheme :spn_terminologi ;
@@ -958,7 +958,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#risikoeier
-:risikoeier rdf:type owl:NamedIndividual ,
+:risikoeier a
                      skos:Concept ;
             skos:broader :risikovurdering ;
             skos:inScheme :spn_terminologi ;
@@ -967,7 +967,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#risikoobjekt
-:risikoobjekt rdf:type owl:NamedIndividual ,
+:risikoobjekt a
                        skos:Concept ;
               skos:broader :risikovurdering ;
               skos:inScheme :spn_terminologi ;
@@ -976,7 +976,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#risikovurdering
-:risikovurdering rdf:type owl:NamedIndividual ,
+:risikovurdering a
                           skos:Concept ;
                  skos:broader :sikkerhetshjulet ;
                  skos:inScheme :spn_terminologi ;
@@ -986,7 +986,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#sammensatte_trusler
-:sammensatte_trusler rdf:type owl:NamedIndividual ,
+:sammensatte_trusler a
                               skos:Concept ;
                      skos:broader :trussel ;
                      skos:inScheme :spn_terminologi ;
@@ -997,7 +997,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#sannsynlighet_ulykke
-:sannsynlighet_ulykke rdf:type owl:NamedIndividual ,
+:sannsynlighet_ulykke a
                                skos:Concept ;
                       skos:broader :fare ;
                       skos:inScheme :spn_terminologi ;
@@ -1008,7 +1008,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#sannsynlighetsvurdering
-:sannsynlighetsvurdering rdf:type owl:NamedIndividual ,
+:sannsynlighetsvurdering a
                                   skos:Concept ;
                          skos:broader :fare ;
                          skos:inScheme :spn_terminologi ;
@@ -1018,7 +1018,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#scenarioanalyse
-:scenarioanalyse rdf:type owl:NamedIndividual ,
+:scenarioanalyse a
                           skos:Concept ;
                  skos:broader :saarbarhetsvurdering ;
                  skos:inScheme :spn_terminologi ;
@@ -1028,7 +1028,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#sikkerhetsavtale
-:sikkerhetsavtale rdf:type owl:NamedIndividual ,
+:sikkerhetsavtale a
                            skos:Concept ;
                   skos:broader :leverandoersikkerhet ;
                   skos:inScheme :spn_terminologi ;
@@ -1038,7 +1038,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#sikkerhetsbrudd
-:sikkerhetsbrudd rdf:type owl:NamedIndividual ,
+:sikkerhetsbrudd a
                           skos:Concept ;
                  skos:broader :sikringstiltak ;
                  skos:inScheme :spn_terminologi ;
@@ -1047,7 +1047,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#sikkerhetsgrad
-:sikkerhetsgrad rdf:type owl:NamedIndividual ,
+:sikkerhetsgrad a
                          skos:Concept ;
                 skos:broader :sikkerhetsgradering ;
                 skos:inScheme :spn_terminologi ;
@@ -1057,7 +1057,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#sikkerhetsgradering
-:sikkerhetsgradering rdf:type owl:NamedIndividual ,
+:sikkerhetsgradering a
                               skos:Concept ;
                      skos:broader :sikringstiltak ;
                      skos:inScheme :spn_terminologi ;
@@ -1067,7 +1067,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#sikkerhetshjulet
-:sikkerhetshjulet rdf:type owl:NamedIndividual ,
+:sikkerhetshjulet a
                            skos:Concept ;
                   skos:broader :forebyggende_sikkerhet ;
                   skos:inScheme :spn_terminologi ;
@@ -1078,7 +1078,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#sikkerhetsmaal
-:sikkerhetsmaal rdf:type owl:NamedIndividual ,
+:sikkerhetsmaal a
                         skos:Concept ;
                skos:broader :sikkerhetsstyring ;
                skos:inScheme :spn_terminologi ;
@@ -1089,7 +1089,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#sikkerhetssluse
-:sikkerhetssluse rdf:type owl:NamedIndividual ,
+:sikkerhetssluse a
                           skos:Concept ;
                  skos:broader :fysisk_sikkerhet ;
                  skos:inScheme :spn_terminologi ;
@@ -1099,7 +1099,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#sikkerhetsstrategi
-:sikkerhetsstrategi rdf:type owl:NamedIndividual ,
+:sikkerhetsstrategi a
                              skos:Concept ;
                     skos:broader :sikkerhetsstyring ;
                     skos:inScheme :spn_terminologi ;
@@ -1108,7 +1108,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#sikkerhetsstyring
-:sikkerhetsstyring rdf:type owl:NamedIndividual ,
+:sikkerhetsstyring a
                             skos:Concept ;
                    skos:broader :sikkerhetshjulet ;
                    skos:inScheme :spn_terminologi ;
@@ -1118,7 +1118,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#sikkerhetstruende_oekonomisk_virkemiddelbruk
-:sikkerhetstruende_oekonomisk_virkemiddelbruk rdf:type owl:NamedIndividual ,
+:sikkerhetstruende_oekonomisk_virkemiddelbruk a
                                                       skos:Concept ;
                                              skos:broader :trussel ;
                                              skos:inScheme :spn_terminologi ;
@@ -1128,7 +1128,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#sikringstiltak
-:sikringstiltak rdf:type owl:NamedIndividual ,
+:sikringstiltak a
                          skos:Concept ;
                 skos:broader :implementering ;
                 skos:inScheme :spn_terminologi ;
@@ -1139,7 +1139,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#skadefoelge
-:skadefoelge rdf:type owl:NamedIndividual ,
+:skadefoelge a
                      skos:Concept ;
             skos:broader :konsekvens_handlemaate ;
             skos:inScheme :spn_terminologi ;
@@ -1150,7 +1150,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#skadereduserende_tiltak
-:skadereduserende_tiltak rdf:type owl:NamedIndividual ,
+:skadereduserende_tiltak a
                                   skos:Concept ;
                          skos:broader :beredskapstiltak ;
                          skos:inScheme :spn_terminologi ;
@@ -1159,7 +1159,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#skadevurdering
-:skadevurdering rdf:type owl:NamedIndividual ,
+:skadevurdering a
                          skos:Concept ;
                 skos:broader :analyseobjekt ;
                 skos:inScheme :spn_terminologi ;
@@ -1168,7 +1168,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#skjerming
-:skjerming rdf:type owl:NamedIndividual ,
+:skjerming a
                     skos:Concept ;
            skos:broader :angrepssikring ;
            skos:inScheme :spn_terminologi ;
@@ -1178,7 +1178,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#snikfolging
-:snikfoelging rdf:type owl:NamedIndividual ,
+:snikfoelging a
                       skos:Concept ;
              skos:broader :fysisk_saarbarhet ;
              skos:inScheme :spn_terminologi ;
@@ -1188,7 +1188,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#solstorm
-:solstorm rdf:type owl:NamedIndividual ,
+:solstorm a
                    skos:Concept ;
           skos:broader :naturskapt_ulykke ;
           skos:inScheme :spn_terminologi ;
@@ -1198,7 +1198,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#spionasje
-:spionasje rdf:type owl:NamedIndividual ,
+:spionasje a
                     skos:Concept ;
            skos:broader :angrep ;
            skos:inScheme :spn_terminologi ;
@@ -1210,7 +1210,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#styringsdokument_for_sikkerhet
-:styringsdokument_for_sikkerhet rdf:type owl:NamedIndividual ,
+:styringsdokument_for_sikkerhet a
                                          skos:Concept ;
                                 skos:broader :sikkerhetsstyring ;
                                 skos:inScheme :spn_terminologi ;
@@ -1219,7 +1219,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#synlighet_handlemaatefaktor
-:synlighet_handlemaatefaktor rdf:type owl:NamedIndividual ,
+:synlighet_handlemaatefaktor a
                                      skos:Concept ;
                             skos:broader :bestanddel ;
                             skos:inScheme :spn_terminologi ;
@@ -1228,7 +1228,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#synlighet_hoey
-:synlighet_hoey rdf:type owl:NamedIndividual ,
+:synlighet_hoey a
                         skos:Concept ;
                skos:broader :synlighetsnivaa ;
                skos:inScheme :spn_terminologi ;
@@ -1237,7 +1237,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#synlighet_lav
-:synlighet_lav rdf:type owl:NamedIndividual ,
+:synlighet_lav a
                         skos:Concept ;
                skos:broader :synlighetsnivaa ;
                skos:inScheme :spn_terminologi ;
@@ -1246,7 +1246,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#synlighet_moderat
-:synlighet_moderat rdf:type owl:NamedIndividual ,
+:synlighet_moderat a
                             skos:Concept ;
                    skos:broader :synlighetsnivaa ;
                    skos:inScheme :spn_terminologi ;
@@ -1255,7 +1255,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#synlighet_svaert_hoey
-:synlighet_svaert_hoey rdf:type owl:NamedIndividual ,
+:synlighet_svaert_hoey a
                               skos:Concept ;
                      skos:broader :synlighetsnivaa ;
                      skos:inScheme :spn_terminologi ;
@@ -1264,7 +1264,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#synlighet_svaert_lav
-:synlighet_svaert_lav rdf:type owl:NamedIndividual ,
+:synlighet_svaert_lav a
                               skos:Concept ;
                      skos:broader :synlighetsnivaa ;
                      skos:inScheme :spn_terminologi ;
@@ -1273,7 +1273,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#synlighetsnivaa
-:synlighetsnivaa rdf:type owl:NamedIndividual ,
+:synlighetsnivaa a
                          skos:Concept ;
                 skos:broader :synlighet_handlemaatefaktor ;
                 skos:inScheme :spn_terminologi ;
@@ -1282,7 +1282,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#systemoevelse
-:systemoevelse rdf:type owl:NamedIndividual ,
+:systemoevelse a
                        skos:Concept ;
               skos:broader :evaluering ;
               skos:inScheme :spn_terminologi ;
@@ -1291,7 +1291,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#saarbarhet
-:saarbarhet rdf:type owl:NamedIndividual ,
+:saarbarhet a
                     skos:Concept ;
            skos:broader :bestanddel ;
            skos:inScheme :spn_terminologi ;
@@ -1302,7 +1302,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#saarbarhetsnivaa
-:saarbarhetsnivaa rdf:type owl:NamedIndividual ,
+:saarbarhetsnivaa a
                          skos:Concept ;
                 skos:broader :saarbarhetsvurdering ;
                 skos:inScheme :spn_terminologi ;
@@ -1310,7 +1310,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#saarbarhetsvurdering
-:saarbarhetsvurdering rdf:type owl:NamedIndividual ,
+:saarbarhetsvurdering a
                               skos:Concept ;
                      skos:broader :analyseobjekt ;
                      skos:inScheme :spn_terminologi ;
@@ -1320,7 +1320,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#tilgjengelighet
-:tilgjengelighet rdf:type owl:NamedIndividual ,
+:tilgjengelighet a
                           skos:Concept ;
                  skos:broader :funksjon ;
                  skos:inScheme :spn_terminologi ;
@@ -1329,7 +1329,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#tilgjengelighet_handlemaatefaktor
-:tilgjengelighet_handlemaatefaktor rdf:type owl:NamedIndividual ,
+:tilgjengelighet_handlemaatefaktor a
                                            skos:Concept ;
                                   skos:broader :bestanddel ;
                                   skos:inScheme :spn_terminologi ;
@@ -1339,7 +1339,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#tilgjengelighet_hoey
-:tilgjengelighet_hoey rdf:type owl:NamedIndividual ,
+:tilgjengelighet_hoey a
                               skos:Concept ;
                      skos:broader :tilgjengelighetsnivaa ;
                      skos:inScheme :spn_terminologi ;
@@ -1347,7 +1347,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#tilgjengelighet_lav
-:tilgjengelighet_lav rdf:type owl:NamedIndividual ,
+:tilgjengelighet_lav a
                               skos:Concept ;
                      skos:broader :tilgjengelighetsnivaa ;
                      skos:inScheme :spn_terminologi ;
@@ -1355,7 +1355,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#tilgjengelighet_moderat
-:tilgjengelighet_moderat rdf:type owl:NamedIndividual ,
+:tilgjengelighet_moderat a
                                   skos:Concept ;
                          skos:broader :tilgjengelighetsnivaa ;
                          skos:inScheme :spn_terminologi ;
@@ -1363,7 +1363,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#tilgjengelighet_svaert_hoey
-:tilgjengelighet_svaert_hoey rdf:type owl:NamedIndividual ,
+:tilgjengelighet_svaert_hoey a
                                     skos:Concept ;
                            skos:broader :tilgjengelighetsnivaa ;
                            skos:inScheme :spn_terminologi ;
@@ -1371,7 +1371,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#tilgjengelighet_svaert_lav
-:tilgjengelighet_svaert_lav rdf:type owl:NamedIndividual ,
+:tilgjengelighet_svaert_lav a
                                     skos:Concept ;
                            skos:broader :tilgjengelighetsnivaa ;
                            skos:inScheme :spn_terminologi ;
@@ -1379,7 +1379,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#tilgjengelighetsnivaa
-:tilgjengelighetsnivaa rdf:type owl:NamedIndividual ,
+:tilgjengelighetsnivaa a
                                skos:Concept ;
                       skos:broader :tilgjengelighet_handlemaatefaktor ;
                       skos:inScheme :spn_terminologi ;
@@ -1388,7 +1388,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#to-faktor-autentisering
-:to-faktor-autentisering rdf:type owl:NamedIndividual ,
+:to-faktor-autentisering a
                                   skos:Concept ;
                          skos:broader :digital_sikkerhet ;
                          skos:inScheme :spn_terminologi ;
@@ -1399,7 +1399,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#trussel
-:trussel rdf:type owl:NamedIndividual ,
+:trussel a
                   skos:Concept ;
          skos:broader :trusselvurdering ;
          skos:inScheme :spn_terminologi ;
@@ -1409,7 +1409,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#trusselnivaa
-:trusselnivaa rdf:type owl:NamedIndividual ,
+:trusselnivaa a
                       skos:Concept ;
              skos:broader :trusselvurdering ;
              skos:inScheme :spn_terminologi ;
@@ -1419,7 +1419,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#trusselnivaa_hoeyt
-:trusselnivaa_hoeyt rdf:type owl:NamedIndividual ,
+:trusselnivaa_hoeyt a
                            skos:Concept ;
                   skos:broader :trusselnivaa ;
                   skos:inScheme :spn_terminologi ;
@@ -1428,7 +1428,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#trusselnivaa_lavt
-:trusselnivaa_lavt rdf:type owl:NamedIndividual ,
+:trusselnivaa_lavt a
                            skos:Concept ;
                   skos:broader :trusselnivaa ;
                   skos:inScheme :spn_terminologi ;
@@ -1437,7 +1437,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#trusselnivaa_moderat
-:trusselnivaa_moderat rdf:type owl:NamedIndividual ,
+:trusselnivaa_moderat a
                               skos:Concept ;
                      skos:broader :trusselnivaa ;
                      skos:inScheme :spn_terminologi ;
@@ -1446,7 +1446,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#trusselnivaa_svaert_hoeyt
-:trusselnivaa_svaert_hoeyt rdf:type owl:NamedIndividual ,
+:trusselnivaa_svaert_hoeyt a
                                  skos:Concept ;
                         skos:broader :trusselnivaa ;
                         skos:inScheme :spn_terminologi ;
@@ -1455,7 +1455,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#trusselnivaa_svaert_lavt
-:trusselnivaa_svaert_lavt rdf:type owl:NamedIndividual ,
+:trusselnivaa_svaert_lavt a
                                  skos:Concept ;
                         skos:broader :trusselnivaa ;
                         skos:inScheme :spn_terminologi ;
@@ -1464,7 +1464,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#trusselvurdering
-:trusselvurdering rdf:type owl:NamedIndividual ,
+:trusselvurdering a
                            skos:Concept ;
                   skos:broader :analyseobjekt ;
                   skos:inScheme :spn_terminologi ;
@@ -1474,7 +1474,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#uaktsomhet
-:uaktsomhet rdf:type owl:NamedIndividual ,
+:uaktsomhet a
                      skos:Concept ;
             skos:broader :menneskeskapt_ulykke ;
             skos:inScheme :spn_terminologi ;
@@ -1483,7 +1483,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#ulykke
-:ulykke rdf:type owl:NamedIndividual ,
+:ulykke a
                  skos:Concept ;
         skos:broader :fare ;
         skos:inScheme :spn_terminologi ;
@@ -1492,7 +1492,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#ulykkesrisiko
-:ulykkesrisiko rdf:type owl:NamedIndividual ,
+:ulykkesrisiko a
                         skos:Concept ;
                skos:broader :risikovurdering ;
                skos:inScheme :spn_terminologi ;
@@ -1501,7 +1501,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#ulykkessikkerhet
-:ulykkessikkerhet rdf:type owl:NamedIndividual ,
+:ulykkessikkerhet a
                            skos:Concept ;
                   skos:broader :ulykkesrisiko ;
                   skos:inScheme :spn_terminologi ;
@@ -1510,7 +1510,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#ulykkessikring
-:ulykkessikring rdf:type owl:NamedIndividual ,
+:ulykkessikring a
                          skos:Concept ;
                 skos:broader :sikringstiltak ;
                 skos:inScheme :spn_terminologi ;
@@ -1518,7 +1518,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#usikkerhet
-:usikkerhet rdf:type owl:NamedIndividual ,
+:usikkerhet a
                      skos:Concept ;
             skos:broader :risikovurdering ;
             skos:inScheme :spn_terminologi ;
@@ -1528,7 +1528,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#usikkerhetsnivaa
-:usikkerhetsnivaa rdf:type owl:NamedIndividual ,
+:usikkerhetsnivaa a
                           skos:Concept ;
                  skos:broader :usikkerhet ;
                  skos:inScheme :spn_terminologi ;
@@ -1538,7 +1538,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#uoensket_hendelse
-:uoensket_hendelse rdf:type owl:NamedIndividual ,
+:uoensket_hendelse a
                            skos:Concept ;
                   skos:broader :verdi ;
                   skos:inScheme :spn_terminologi ;
@@ -1549,7 +1549,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#verdi
-:verdi rdf:type owl:NamedIndividual ,
+:verdi a
                 skos:Concept ;
        skos:broader :risikovurdering ;
        skos:inScheme :spn_terminologi ;
@@ -1560,7 +1560,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#verdikartlegging
-:verdikartlegging rdf:type owl:NamedIndividual ,
+:verdikartlegging a
                            skos:Concept ;
                   skos:broader :risikovurdering ;
                   skos:inScheme :spn_terminologi ;
@@ -1569,7 +1569,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#verifikasjon
-:verifikasjon rdf:type owl:NamedIndividual ,
+:verifikasjon a
                        skos:Concept ;
               skos:broader :sikringstiltak ;
               skos:inScheme :spn_terminologi ;
@@ -1578,7 +1578,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#verifikasjonsstyrke
-:verifikasjonsstyrke rdf:type owl:NamedIndividual ,
+:verifikasjonsstyrke a
                               skos:Concept ;
                      skos:broader :verifikasjon ;
                      skos:inScheme :spn_terminologi ;
@@ -1589,7 +1589,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#vulkanutbrudd
-:vulkanutbrudd rdf:type owl:NamedIndividual ,
+:vulkanutbrudd a
                         skos:Concept ;
                skos:broader :naturskapt_ulykke ;
                skos:inScheme :spn_terminologi ;
@@ -1599,7 +1599,7 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan mots√• et angrep fra √
 
 
 ###  https://www.johannesodegard.no/terminologi#oekonomiske_utfordringer
-:oekonomiske_utfordringer rdf:type owl:NamedIndividual ,
+:oekonomiske_utfordringer a
                                   skos:Concept ;
                          skos:broader :personellsaarbarhet ;
                          skos:prefLabel "√∏konomiske utfordringer"@nb .
