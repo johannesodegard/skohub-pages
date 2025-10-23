@@ -8,33 +8,10 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 
-###  https://www.johannesodegard.no/terminologi#spn_terminologi
-:spn_terminologi a
-                          skos:ConceptScheme ;
-                 dct:created "2025-10-23"^^xsd:date ;
-                 dct:creator "Johannes Ødegård"@nb ;
-                 dct:language "nb" ;
-                 dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-                 dct:title "Sikkerhet på norsk – terminologi"@nb ;
-                 skos:hasTopConcept :spn .
-
-###  https://www.johannesodegard.no/terminologi#spn
-:spn a
-              skos:Concept ;
-     skos:inScheme :spn_terminologi ;
-     skos:topConceptOf :spn_terminologi ;
-     skos:definition "uavhengig prosjekt og faglig initiativ for begrepsutvikling, metode og kunnskapsformidling innen forebyggende sikkerhet og nasjonal sikkerhet"@nb ;
-     skos:note "Sikkerhet på norsk (2023–) er et uavhengig prosjekt som har til hensikt å øke både kjennskap til og kunnskap om forebyggende sikkerhet. Prosjektet springer ut fra, men er ikke avgrenset til, forebyggende sikkerhetsarbeid etter sikkerhetsloven av 1. juni 2018 nr. 24. Rammeverket og begrepsbruken er primært tilpasset virksomheter av betydning for nasjonal sikkerhet, og er beskrevet i boken Angrepssikkerhet (2026) med tilhørende terminologi."@nb ;
-     skos:prefLabel "Sikkerhet på norsk"@nb .
-
-
-
-
 
 #################################################################
 #    Individuals
 #################################################################
-
 
 
 ###  https://www.johannesodegard.no/terminologi#analyseobjekt
@@ -123,6 +100,16 @@
                  skos:prefLabel "beredskapslager"@nb .
 
 
+###  https://www.johannesodegard.no/terminologi#beredskapsoevelse
+:beredskapsoevelse a
+                            skos:Concept ;
+                   skos:broader :beredskapstiltak ,
+                                :haandtering ;
+                   skos:inScheme :spn_terminologi ;
+                   skos:definition "prosess for å øve på, vurdere og forbedre prestasjonen i en hendelseshåndtering"@nb ;
+                   skos:prefLabel "beredskapsøvelse"@nb .
+
+
 ###  https://www.johannesodegard.no/terminologi#beredskapsplan
 :beredskapsplan a
                          skos:Concept ;
@@ -143,25 +130,15 @@
                   skos:prefLabel "beredskapstiltak"@nb .
 
 
-###  https://www.johannesodegard.no/terminologi#beredskapsoevelse
-:beredskapsoevelse a
-                           skos:Concept ;
-                  skos:broader :beredskapstiltak ,
-                               :haandtering ;
-                  skos:inScheme :spn_terminologi ;
-                  skos:definition "prosess for å øve på, vurdere og forbedre prestasjonen i en hendelseshåndtering"@nb ;
-                  skos:prefLabel "beredskapsøvelse"@nb .
-
-
 ###  https://www.johannesodegard.no/terminologi#bestanddel
 :bestanddel a
                      skos:Concept ;
             skos:broader :saarbarhetsvurdering ;
             skos:inScheme :spn_terminologi ;
+            skos:related :verdi ;
             skos:altLabel "mål"@nb ;
             skos:definition "liv og helse, materielle eller immaterielle størrelser som kan bli utsatt for en uønsket hendelse"@nb ;
-            skos:prefLabel "bestanddel"@nb ;
-            skos:related :verdi .
+            skos:prefLabel "bestanddel"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#daglig_sikkerhetsmessig_ledelse
@@ -182,6 +159,16 @@
            skos:prefLabel "deteksjon"@nb .
 
 
+###  https://www.johannesodegard.no/terminologi#digital_saarbarhet
+:digital_saarbarhet a
+                             skos:Concept ;
+                    skos:broader :saarbarhet ;
+                    skos:inScheme :spn_terminologi ;
+                    skos:definition "sårbarhet knyttet til digital infrastruktur som informasjon-, kommunikasjon- og teknologisystemer"@nb ;
+                    skos:prefLabel "digital sårbarhet"@nb ;
+                    skos:related :digital_sikkerhet .
+
+
 ###  https://www.johannesodegard.no/terminologi#digital_sikkerhet
 :digital_sikkerhet a
                             skos:Concept ;
@@ -189,16 +176,6 @@
                    skos:inScheme :spn_terminologi ;
                    skos:definition "aktiviteter og tiltak for å redusere sårbarheter knyttet til digital infrastruktur som informasjon-, kommunikasjon- og teknologisystemer"@nb ;
                    skos:prefLabel "digital sikkerhet"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#digital_saarbarhet
-:digital_saarbarhet a
-                            skos:Concept ;
-                   skos:broader :saarbarhet ;
-                   skos:inScheme :spn_terminologi ;
-                   skos:definition "sårbarhet knyttet til digital infrastruktur som informasjon-, kommunikasjon- og teknologisystemer"@nb ;
-                   skos:prefLabel "digital sårbarhet"@nb ;
-                   skos:related :digital_sikkerhet .
 
 
 ###  https://www.johannesodegard.no/terminologi#dokumentasjon
@@ -215,7 +192,7 @@
         skos:broader :sikringstiltak ;
         skos:inScheme :spn_terminologi ;
         skos:altLabel "domene"@nb ;
-        skos:closeMatch <http://www.johannesodegard.no/terminologi#https://termlex.no/term/171137528906133/nb> ;
+        skos:closeMatch <https://termlex.no/term/171137528906133/nb> ;
         skos:definition "spesialkunnskapsfelt for sikringstiltak"@nb ;
         skos:note "Sikringstiltak kan kategoriseres innenfor ulike fagområder som krever spesialisert kunnskap om aktuelle sårbarheter."@nb ;
         skos:prefLabel "fagområde"@nb ;
@@ -262,12 +239,12 @@
 
 ###  https://www.johannesodegard.no/terminologi#forsvarlig_sikkerhetsnivaa
 :forsvarlig_sikkerhetsnivaa a
-                                    skos:Concept ;
-                           skos:broader :risikovurdering ;
-                           skos:inScheme :spn_terminologi ;
-                           skos:definition "tilstand hvor krav til forebyggende sikkerhetsarbeid er oppfylt og det ikke er identifisert uakseptabel risiko"@nb ;
-                           skos:note "Forsvarlig sikkerhetsnivå er brukt flere steder i sikkerhetsloven (jf. §§ 4-3, 5-2, 6-2, 7-3, 7-6), og er en rettslig standard som følger prinsippet om forsvarlighet. \"Hva som vil utgjøre et forsvarlig sikkerhetsnivå for den enkelte virksomhet, og på de enkelte fagfeltene loven dekker, vil måtte vurderes opp mot hva som anses som god faglig praksis på de enkelte fagområdene, herunder informasjons- og informasjonssystemsikkerhet, objekt- og infrastruktursikkerhet og personellsikkerhet. Den nærmere grensedragningen bør, slik utvalget ser det utvikles i samarbeid mellom Sikkerhetsmyndigheten og de aktuelle sektormyndighetene. Dette vil også gi mulighet til å kunne gjøre sektorspesifikke tilpasninger der det er behov.\" (NOU 2016: 19, side 144)"@nb ;
-                           skos:prefLabel "forsvarlig sikkerhetsnivå"@nb .
+                                     skos:Concept ;
+                            skos:broader :risikovurdering ;
+                            skos:inScheme :spn_terminologi ;
+                            skos:definition "tilstand hvor krav til forebyggende sikkerhetsarbeid er oppfylt og det ikke er identifisert uakseptabel risiko"@nb ;
+                            skos:note "Forsvarlig sikkerhetsnivå er brukt flere steder i sikkerhetsloven (jf. §§ 4-3, 5-2, 6-2, 7-3, 7-6), og er en rettslig standard som følger prinsippet om forsvarlighet. \"Hva som vil utgjøre et forsvarlig sikkerhetsnivå for den enkelte virksomhet, og på de enkelte fagfeltene loven dekker, vil måtte vurderes opp mot hva som anses som god faglig praksis på de enkelte fagområdene, herunder informasjons- og informasjonssystemsikkerhet, objekt- og infrastruktursikkerhet og personellsikkerhet. Den nærmere grensedragningen bør, slik utvalget ser det utvikles i samarbeid mellom Sikkerhetsmyndigheten og de aktuelle sektormyndighetene. Dette vil også gi mulighet til å kunne gjøre sektorspesifikke tilpasninger der det er behov.\" (NOU 2016: 19, side 144)"@nb ;
+                            skos:prefLabel "forsvarlig sikkerhetsnivå"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#fortifikasjon
@@ -300,6 +277,16 @@
           skos:prefLabel "funksjon"@nb .
 
 
+###  https://www.johannesodegard.no/terminologi#fysisk_saarbarhet
+:fysisk_saarbarhet a
+                            skos:Concept ;
+                   skos:broader :saarbarhet ;
+                   skos:inScheme :spn_terminologi ;
+                   skos:definition "sårbarhet knyttet til fysiske installasjoner eller objekter"@nb ;
+                   skos:prefLabel "fysisk sårbarhet"@nb ;
+                   skos:related :fysisk_sikkerhet .
+
+
 ###  https://www.johannesodegard.no/terminologi#fysisk_sikkerhet
 :fysisk_sikkerhet a
                            skos:Concept ;
@@ -307,16 +294,6 @@
                   skos:inScheme :spn_terminologi ;
                   skos:definition "aktiviteter og tiltak for å redusere sårbarheter knyttet til fysiske installasjoner og objekter"@nb ;
                   skos:prefLabel "fysisk sikkerhet"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#fysisk_saarbarhet
-:fysisk_saarbarhet a
-                           skos:Concept ;
-                  skos:broader :saarbarhet ;
-                  skos:inScheme :spn_terminologi ;
-                  skos:definition "sårbarhet knyttet til fysiske installasjoner eller objekter"@nb ;
-                  skos:prefLabel "fysisk sårbarhet"@nb ;
-                  skos:related :fysisk_sikkerhet .
 
 
 ###  https://www.johannesodegard.no/terminologi#gjenopprettingsevne
@@ -346,6 +323,15 @@
                  skos:prefLabel "grov uaktsomhet"@nb .
 
 
+###  https://www.johannesodegard.no/terminologi#haandtering
+:haandtering a
+                      skos:Concept ;
+             skos:broader :sikkerhetshjulet ;
+             skos:inScheme :spn_terminologi ;
+             skos:definition "prosess i sikkerhetshjulet som innebærer planlegging, tilrettelegging, gjennomføring og øving på initiering, håndtering, koordinering og kontroll av personell og ressurser for å redusere, kontrollere eller redusere virkningene av en uønsket hendelse"@nb ;
+             skos:prefLabel "håndtering"@nb .
+
+
 ###  https://www.johannesodegard.no/terminologi#handlefrihet
 :handlefrihet a
                        skos:Concept ;
@@ -355,6 +341,31 @@
               skos:definition "uttrykk for omfanget av eksterne forhold som påvirker en trussels evne eller vilje til å gjennomføre et angrep"@nb ;
               skos:example "Den fiendtlige bataljonsstridsgruppen har kapabiliteter til å krysse elven, men har ikke handlefrihet til å gjennomføre dette de neste 48 timene da broleggingskapabiliteten er bundet opp i en annen pågående elvekryssing."@nb ;
               skos:prefLabel "handlefrihet"@nb .
+
+
+###  https://www.johannesodegard.no/terminologi#handlemaate_svaert_enkel
+:handlemaate_svaert_enkel a
+                                   skos:Concept ;
+                          skos:broader :handlemåtekompleksitet ;
+                          skos:inScheme :spn_terminologi ;
+                          skos:definition "enkeltperson uten spesialisert kompetanse og uten forutgående planlegging"@nb ;
+                          skos:note """Anslag: Forbipasserende opportunistisk lovbryter med tilgang på brekkjern.
+Spionasje: Forbipasserende opportunist som snikfølger inn en dør."""@nb ;
+                          skos:prefLabel "svært enkel handlemåte"@nb .
+
+
+###  https://www.johannesodegard.no/terminologi#handlemaate_svaert_kompleks
+:handlemaate_svaert_kompleks a
+                                      skos:Concept ;
+                             skos:broader :handlemåtekompleksitet ;
+                             skos:inScheme :spn_terminologi ;
+                             skos:definition "global stormakt som anvender en betydelig andel av sine strategiske ressurser"@nb ;
+                             skos:note """Anslag: Langtrekkende missiler eller spesialoperasjoner støttet av strategiske ressurser over tid.
+Historisk eksempel: Tungtvannsaksjonene på Vemork fra 1942 - 1943.
+
+Spionasje: Innplassering av agenter som opparbeider seg tillit og tilgang over flere år og blir autorisert.
+Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 - 2018."""@nb ;
+                             skos:prefLabel "svært kompleks handlemåte"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#handlemåte
@@ -407,31 +418,6 @@ Spionasje: Sosial manipulering og utpressing av ansatte."""@nb ;
                     skos:prefLabel "moderat kompleks handlemåte"@nb .
 
 
-###  https://www.johannesodegard.no/terminologi#handlemaate_svaert_enkel
-:handlemaate_svaert_enkel a
-                                 skos:Concept ;
-                        skos:broader :handlemåtekompleksitet ;
-                        skos:inScheme :spn_terminologi ;
-                        skos:definition "enkeltperson uten spesialisert kompetanse og uten forutgående planlegging"@nb ;
-                        skos:note """Anslag: Forbipasserende opportunistisk lovbryter med tilgang på brekkjern.
-Spionasje: Forbipasserende opportunist som snikfølger inn en dør."""@nb ;
-                        skos:prefLabel "svært enkel handlemåte"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#handlemaate_svaert_kompleks
-:handlemaate_svaert_kompleks a
-                                    skos:Concept ;
-                           skos:broader :handlemåtekompleksitet ;
-                           skos:inScheme :spn_terminologi ;
-                           skos:definition "global stormakt som anvender en betydelig andel av sine strategiske ressurser"@nb ;
-                           skos:note """Anslag: Langtrekkende missiler eller spesialoperasjoner støttet av strategiske ressurser over tid.
-Historisk eksempel: Tungtvannsaksjonene på Vemork fra 1942 - 1943.
-
-Spionasje: Innplassering av agenter som opparbeider seg tillit og tilgang over flere år og blir autorisert.
-Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 - 2018."""@nb ;
-                           skos:prefLabel "svært kompleks handlemåte"@nb .
-
-
 ###  https://www.johannesodegard.no/terminologi#handlemåtefaktor
 :handlemåtefaktor a
                            skos:Concept ;
@@ -467,15 +453,6 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
         skos:definition "tiltak for å redusere en bestanddels tilgjengelighet for en trussel, herunder perimetersikring, flytting av lokasjon til en utilgjengelig lokasjon og etablering av verifikasjonsstyrker"@nb ;
         skos:prefLabel "hinder"@nb ;
         skos:related :tilgjengelighet_handlemaatefaktor .
-
-
-###  https://www.johannesodegard.no/terminologi#haandtering
-:haandtering a
-                     skos:Concept ;
-            skos:broader :sikkerhetshjulet ;
-            skos:inScheme :spn_terminologi ;
-            skos:definition "prosess i sikkerhetshjulet som innebærer planlegging, tilrettelegging, gjennomføring og øving på initiering, håndtering, koordinering og kontroll av personell og ressurser for å redusere, kontrollere eller redusere virkningene av en uønsket hendelse"@nb ;
-            skos:prefLabel "håndtering"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#implementering
@@ -535,8 +512,7 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
            skos:broader :sikringstiltak ;
            skos:inScheme :spn_terminologi ;
            skos:definition "beslutning om noe eller noen er sikkerhetsmessig skikket til å forvalte eller behandle verdier som kan få skadefølger ved bortfall av verdiens funksjon eller konfidensialitet"@nb ;
-           skos:prefLabel "klarering"@nb ;
-           skos:related :autorisasjon .
+           skos:prefLabel "klarering"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#kompromat
@@ -569,33 +545,33 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 
 ###  https://www.johannesodegard.no/terminologi#konfidensialitetskonsekvensnivaa
 :konfidensialitetskonsekvensnivaa a
-                                          skos:Concept ;
-                                 skos:broader :konsekvens_handlemaate ;
-                                 skos:inScheme :spn_terminologi ;
-                                 skos:definition "uttrykk for omfanget av skadefølger for konfidensialitetsbehovet som følge av en handlemåte"@nb ;
-                                 skos:note "Vurderes på bakgrunn av omfanget av sikkerhetsgradert informasjon og graderingsnivå (se tabell X i Angrepssikkerhet (2026))."@nb ;
-                                 skos:prefLabel "konsekvensnivå for konfidensialitet"@nb .
+                                           skos:Concept ;
+                                  skos:broader :konsekvens_handlemaate ;
+                                  skos:inScheme :spn_terminologi ;
+                                  skos:definition "uttrykk for omfanget av skadefølger for konfidensialitetsbehovet som følge av en handlemåte"@nb ;
+                                  skos:note "Vurderes på bakgrunn av omfanget av sikkerhetsgradert informasjon og graderingsnivå (se tabell X i Angrepssikkerhet (2026))."@nb ;
+                                  skos:prefLabel "konsekvensnivå for konfidensialitet"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#konfidensialitetsnivaa
 :konfidensialitetsnivaa a
-                                skos:Concept ;
-                       skos:broader :skadevurdering ;
-                       skos:inScheme :spn_terminologi ;
-                       skos:definition "uttrykk for omanget av skadefølger for et risikoobjekt ved helt bortfall av et analyseobjekts funksjon"@nb ;
-                       skos:prefLabel "konfidensialitetsnivå"@nb .
+                                 skos:Concept ;
+                        skos:broader :skadevurdering ;
+                        skos:inScheme :spn_terminologi ;
+                        skos:definition "uttrykk for omanget av skadefølger for et risikoobjekt ved helt bortfall av et analyseobjekts funksjon"@nb ;
+                        skos:prefLabel "konfidensialitetsnivå"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#konsekvens_handlemaate
 :konsekvens_handlemaate a
-                                skos:Concept ;
-                       skos:broader :scenarioanalyse ;
-                       skos:inScheme :spn_terminologi ;
-                       skos:definition "beskrivelse av skadefølger og ringvirkninger av en bestemt handlemåte"@nb ;
-                       skos:note "I rammeverket innbefatter termen 'konsekvens' både primære bortfall av en verdis funksjon eller konfidensialitet, omtalt som 'skadefølger', og sekundære og tertiære bortfall, omtalt som 'ringvirkninger'. Tiltak for å redusere konsekvenser omtales som 'beredskap'."@nb ;
-                       skos:prefLabel "konsekvens"@nb ;
-                       skos:related :haandtering ;
-                       skos:scopeNote "konsekvens vurderes i et scenario"@nb .
+                                 skos:Concept ;
+                        skos:broader :scenarioanalyse ;
+                        skos:inScheme :spn_terminologi ;
+                        skos:definition "beskrivelse av skadefølger og ringvirkninger av en bestemt handlemåte"@nb ;
+                        skos:note "I rammeverket innbefatter termen 'konsekvens' både primære bortfall av en verdis funksjon eller konfidensialitet, omtalt som 'skadefølger', og sekundære og tertiære bortfall, omtalt som 'ringvirkninger'. Tiltak for å redusere konsekvenser omtales som 'beredskap'."@nb ;
+                        skos:prefLabel "konsekvens"@nb ;
+                        skos:related :haandtering ;
+                        skos:scopeNote "konsekvens vurderes i et scenario"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#konsentrasjonsrisiko
@@ -629,21 +605,21 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 
 ###  https://www.johannesodegard.no/terminologi#kritikalitetskonsekvensnivaa
 :kritikalitetskonsekvensnivaa a
-                                      skos:Concept ;
-                             skos:broader :konsekvens_handlemaate ;
-                             skos:inScheme :spn_terminologi ;
-                             skos:definition "uttrykk for omfanget av skadefølger for en funksjon som følge av en handlemåte"@nb ;
-                             skos:prefLabel "konsekvensnivå for kritikalitet"@nb .
+                                       skos:Concept ;
+                              skos:broader :konsekvens_handlemaate ;
+                              skos:inScheme :spn_terminologi ;
+                              skos:definition "uttrykk for omfanget av skadefølger for en funksjon som følge av en handlemåte"@nb ;
+                              skos:prefLabel "konsekvensnivå for kritikalitet"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#kritikalitetsnivaa
 :kritikalitetsnivaa a
-                            skos:Concept ;
-                   skos:broader :kritikalitetskonsekvensnivaa ,
-                                :skadevurdering ;
-                   skos:inScheme :spn_terminologi ;
-                   skos:definition "uttrykk for omanget av skadefølger for et risikoobjekt ved helt bortfall av et analyseobjekts konfidensialitetsbehov"@nb ;
-                   skos:prefLabel "kritikalitetsnivå"@nb .
+                             skos:Concept ;
+                    skos:broader :kritikalitetskonsekvensnivaa ,
+                                 :skadevurdering ;
+                    skos:inScheme :spn_terminologi ;
+                    skos:definition "uttrykk for omanget av skadefølger for et risikoobjekt ved helt bortfall av et analyseobjekts konfidensialitetsbehov"@nb ;
+                    skos:prefLabel "kritikalitetsnivå"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#kunnskapsbasert_sannsynlighet
@@ -658,33 +634,33 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 
 ###  https://www.johannesodegard.no/terminologi#leverandoerklarering
 :leverandoerklarering a
-                              skos:Concept ;
-                     skos:broader :leverandoersikkerhet ;
-                     skos:inScheme :spn_terminologi ;
-                     skos:definition "beslutning om leverandør er sikkerhetsmessig skikket"@nb ;
-                     skos:prefLabel "leverandørklarering"@nb ;
-                     skos:related :klarering ;
-                     skos:scopeNote "jf. sikkerhetsloven av 1. juni 2018 nr. 24 § 9-3"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#leverandoersikkerhet
-:leverandoersikkerhet a
-                              skos:Concept ;
-                     skos:broader :domene ;
-                     skos:inScheme :spn_terminologi ;
-                     skos:definition "aktiviteter og tiltak for å redusere sårbarheter knyttet til kompromittering av informasjon i forbindelse med en anskaffelse eller bortfall av varer og tjenester fra en leverandør"@nb ;
-                     skos:prefLabel "leverandørsikkerhet"@nb ;
-                     skos:related :leverandoersaarbarhet .
+                               skos:Concept ;
+                      skos:broader :leverandoersikkerhet ;
+                      skos:inScheme :spn_terminologi ;
+                      skos:definition "beslutning om leverandør er sikkerhetsmessig skikket"@nb ;
+                      skos:prefLabel "leverandørklarering"@nb ;
+                      skos:related :klarering ;
+                      skos:scopeNote "jf. sikkerhetsloven av 1. juni 2018 nr. 24 § 9-3"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#leverandoersaarbarhet
 :leverandoersaarbarhet a
-                              skos:Concept ;
-                     skos:broader :saarbarhet ;
-                     skos:inScheme :spn_terminologi ;
-                     skos:definition "sårbarheter forårsaket av eksponering av verdier gjennom en anskaffelse eller som følge av avhengigheter til en bestemt leverandør"@nb ;
-                     skos:prefLabel "leverandørsårbarhet"@nb ;
-                     skos:related :leverandoersikkerhet .
+                                skos:Concept ;
+                       skos:broader :saarbarhet ;
+                       skos:inScheme :spn_terminologi ;
+                       skos:definition "sårbarheter forårsaket av eksponering av verdier gjennom en anskaffelse eller som følge av avhengigheter til en bestemt leverandør"@nb ;
+                       skos:prefLabel "leverandørsårbarhet"@nb ;
+                       skos:related :leverandoersikkerhet .
+
+
+###  https://www.johannesodegard.no/terminologi#leverandoersikkerhet
+:leverandoersikkerhet a
+                               skos:Concept ;
+                      skos:broader :domene ;
+                      skos:inScheme :spn_terminologi ;
+                      skos:definition "aktiviteter og tiltak for å redusere sårbarheter knyttet til kompromittering av informasjon i forbindelse med en anskaffelse eller bortfall av varer og tjenester fra en leverandør"@nb ;
+                      skos:prefLabel "leverandørsikkerhet"@nb ;
+                      skos:related :leverandoersaarbarhet .
 
 
 ###  https://www.johannesodegard.no/terminologi#menneskeskapt_ulykke
@@ -697,20 +673,20 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 
 ###  https://www.johannesodegard.no/terminologi#misforstaaelse
 :misforstaaelse a
-                        skos:Concept ;
-               skos:broader :menneskeskapt_ulykke ;
-               skos:inScheme :spn_terminologi ;
-               skos:definition "uklarheter som er årsak til en ulykke"@nb ;
-               skos:prefLabel "misforståelse"@nb .
+                         skos:Concept ;
+                skos:broader :menneskeskapt_ulykke ;
+                skos:inScheme :spn_terminologi ;
+                skos:definition "uklarheter som er årsak til en ulykke"@nb ;
+                skos:prefLabel "misforståelse"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#misnoeye
 :misnoeye a
-                  skos:Concept ;
-         skos:broader :personellsaarbarhet ;
-         skos:inScheme :spn_terminologi ;
-         skos:definition "psykososiale forhold som fører til manglende ønske om å etterleve retningslinjer"@nb ;
-         skos:prefLabel "misnøye"@nb .
+                   skos:Concept ;
+          skos:broader :personellsaarbarhet ;
+          skos:inScheme :spn_terminologi ;
+          skos:definition "psykososiale forhold som fører til manglende ønske om å etterleve retningslinjer"@nb ;
+          skos:prefLabel "misnøye"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#monitorering
@@ -725,66 +701,66 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
 
 ###  https://www.johannesodegard.no/terminologi#motstandsdyktighet_handlemaatefaktor
 :motstandsdyktighet_handlemaatefaktor a
-                                              skos:Concept ;
-                                     skos:broader :bestanddel ;
-                                     skos:definition "egenskap ved verdi om at det kreves ressurser for å forårsake et bortfall av verdiens funksjon eller konfidensialitet, gitt at en trusselaktør har funnet verdien og har kommet seg til et sted hvor et angrep kan gjennomføres fra"@nb ;
-                                     skos:prefLabel "motstandsdyktighet mot trussel"@nb ;
-                                     skos:scopeNote "handlemåtefaktor"@nb .
+                                               skos:Concept ;
+                                      skos:broader :bestanddel ;
+                                      skos:definition "egenskap ved verdi om at det kreves ressurser for å forårsake et bortfall av verdiens funksjon eller konfidensialitet, gitt at en trusselaktør har funnet verdien og har kommet seg til et sted hvor et angrep kan gjennomføres fra"@nb ;
+                                      skos:prefLabel "motstandsdyktighet mot trussel"@nb ;
+                                      skos:scopeNote "handlemåtefaktor"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#motstandsdyktighetsnivaa
 :motstandsdyktighetsnivaa a
-                                  skos:Concept ;
-                         skos:broader :motstandsdyktighet_handlemaatefaktor ;
-                         skos:inScheme :spn_terminologi ;
-                         skos:definition "uttrykk for hvor mye ressurser som kreves for å forårsake et bortfall av bestanddelens funksjon eller konfidensialitet, gitt at en trusselaktør har funnet bestanddelen og har kommet seg til et sted hvor et angrep kan gjennomføres fra"@nb ;
-                         skos:prefLabel "motstandsdyktighetsnivå"@nb .
+                                   skos:Concept ;
+                          skos:broader :motstandsdyktighet_handlemaatefaktor ;
+                          skos:inScheme :spn_terminologi ;
+                          skos:definition "uttrykk for hvor mye ressurser som kreves for å forårsake et bortfall av bestanddelens funksjon eller konfidensialitet, gitt at en trusselaktør har funnet bestanddelen og har kommet seg til et sted hvor et angrep kan gjennomføres fra"@nb ;
+                          skos:prefLabel "motstandsdyktighetsnivå"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#motstandsdyktighetsnivaa_hoeyt
 :motstandsdyktighetsnivaa_hoeyt a
-                                       skos:Concept ;
-                              skos:broader :motstandsdyktighetsnivaa ;
-                              skos:inScheme :spn_terminologi ;
-                              skos:definition "bestanddelens funksjon kan motstå et angrep fra krumbane-artilleri og grupper bevæpnet med håndvåpen og vinkelsliper eller bestanddelens konfidensialitetsbehov kan motstå et angrep fra avanserte dekrypteringsteknikker"@nb ;
-                              skos:prefLabel "høy motstandsdyktighet"@nb .
+                                         skos:Concept ;
+                                skos:broader :motstandsdyktighetsnivaa ;
+                                skos:inScheme :spn_terminologi ;
+                                skos:definition "bestanddelens funksjon kan motstå et angrep fra krumbane-artilleri og grupper bevæpnet med håndvåpen og vinkelsliper eller bestanddelens konfidensialitetsbehov kan motstå et angrep fra avanserte dekrypteringsteknikker"@nb ;
+                                skos:prefLabel "høy motstandsdyktighet"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#motstandsdyktighetsnivaa_lavt
 :motstandsdyktighetsnivaa_lavt a
-                                       skos:Concept ;
-                              skos:broader :motstandsdyktighetsnivaa ;
-                              skos:inScheme :spn_terminologi ;
-                              skos:definition "bestanddelens funksjon kan settes ut av drift av en mindre gruppe personer med enkle redskaper eller standard håandverktøy, eller informasjon med konfidensialitetsbehov kan avleses med enkle teknikker som ROT13 eller tilsvarende"@nb ;
-                              skos:prefLabel "lav motstandsdyktighet"@nb .
+                                        skos:Concept ;
+                               skos:broader :motstandsdyktighetsnivaa ;
+                               skos:inScheme :spn_terminologi ;
+                               skos:definition "bestanddelens funksjon kan settes ut av drift av en mindre gruppe personer med enkle redskaper eller standard håandverktøy, eller informasjon med konfidensialitetsbehov kan avleses med enkle teknikker som ROT13 eller tilsvarende"@nb ;
+                               skos:prefLabel "lav motstandsdyktighet"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#motstandsdyktighetsnivaa_moderat
 :motstandsdyktighetsnivaa_moderat a
-                                          skos:Concept ;
-                                 skos:broader :motstandsdyktighetsnivaa ;
-                                 skos:inScheme :spn_terminologi ;
-                                 skos:definition """bestanddelens funksjon kan motstå et angrep fra mindre grupper med håndvåppen, men vil kunne settes ut av drift ved bruk av lettere eksplosiver eller improviserte
+                                           skos:Concept ;
+                                  skos:broader :motstandsdyktighetsnivaa ;
+                                  skos:inScheme :spn_terminologi ;
+                                  skos:definition """bestanddelens funksjon kan motstå et angrep fra mindre grupper med håndvåppen, men vil kunne settes ut av drift ved bruk av lettere eksplosiver eller improviserte
 redskaper, eller bestanddelens konfidensialitetsbehov kan motså et angrep fra åpent tilgjengelige dekrypteringsverktøy"""@nb ;
-                                 skos:prefLabel "moderat motstandsdyktighetsnivå"@nb .
+                                  skos:prefLabel "moderat motstandsdyktighetsnivå"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#motstandsdyktighetsnivaa_svaert_hoeyt
 :motstandsdyktighetsnivaa_svaert_hoeyt a
-                                             skos:Concept ;
-                                    skos:broader :motstandsdyktighetsnivaa ;
-                                    skos:inScheme :spn_terminologi ;
-                                    skos:definition "bestanddelens funksjon kan motstå et angrep fra bunkerbomber og en spesialstyrke med omfattende forutgående planlegging eller bestanddelenes konfidensialitetsbehov kan motstå stormakters dekrypteringsteknikker"@nb ;
-                                    skos:prefLabel "svært høy motstandsdyktighet"@nb .
+                                                skos:Concept ;
+                                       skos:broader :motstandsdyktighetsnivaa ;
+                                       skos:inScheme :spn_terminologi ;
+                                       skos:definition "bestanddelens funksjon kan motstå et angrep fra bunkerbomber og en spesialstyrke med omfattende forutgående planlegging eller bestanddelenes konfidensialitetsbehov kan motstå stormakters dekrypteringsteknikker"@nb ;
+                                       skos:prefLabel "svært høy motstandsdyktighet"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#motstandsdyktighetsnivaa_svaert_lavt
 :motstandsdyktighetsnivaa_svaert_lavt a
-                                             skos:Concept ;
-                                    skos:broader :motstandsdyktighetsnivaa ;
-                                    skos:inScheme :spn_terminologi ;
-                                    skos:definition "bortfall av bestanddelens funksjon kan forårsakes av en enkeltperson uten redskaper og planlegging; bestanddelens informasjon med konfidensialitetsbehov står i klartekst"@nb ;
-                                    skos:prefLabel "svært lav motstandsdyktighet"@nb .
+                                               skos:Concept ;
+                                      skos:broader :motstandsdyktighetsnivaa ;
+                                      skos:inScheme :spn_terminologi ;
+                                      skos:definition "bortfall av bestanddelens funksjon kan forårsakes av en enkeltperson uten redskaper og planlegging; bestanddelens informasjon med konfidensialitetsbehov står i klartekst"@nb ;
+                                      skos:prefLabel "svært lav motstandsdyktighet"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#naturskapt_ulykke
@@ -797,21 +773,28 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan motså et angrep fra �
 
 ###  https://www.johannesodegard.no/terminologi#nulldagssaarbarhet
 :nulldagssaarbarhet a
-                            skos:Concept ;
-                   skos:broader :digital_saarbarhet ;
-                   skos:inScheme :spn_terminologi ;
-                   skos:definition "sårbarhet i en digital infrastruktur som hverken utvikleren eller cybersikkerhetsmiljøer er kjent med"@nb ;
-                   skos:prefLabel "nulldagssårbarhet"@nb .
+                             skos:Concept ;
+                    skos:broader :digital_saarbarhet ;
+                    skos:inScheme :spn_terminologi ;
+                    skos:definition "sårbarhet i en digital infrastruktur som hverken utvikleren eller cybersikkerhetsmiljøer er kjent med"@nb ;
+                    skos:prefLabel "nulldagssårbarhet"@nb .
+
+
+###  https://www.johannesodegard.no/terminologi#oekonomiske_utfordringer
+:oekonomiske_utfordringer a
+                                   skos:Concept ;
+                          skos:broader :personellsaarbarhet ;
+                          skos:prefLabel "økonomiske utfordringer"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#oppkjoepssikkerhet
 :oppkjoepssikkerhet a
-                            skos:Concept ;
-                   skos:broader :domene ;
-                   skos:inScheme :spn_terminologi ;
-                   skos:definition "aktiviteter og tiltak for å redusere sårbarheter som følge av at en virksomhet av betydning for en risikoeier blir ervervet av en trussel"@nb ;
-                   skos:prefLabel "oppkjøpssikkerhet"@nb ;
-                   skos:scopeNote "jf. sikkerhetsloven av 1. juni 2018 nr. 24 kap. 10"@nb .
+                             skos:Concept ;
+                    skos:broader :domene ;
+                    skos:inScheme :spn_terminologi ;
+                    skos:definition "aktiviteter og tiltak for å redusere sårbarheter som følge av at en virksomhet av betydning for en risikoeier blir ervervet av en trussel"@nb ;
+                    skos:prefLabel "oppkjøpssikkerhet"@nb ;
+                    skos:scopeNote "jf. sikkerhetsloven av 1. juni 2018 nr. 24 kap. 10"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#personellautorisasjon
@@ -819,8 +802,8 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan motså et angrep fra �
                                 skos:Concept ;
                        skos:broader :personellsikkerhet ;
                        skos:inScheme :spn_terminologi ;
-                       skos:altLabel "autorisasjon"@nb ;
                        skos:definition "beslutning om personell kan få tilgang til en verdi som ikke er åpent tilgjengelig"@nb ;
+                       skos:note "Omtales bare som 'autorisasjon' i sikkerhetsloven."@nb ;
                        skos:prefLabel "personellautorisasjon"@nb ;
                        skos:related :autorisasjon ;
                        skos:scopeNote "jf. sikkerhetsloven av 1. juni 2018 nr. 24 § 8-9"@nb .
@@ -838,6 +821,16 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan motså et angrep fra �
                     skos:scopeNote "jf. sikkerhetsloven av 1. juni 2018 nr. 24 kap. 8"@nb .
 
 
+###  https://www.johannesodegard.no/terminologi#personellsaarbarhet
+:personellsaarbarhet a
+                              skos:Concept ;
+                     skos:broader :saarbarhet ;
+                     skos:inScheme :spn_terminologi ;
+                     skos:definition "egenskap ved personell som gjør det mulig for en trussel å påvirke personellet til å gjennomføre et angrep"@nb ;
+                     skos:prefLabel "personellsårbarhet"@nb ;
+                     skos:related :personellsikkerhet .
+
+
 ###  https://www.johannesodegard.no/terminologi#personellsikkerhet
 :personellsikkerhet a
                              skos:Concept ;
@@ -847,16 +840,6 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan motså et angrep fra �
                     skos:prefLabel "personellsikkerhet"@nb ;
                     skos:related :personellsaarbarhet ;
                     skos:scopeNote "jf. sikkerhetsloven av 1. juni 2018 nr. 24 kap. 8"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#personellsaarbarhet
-:personellsaarbarhet a
-                             skos:Concept ;
-                    skos:broader :saarbarhet ;
-                    skos:inScheme :spn_terminologi ;
-                    skos:definition "egenskap ved personell som gjør det mulig for en trussel å påvirke personellet til å gjennomføre et angrep"@nb ;
-                    skos:prefLabel "personellsårbarhet"@nb ;
-                    skos:related :personellsikkerhet .
 
 
 ###  https://www.johannesodegard.no/terminologi#personkontroll
@@ -888,13 +871,6 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan motså et angrep fra �
                  skos:definition "personell og ressurser spesielt forberedt og trent på å håndtere og avverge og en uønsket hendelse"@nb ;
                  skos:example "Lokalt politi er reaksjonsstyrke for dette objektet."@nb ;
                  skos:prefLabel "reaksjonsstyrke"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#ref
-:ref a
-              skos:Concept ;
-     skos:inScheme :spn_terminologi ;
-     skos:prefLabel "ref"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#revisjon
@@ -983,6 +959,35 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan motså et angrep fra �
                  skos:closeMatch <https://termlex.no/term/171068858506771/nb> ;
                  skos:definition "prosess i sikkerhetshjulet som innebærer å kartlegge verdier, analysere risiko og evaluere om det er oppnådd et forsvarlig sikkerhetsnivå"@nb ;
                  skos:prefLabel "risikovurdering"@nb .
+
+
+###  https://www.johannesodegard.no/terminologi#saarbarhet
+:saarbarhet a
+                     skos:Concept ;
+            skos:broader :bestanddel ;
+            skos:inScheme :spn_terminologi ;
+            skos:closeMatch <https://termlex.no/term/170456818006600/nb> ;
+            skos:definition "svakhet i en verdi eller et sikkerhetstiltak som kan utnyttes av en trussel for å forårsake en uønsket hendelse, eller svakhet i en verdi eller et sikkerhetstiltak som gjør at en fare kan forårsake en uønsket hendelse"@nb ;
+            skos:note "Sårbarhet er i rammeverket avgrenset til egenskaper ved en bestanddel som en trussel kan påvirke for å forårsake bortfall av funksjon eller konfidensialitet, eller som kan muliggjøre en fare i å forårsake bortfall av funksjon eller konfidensialitet. Manglende evne til å iverksette skade- og konsekvensreduserende tiltak inngår i rammeverket i termen 'skadefølger'."@nb ;
+            skos:prefLabel "sårbarhet"@nb .
+
+
+###  https://www.johannesodegard.no/terminologi#saarbarhetsnivaa
+:saarbarhetsnivaa a
+                           skos:Concept ;
+                  skos:broader :saarbarhetsvurdering ;
+                  skos:inScheme :spn_terminologi ;
+                  skos:prefLabel "sårbarhetsnivå"@nb .
+
+
+###  https://www.johannesodegard.no/terminologi#saarbarhetsvurdering
+:saarbarhetsvurdering a
+                               skos:Concept ;
+                      skos:broader :analyseobjekt ;
+                      skos:inScheme :spn_terminologi ;
+                      skos:definition "samlet vurdering av forholdet mellom kompleksitet i handlemåter og skadefølger om handlemåten blir gjennomført"@nb ;
+                      skos:note "Merknad 1: En enkel handlemåte som kan føre til omfattende skadefølger gir et høyt sårbarhetsnivå."@nb ;
+                      skos:prefLabel "sårbarhetsvurdering"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#sammensatte_trusler
@@ -1079,13 +1084,13 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan motså et angrep fra �
 
 ###  https://www.johannesodegard.no/terminologi#sikkerhetsmaal
 :sikkerhetsmaal a
-                        skos:Concept ;
-               skos:broader :sikkerhetsstyring ;
-               skos:inScheme :spn_terminologi ;
-               skos:definition "fastsatte mål for ivaretakelse av verdier"@nb ;
-               skos:exactMatch <https://termlex.no/term/174963378804201/nb> ;
-               skos:prefLabel "sikkerhetsmål"@nb ;
-               skos:scopeNote "internt definert"@nb .
+                         skos:Concept ;
+                skos:broader :sikkerhetsstyring ;
+                skos:inScheme :spn_terminologi ;
+                skos:definition "fastsatte mål for ivaretakelse av verdier"@nb ;
+                skos:exactMatch <https://termlex.no/term/174963378804201/nb> ;
+                skos:prefLabel "sikkerhetsmål"@nb ;
+                skos:scopeNote "internt definert"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#sikkerhetssluse
@@ -1119,12 +1124,12 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan motså et angrep fra �
 
 ###  https://www.johannesodegard.no/terminologi#sikkerhetstruende_oekonomisk_virkemiddelbruk
 :sikkerhetstruende_oekonomisk_virkemiddelbruk a
-                                                      skos:Concept ;
-                                             skos:broader :trussel ;
-                                             skos:inScheme :spn_terminologi ;
-                                             skos:definition "bruk av økonomiske virkemidler, herunder belønning, straff og oppkjøp, for å fremme egne interesser på bekostning av en risikoeier"@nb ;
-                                             skos:note "Merknad: 'Håndbok i risikovurdering for funksjoner og konfidensialitet' dekker kun en bestanddel av sammensatte trusler."@nb ;
-                                             skos:prefLabel "sikkerhetstruende økonomisk virkemiddelbruk"@nb .
+                                                       skos:Concept ;
+                                              skos:broader :trussel ;
+                                              skos:inScheme :spn_terminologi ;
+                                              skos:definition "bruk av økonomiske virkemidler, herunder belønning, straff og oppkjøp, for å fremme egne interesser på bekostning av en risikoeier"@nb ;
+                                              skos:note "Merknad: 'Håndbok i risikovurdering for funksjoner og konfidensialitet' dekker kun en bestanddel av sammensatte trusler."@nb ;
+                                              skos:prefLabel "sikkerhetstruende økonomisk virkemiddelbruk"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#sikringstiltak
@@ -1140,13 +1145,13 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan motså et angrep fra �
 
 ###  https://www.johannesodegard.no/terminologi#skadefoelge
 :skadefoelge a
-                     skos:Concept ;
-            skos:broader :konsekvens_handlemaate ;
-            skos:inScheme :spn_terminologi ;
-            skos:definition "primære bortfall av en verdi som følge av en uønsket hendelse"@nb ;
-            skos:note "Tiltak for å redusere skadefølger omtales som 'skadereduserende'."@nb ;
-            skos:prefLabel "skadefølge"@nb ;
-            skos:related :skadereduserende_tiltak .
+                      skos:Concept ;
+             skos:broader :konsekvens_handlemaate ;
+             skos:inScheme :spn_terminologi ;
+             skos:definition "primære bortfall av en verdi som følge av en uønsket hendelse"@nb ;
+             skos:note "Tiltak for å redusere skadefølger omtales som 'skadereduserende'."@nb ;
+             skos:prefLabel "skadefølge"@nb ;
+             skos:related :skadereduserende_tiltak .
 
 
 ###  https://www.johannesodegard.no/terminologi#skadereduserende_tiltak
@@ -1177,14 +1182,14 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan motså et angrep fra �
            skos:related :synlighet_handlemaatefaktor .
 
 
-###  https://www.johannesodegard.no/terminologi#snikfolging
+###  https://www.johannesodegard.no/terminologi#snikfoelging
 :snikfoelging a
-                      skos:Concept ;
-             skos:broader :fysisk_saarbarhet ;
-             skos:inScheme :spn_terminologi ;
-             skos:definition "å følge etter autorisert personell inn i et område du ikke er autorisert for"@nb ;
-             skos:example "Inntregeren kom seg inn i lokalene gjennom å snikfølge en ansatt inn i garasjen."@nb ;
-             skos:prefLabel "snikfølging"@nb .
+                       skos:Concept ;
+              skos:broader :fysisk_saarbarhet ;
+              skos:inScheme :spn_terminologi ;
+              skos:definition "å følge etter autorisert personell inn i et område du ikke er autorisert for"@nb ;
+              skos:example "Inntregeren kom seg inn i lokalene gjennom å snikfølge en ansatt inn i garasjen."@nb ;
+              skos:prefLabel "snikfølging"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#solstorm
@@ -1206,7 +1211,25 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan motså et angrep fra �
            skos:prefLabel "spionasje"@nb .
 
 
+###  https://www.johannesodegard.no/terminologi#spn
+:spn a
+              skos:Concept ;
+     skos:inScheme :spn_terminologi ;
+     skos:topConceptOf :spn_terminologi ;
+     skos:definition "uavhengig prosjekt og faglig initiativ for begrepsutvikling, metode og kunnskapsformidling innen forebyggende sikkerhet og nasjonal sikkerhet"@nb ;
+     skos:note "Sikkerhet på norsk (2023–) er et uavhengig prosjekt som har til hensikt å øke både kjennskap til og kunnskap om forebyggende sikkerhet. Prosjektet springer ut fra, men er ikke avgrenset til, forebyggende sikkerhetsarbeid etter sikkerhetsloven av 1. juni 2018 nr. 24. Rammeverket og begrepsbruken er primært tilpasset virksomheter av betydning for nasjonal sikkerhet, og er beskrevet i boken Angrepssikkerhet (2026) med tilhørende terminologi."@nb ;
+     skos:prefLabel "Sikkerhet på norsk"@nb .
 
+
+###  https://www.johannesodegard.no/terminologi#spn_terminologi
+:spn_terminologi a
+                          skos:ConceptScheme ;
+                 dct:created "2025-10-23"^^xsd:date ;
+                 dct:creator "Johannes Ødegård"@nb ;
+                 dct:language "nb" ;
+                 dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                 dct:title "Sikkerhet på norsk – terminologi"@nb ;
+                 skos:hasTopConcept :spn .
 
 
 ###  https://www.johannesodegard.no/terminologi#styringsdokument_for_sikkerhet
@@ -1220,20 +1243,20 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan motså et angrep fra �
 
 ###  https://www.johannesodegard.no/terminologi#synlighet_handlemaatefaktor
 :synlighet_handlemaatefaktor a
-                                     skos:Concept ;
-                            skos:broader :bestanddel ;
-                            skos:inScheme :spn_terminologi ;
-                            skos:definition "egenskap ved verdi om hvor lett gjenkjennelig verdien er og hvor enkelt det er å oppdage verdien om man er innen rekkevidde av den"@nb ;
-                            skos:prefLabel "synlighet for trussel"@nb .
+                                      skos:Concept ;
+                             skos:broader :bestanddel ;
+                             skos:inScheme :spn_terminologi ;
+                             skos:definition "egenskap ved verdi om hvor lett gjenkjennelig verdien er og hvor enkelt det er å oppdage verdien om man er innen rekkevidde av den"@nb ;
+                             skos:prefLabel "synlighet for trussel"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#synlighet_hoey
 :synlighet_hoey a
-                        skos:Concept ;
-               skos:broader :synlighetsnivaa ;
-               skos:inScheme :spn_terminologi ;
-               skos:definition "godt skiltet. eksempelvis kjøpesenter og gullsmedforretning."@nb ;
-               skos:prefLabel "høy synlighet"@nb .
+                         skos:Concept ;
+                skos:broader :synlighetsnivaa ;
+                skos:inScheme :spn_terminologi ;
+                skos:definition "godt skiltet. eksempelvis kjøpesenter og gullsmedforretning."@nb ;
+                skos:prefLabel "høy synlighet"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#synlighet_lav
@@ -1256,67 +1279,38 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan motså et angrep fra �
 
 ###  https://www.johannesodegard.no/terminologi#synlighet_svaert_hoey
 :synlighet_svaert_hoey a
-                              skos:Concept ;
-                     skos:broader :synlighetsnivaa ;
-                     skos:inScheme :spn_terminologi ;
-                     skos:definition "signalbygg. eksempelvis slottet, stortinget og rådhus"@nb ;
-                     skos:prefLabel "svært høy synlighet"@nb .
+                                skos:Concept ;
+                       skos:broader :synlighetsnivaa ;
+                       skos:inScheme :spn_terminologi ;
+                       skos:definition "signalbygg. eksempelvis slottet, stortinget og rådhus"@nb ;
+                       skos:prefLabel "svært høy synlighet"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#synlighet_svaert_lav
 :synlighet_svaert_lav a
-                              skos:Concept ;
-                     skos:broader :synlighetsnivaa ;
-                     skos:inScheme :spn_terminologi ;
-                     skos:definition "usynlig. eksempelvis fjellanlegg med skjult inngang uten elektromagnetisk emisjon"@nb ;
-                     skos:prefLabel "svært lav synlighet"@nb .
+                               skos:Concept ;
+                      skos:broader :synlighetsnivaa ;
+                      skos:inScheme :spn_terminologi ;
+                      skos:definition "usynlig. eksempelvis fjellanlegg med skjult inngang uten elektromagnetisk emisjon"@nb ;
+                      skos:prefLabel "svært lav synlighet"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#synlighetsnivaa
 :synlighetsnivaa a
-                         skos:Concept ;
-                skos:broader :synlighet_handlemaatefaktor ;
-                skos:inScheme :spn_terminologi ;
-                skos:definition "uttrykk for hvor lett gjenkjennelig en verdi er og hvorr enkelt det er å oppdage den om man er innen rekkevidde av verdien"@nb ;
-                skos:prefLabel "synlighetsnivå"@nb .
+                          skos:Concept ;
+                 skos:broader :synlighet_handlemaatefaktor ;
+                 skos:inScheme :spn_terminologi ;
+                 skos:definition "uttrykk for hvor lett gjenkjennelig en verdi er og hvorr enkelt det er å oppdage den om man er innen rekkevidde av verdien"@nb ;
+                 skos:prefLabel "synlighetsnivå"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#systemoevelse
 :systemoevelse a
-                       skos:Concept ;
-              skos:broader :evaluering ;
-              skos:inScheme :spn_terminologi ;
-              skos:definition "prosess for å øve på, vurdere og forbedre prestasjonen til et system av sikkerhets- og beredskapstiltak"@nb ;
-              skos:prefLabel "systemøvelse"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#saarbarhet
-:saarbarhet a
-                    skos:Concept ;
-           skos:broader :bestanddel ;
-           skos:inScheme :spn_terminologi ;
-           skos:closeMatch <https://termlex.no/term/170456818006600/nb> ;
-           skos:definition "svakhet i en verdi eller et sikkerhetstiltak som kan utnyttes av en trussel for å forårsake en uønsket hendelse, eller svakhet i en verdi eller et sikkerhetstiltak som gjør at en fare kan forårsake en uønsket hendelse"@nb ;
-           skos:note "Sårbarhet er i rammeverket avgrenset til egenskaper ved en bestanddel som en trussel kan påvirke for å forårsake bortfall av funksjon eller konfidensialitet, eller som kan muliggjøre en fare i å forårsake bortfall av funksjon eller konfidensialitet. Manglende evne til å iverksette skade- og konsekvensreduserende tiltak inngår i rammeverket i termen 'skadefølger'."@nb ;
-           skos:prefLabel "sårbarhet"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#saarbarhetsnivaa
-:saarbarhetsnivaa a
-                         skos:Concept ;
-                skos:broader :saarbarhetsvurdering ;
-                skos:inScheme :spn_terminologi ;
-                skos:prefLabel "sårbarhetsnivå"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#saarbarhetsvurdering
-:saarbarhetsvurdering a
-                              skos:Concept ;
-                     skos:broader :analyseobjekt ;
-                     skos:inScheme :spn_terminologi ;
-                     skos:definition "samlet vurdering av forholdet mellom kompleksitet i handlemåter og skadefølger om handlemåten blir gjennomført"@nb ;
-                     skos:note "Merknad 1: En enkel handlemåte som kan føre til omfattende skadefølger gir et høyt sårbarhetsnivå."@nb ;
-                     skos:prefLabel "sårbarhetsvurdering"@nb .
+                        skos:Concept ;
+               skos:broader :evaluering ;
+               skos:inScheme :spn_terminologi ;
+               skos:definition "prosess for å øve på, vurdere og forbedre prestasjonen til et system av sikkerhets- og beredskapstiltak"@nb ;
+               skos:prefLabel "systemøvelse"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#tilgjengelighet
@@ -1330,20 +1324,20 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan motså et angrep fra �
 
 ###  https://www.johannesodegard.no/terminologi#tilgjengelighet_handlemaatefaktor
 :tilgjengelighet_handlemaatefaktor a
-                                           skos:Concept ;
-                                  skos:broader :bestanddel ;
-                                  skos:inScheme :spn_terminologi ;
-                                  skos:definition "egenskap ved verdi om hvor enkelt det er å komme seg til et sted fra hvor verdien kan angripes"@nb ;
-                                  skos:note "Vurderingen innbefatter blant annet en vurdering av perimetersikring og deteksjonssystemer i tillegg til fremføringsakser og geografisk plassering."@nb ;
-                                  skos:prefLabel "tilgjengelighet for trussel"@nb .
+                                            skos:Concept ;
+                                   skos:broader :bestanddel ;
+                                   skos:inScheme :spn_terminologi ;
+                                   skos:definition "egenskap ved verdi om hvor enkelt det er å komme seg til et sted fra hvor verdien kan angripes"@nb ;
+                                   skos:note "Vurderingen innbefatter blant annet en vurdering av perimetersikring og deteksjonssystemer i tillegg til fremføringsakser og geografisk plassering."@nb ;
+                                   skos:prefLabel "tilgjengelighet for trussel"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#tilgjengelighet_hoey
 :tilgjengelighet_hoey a
-                              skos:Concept ;
-                     skos:broader :tilgjengelighetsnivaa ;
-                     skos:inScheme :spn_terminologi ;
-                     skos:prefLabel "høy tilgjengelighet"@nb .
+                               skos:Concept ;
+                      skos:broader :tilgjengelighetsnivaa ;
+                      skos:inScheme :spn_terminologi ;
+                      skos:prefLabel "høy tilgjengelighet"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#tilgjengelighet_lav
@@ -1364,27 +1358,27 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan motså et angrep fra �
 
 ###  https://www.johannesodegard.no/terminologi#tilgjengelighet_svaert_hoey
 :tilgjengelighet_svaert_hoey a
-                                    skos:Concept ;
-                           skos:broader :tilgjengelighetsnivaa ;
-                           skos:inScheme :spn_terminologi ;
-                           skos:prefLabel "svært høy tilgjengelighet"@nb .
+                                      skos:Concept ;
+                             skos:broader :tilgjengelighetsnivaa ;
+                             skos:inScheme :spn_terminologi ;
+                             skos:prefLabel "svært høy tilgjengelighet"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#tilgjengelighet_svaert_lav
 :tilgjengelighet_svaert_lav a
-                                    skos:Concept ;
-                           skos:broader :tilgjengelighetsnivaa ;
-                           skos:inScheme :spn_terminologi ;
-                           skos:prefLabel "svært lav tilgjengelighet"@nb .
+                                     skos:Concept ;
+                            skos:broader :tilgjengelighetsnivaa ;
+                            skos:inScheme :spn_terminologi ;
+                            skos:prefLabel "svært lav tilgjengelighet"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#tilgjengelighetsnivaa
 :tilgjengelighetsnivaa a
-                               skos:Concept ;
-                      skos:broader :tilgjengelighet_handlemaatefaktor ;
-                      skos:inScheme :spn_terminologi ;
-                      skos:definition "uttrykk for hvor tilgjengelig en verdi er for en trussel"@nb ;
-                      skos:prefLabel "tilgjengelighetsnivå"@nb .
+                                skos:Concept ;
+                       skos:broader :tilgjengelighet_handlemaatefaktor ;
+                       skos:inScheme :spn_terminologi ;
+                       skos:definition "uttrykk for hvor tilgjengelig en verdi er for en trussel"@nb ;
+                       skos:prefLabel "tilgjengelighetsnivå"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#to-faktor-autentisering
@@ -1410,57 +1404,57 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan motså et angrep fra �
 
 ###  https://www.johannesodegard.no/terminologi#trusselnivaa
 :trusselnivaa a
-                      skos:Concept ;
-             skos:broader :trusselvurdering ;
-             skos:inScheme :spn_terminologi ;
-             skos:definition "uttrykk for omfanget av trusler med intensjon om å gjennomføre et angrep og deres respektive kapabiltieter og handlefrihet"@nb ;
-             skos:note "Merknad: Trusselnivået angir ikke hvem som vil gjennomføre et angrep eller hvor omfattende et angrep vil være. Aktør og handlemåte ved et eventuelt angrep påvirkes av identifiserte verdier i verdikartleggingen og deres funksjon og konfidensialitetsbehov, samt omfanget av sårbarheter."@nb ;
-             skos:prefLabel "trusselnivå"@nb .
+                       skos:Concept ;
+              skos:broader :trusselvurdering ;
+              skos:inScheme :spn_terminologi ;
+              skos:definition "uttrykk for omfanget av trusler med intensjon om å gjennomføre et angrep og deres respektive kapabiltieter og handlefrihet"@nb ;
+              skos:note "Merknad: Trusselnivået angir ikke hvem som vil gjennomføre et angrep eller hvor omfattende et angrep vil være. Aktør og handlemåte ved et eventuelt angrep påvirkes av identifiserte verdier i verdikartleggingen og deres funksjon og konfidensialitetsbehov, samt omfanget av sårbarheter."@nb ;
+              skos:prefLabel "trusselnivå"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#trusselnivaa_hoeyt
 :trusselnivaa_hoeyt a
-                           skos:Concept ;
-                  skos:broader :trusselnivaa ;
-                  skos:inScheme :spn_terminologi ;
-                  skos:definition "omfanget av aktører med intensjon og kapabilitet og deres respektive handlefrihet gjør at det er god grunn til å forvente et angrep fra en aktør som har kapabilitet til å gjennomføre en kompleks handlemåte eller høyere, alternativt er det veldig god grunn til å forvente et nærstående angrep fra en aktør som har kapabilitet til å gjennomføre et angrep med enkel kompleksitet"@nb ;
-                  skos:prefLabel "høyt trusselnivå"@nb .
+                             skos:Concept ;
+                    skos:broader :trusselnivaa ;
+                    skos:inScheme :spn_terminologi ;
+                    skos:definition "omfanget av aktører med intensjon og kapabilitet og deres respektive handlefrihet gjør at det er god grunn til å forvente et angrep fra en aktør som har kapabilitet til å gjennomføre en kompleks handlemåte eller høyere, alternativt er det veldig god grunn til å forvente et nærstående angrep fra en aktør som har kapabilitet til å gjennomføre et angrep med enkel kompleksitet"@nb ;
+                    skos:prefLabel "høyt trusselnivå"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#trusselnivaa_lavt
 :trusselnivaa_lavt a
-                           skos:Concept ;
-                  skos:broader :trusselnivaa ;
-                  skos:inScheme :spn_terminologi ;
-                  skos:definition "omfanget av aktører med intensjon og kapabilitet og deres respektive handlefrihet gjør at det er liten grunn til å forvente et angrep gjennomført av en aktør som har kapabilitet til å gjennomføre en enkel handlemåte eller høyere"@nb ;
-                  skos:prefLabel "lavt trusselnivå"@nb .
+                            skos:Concept ;
+                   skos:broader :trusselnivaa ;
+                   skos:inScheme :spn_terminologi ;
+                   skos:definition "omfanget av aktører med intensjon og kapabilitet og deres respektive handlefrihet gjør at det er liten grunn til å forvente et angrep gjennomført av en aktør som har kapabilitet til å gjennomføre en enkel handlemåte eller høyere"@nb ;
+                   skos:prefLabel "lavt trusselnivå"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#trusselnivaa_moderat
 :trusselnivaa_moderat a
-                              skos:Concept ;
-                     skos:broader :trusselnivaa ;
-                     skos:inScheme :spn_terminologi ;
-                     skos:definition "omfanget av aktører med intensjon og kapabilitet og deres respektive handlefrihet gjør at det er god grunn til å forvente et angrep fra en aktør som har kapabilitet til å gjennomføre en enkel handlemåte, men det er liten grunn til å forvente et angrep fra en aktør som har kapabilitet til å gjennomføre en moderat kompleks handlemåte eller høyere"@nb ;
-                     skos:prefLabel "moderat trusselnivå"@nb .
+                               skos:Concept ;
+                      skos:broader :trusselnivaa ;
+                      skos:inScheme :spn_terminologi ;
+                      skos:definition "omfanget av aktører med intensjon og kapabilitet og deres respektive handlefrihet gjør at det er god grunn til å forvente et angrep fra en aktør som har kapabilitet til å gjennomføre en enkel handlemåte, men det er liten grunn til å forvente et angrep fra en aktør som har kapabilitet til å gjennomføre en moderat kompleks handlemåte eller høyere"@nb ;
+                      skos:prefLabel "moderat trusselnivå"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#trusselnivaa_svaert_hoeyt
 :trusselnivaa_svaert_hoeyt a
-                                 skos:Concept ;
-                        skos:broader :trusselnivaa ;
-                        skos:inScheme :spn_terminologi ;
-                        skos:definition "omfanget av aktører med intensjon og kapabilitet og deres respektive handlefrihet gjør at det er veldig god grunn til å forvente et nærstående angrep fra en aktør som har kapabilitet til å gjennomføre et angrep med en moderat kompleks handlemåte, eller høyere"@nb ;
-                        skos:prefLabel "svært høyt trusselnivå"@nb .
+                                    skos:Concept ;
+                           skos:broader :trusselnivaa ;
+                           skos:inScheme :spn_terminologi ;
+                           skos:definition "omfanget av aktører med intensjon og kapabilitet og deres respektive handlefrihet gjør at det er veldig god grunn til å forvente et nærstående angrep fra en aktør som har kapabilitet til å gjennomføre et angrep med en moderat kompleks handlemåte, eller høyere"@nb ;
+                           skos:prefLabel "svært høyt trusselnivå"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#trusselnivaa_svaert_lavt
 :trusselnivaa_svaert_lavt a
-                                 skos:Concept ;
-                        skos:broader :trusselnivaa ;
-                        skos:inScheme :spn_terminologi ;
-                        skos:definition "omfanget av aktører med intensjon og kapabilitet og deres respektive handlefrihet gjør at det er meget liten grunn til å forvente et angrep, selv med en svært enkel handlemåte"@nb ;
-                        skos:prefLabel "svært lavt trusselnivå"@nb .
+                                   skos:Concept ;
+                          skos:broader :trusselnivaa ;
+                          skos:inScheme :spn_terminologi ;
+                          skos:definition "omfanget av aktører med intensjon og kapabilitet og deres respektive handlefrihet gjør at det er meget liten grunn til å forvente et angrep, selv med en svært enkel handlemåte"@nb ;
+                          skos:prefLabel "svært lavt trusselnivå"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#trusselvurdering
@@ -1517,6 +1511,16 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan motså et angrep fra �
                 skos:prefLabel "ulykkessikring"@nb .
 
 
+###  https://www.johannesodegard.no/terminologi#uoensket_hendelse
+:uoensket_hendelse a
+                            skos:Concept ;
+                   skos:broader :verdi ;
+                   skos:inScheme :spn_terminologi ;
+                   skos:closeMatch <https://termlex.no/term/174963378805210/nb> ;
+                   skos:definition "hendelse som kan medføre tap av en verdi"@nb ;
+                   skos:prefLabel "uønsket hendelse"@nb .
+
+
 ###  https://www.johannesodegard.no/terminologi#usikkerhet
 :usikkerhet a
                      skos:Concept ;
@@ -1529,23 +1533,12 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan motså et angrep fra �
 
 ###  https://www.johannesodegard.no/terminologi#usikkerhetsnivaa
 :usikkerhetsnivaa a
-                          skos:Concept ;
-                 skos:broader :usikkerhet ;
-                 skos:inScheme :spn_terminologi ;
-                 skos:definition "uttrykk for omfanget av usikkerhet i en risikovurdering"@nb ;
-                 skos:note "Merknad: Usikkerhetsnivå uttrykker hvor mye høyere konsekvensnivå, trusselnivå og sårbarhetsnivå kan være enn det som er lagt til grunn i risikoanalysen."@nb ;
-                 skos:prefLabel "usikkerhetsnivå"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#uoensket_hendelse
-:uoensket_hendelse a
                            skos:Concept ;
-                  skos:broader :verdi ;
+                  skos:broader :usikkerhet ;
                   skos:inScheme :spn_terminologi ;
-                  skos:closeMatch <https://termlex.no/term/174963378805210/nb> ;
-                  skos:definition "hendelse som kan medføre tap av en verdi"@nb ;
-                  skos:prefLabel "uønsket hendelse"@nb ;
-                  skos:related :forebyggende_sikkerhet .
+                  skos:definition "uttrykk for omfanget av usikkerhet i en risikovurdering"@nb ;
+                  skos:note "Merknad: Usikkerhetsnivå uttrykker hvor mye høyere konsekvensnivå, trusselnivå og sårbarhetsnivå kan være enn det som er lagt til grunn i risikoanalysen."@nb ;
+                  skos:prefLabel "usikkerhetsnivå"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#verdi
@@ -1596,13 +1589,6 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan motså et angrep fra �
                skos:definition "ukontrollert utslipp av lava og store mengder gass og pyroklastisk materiale fra jordens indre"@nb ;
                skos:note "Merknad: kan føre til en ulykke som følge av ringvirkningene av utbruddet"@nb ;
                skos:prefLabel "vulkanutbrudd"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#oekonomiske_utfordringer
-:oekonomiske_utfordringer a
-                                  skos:Concept ;
-                         skos:broader :personellsaarbarhet ;
-                         skos:prefLabel "økonomiske utfordringer"@nb .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
