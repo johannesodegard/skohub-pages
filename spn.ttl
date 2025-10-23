@@ -8,56 +8,30 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 
-###  http://www.johannesodegard.no/terminologi#Sikkerhet_på_norsk
+###  https://www.johannesodegard.no/terminologi#spn_terminologi
+:spn_terminologi a
+                          skos:ConceptScheme ;
+                 dct:created "2025-10-23"^^xsd:date ;
+                 dct:creator "Johannes Ødegård"@nb ;
+                 dct:language "nb" ;
+                 dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                 dct:title "Sikkerhet på norsk – terminologi"@nb ;
+                 skos:hasTopConcept :spn .
+
+
+###  https://www.johannesodegard.no/terminologi#spn
 :spn a
-                             skos:Concept ;
-                    skos:inScheme :spn_terminologi ;
-                    skos:topConceptOf :spn_terminologi ;
-                    skos:definition "uavhengig prosjekt og faglig initiativ for begrepsutvikling, metode og kunnskapsformidling innen forebyggende sikkerhet og nasjonal sikkerhet"@nb ;
-                    skos:note "Sikkerhet på norsk (2023–) er et uavhengig prosjekt som har til hensikt å øke både kjennskap til og kunnskap om forebyggende sikkerhet. Prosjektet springer ut fra, men er ikke avgrenset til, forebyggende sikkerhetsarbeid etter sikkerhetsloven av 1. juni 2018 nr. 24. Rammeverket og begrepsbruken er primært tilpasset virksomheter av betydning for nasjonal sikkerhet, og er beskrevet i boken Angrepssikkerhet (2026) med tilhørende terminologi."@nb ;
-                    skos:prefLabel "Sikkerhet på norsk"@nb .
+              skos:Concept ;
+     skos:inScheme :spn_terminologi ;
+     skos:topConceptOf :spn_terminologi ;
+     skos:definition "uavhengig prosjekt og faglig initiativ for begrepsutvikling, metode og kunnskapsformidling innen forebyggende sikkerhet og nasjonal sikkerhet"@nb ;
+     skos:note "Sikkerhet på norsk (2023–) er et uavhengig prosjekt som har til hensikt å øke både kjennskap til og kunnskap om forebyggende sikkerhet. Prosjektet springer ut fra, men er ikke avgrenset til, forebyggende sikkerhetsarbeid etter sikkerhetsloven av 1. juni 2018 nr. 24. Rammeverket og begrepsbruken er primært tilpasset virksomheter av betydning for nasjonal sikkerhet, og er beskrevet i boken Angrepssikkerhet (2026) med tilhørende terminologi."@nb ;
+     skos:prefLabel "Sikkerhet på norsk"@nb .
 
 
-###  http://www.johannesodegard.no/terminologi#spn_terminologi
-:spn_terminologi
-    a skos:ConceptScheme ;
-    dct:title    "Sikkerhet på norsk – terminologi"@nb ;
-    dct:creator "Johannes Ødegård"@nb ;
-    dct:created "2025-10-23"^^xsd:date ;
-    dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-    dct:language "nb" ;
-    skos:hasTopConcept :spn, etterretning .
-
-
-###  https://www.johannesodegard.no/terminologi#aksess
-:aksess a
-                 skos:Concept ;
-        skos:broader :innhenting ;
-        skos:inScheme :spn_terminologi ;
-        skos:definition "etterretningsorganisasjonens eller en kildes tilgang til data og informasjon"@nb ;
-        skos:prefLabel "aksess"@nb ;
-        skos:scopeNote "etterretning"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#akustisk_etterretning
-:akustisk_etterretning a
-                                skos:Concept ;
-                       skos:broader :innhenting_mot_fysisk_objekt ;
-                       skos:inScheme :spn_terminologi ;
-                       skos:altLabel "akustisk innhenting"@nb ;
-                       skos:prefLabel "ACINT"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#analyse
-:analyse a
-                  skos:Concept ;
-         skos:broader :etterretningshjulet ;
-         skos:inScheme :spn_terminologi ;
-         dct:bibliographicCitation "Forsvarets etterretningsdoktrine (2025) s. 100"@nb ;
-         skos:definition "identifisering av de konkrete elementene i dataene, informasjonen eller etterretningene som er relevante for å besvare et etterretningsbehov"@nb ;
-         skos:prefLabel "analyse"@nb ;
-         skos:scopeNote "etterretning"@nb .
-
+#################################################################
+#    Individuals
+#################################################################
 
 ###  https://www.johannesodegard.no/terminologi#analyseobjekt
 :analyseobjekt a
@@ -136,22 +110,6 @@
               skos:prefLabel "autorisasjon"@nb .
 
 
-###  https://www.johannesodegard.no/terminologi#bakgrunn
-:bakgrunn a
-                   skos:Concept ;
-          skos:broader :etterretningsbehov ;
-          skos:inScheme :spn_terminologi ;
-          skos:prefLabel "bakgrunn"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#begrunnelse
-:begrunnelse a
-                      skos:Concept ;
-             skos:broader :etterretningsbehov ;
-             skos:inScheme :spn_terminologi ;
-             skos:prefLabel "begrunnelse"@nb .
-
-
 ###  https://www.johannesodegard.no/terminologi#beredskapslager
 :beredskapslager a
                           skos:Concept ;
@@ -200,23 +158,6 @@
             skos:definition "liv og helse, materielle eller immaterielle størrelser som kan bli utsatt for en uønsket hendelse"@nb ;
             skos:prefLabel "bestanddel"@nb ;
             skos:related :verdi .
-
-
-###  https://www.johannesodegard.no/terminologi#bilde-etterretning
-:bilde-etterretning a
-                             skos:Concept ;
-                    skos:broader :innhenting_mot_fysisk_objekt ;
-                    skos:inScheme :spn_terminologi ;
-                    skos:altLabel "bilde-etterretning"@nb ;
-                    skos:prefLabel "IMINT"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#blandet_innhenting
-:blandet_innhenting a
-                             skos:Concept ;
-                    skos:broader :innhentingsmetode ;
-                    skos:inScheme :spn_terminologi ;
-                    skos:prefLabel "blandet innhenting"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#daglig_sikkerhetsmessig_ledelse
@@ -286,76 +227,6 @@
              skos:prefLabel "ekstremisme"@nb .
 
 
-###  https://www.johannesodegard.no/terminologi#elektronisk_etterretning
-:elektronisk_etterretning a
-                                   skos:Concept ;
-                          skos:broader :innhenting_mot_fysisk_objekt ;
-                          skos:inScheme :spn_terminologi ;
-                          skos:altLabel "elektronisk etterretning"@nb ;
-                          skos:prefLabel "ELINT"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#endisiplin
-:endisiplin a
-                     skos:Concept ;
-            skos:broader :analyse ;
-            skos:inScheme :spn_terminologi ;
-            skos:definition "data og informasjon innhentet fra én etterretningsdisiplin"@nb ;
-            skos:prefLabel "endisiplin"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#etterretning
-:etterretning a
-                       skos:Concept ;
-              skos:broader :spn ;
-              skos:inScheme :spn_terminologi ;
-              skos:topConceptOf :spn_terminologi ;
-              dct:bibliographicCitation "Forsvarets etterretningsdoktrine (2025) s. 100"@nb ;
-              skos:definition "resultatet av statlig sanksjonert innhenting, analyse og vurdering av data og informasjon som er generert åpent eller fordekt og utarbeidet for å gi fortrinn i beslutningsprosesser"@nb ;
-              skos:note "Etterretningstermer er inkludert i rammeverket for å synliggjøre forholdet mellom forebyggende sikkerhetsarbeid og etterretning. Etterretningstermer er hentet fra Forsvarets etterrtningsdoktrine (2025) og skrevet om i henhold til Termlosen (Språkrådet, 2020) kap. 6.1. a-d."@nb ;
-              skos:prefLabel "etterretning"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#etterretningsbehov
-:etterretningsbehov a
-                             skos:Concept ;
-                    skos:broader :etterretningsdialog ;
-                    skos:inScheme :spn_terminologi ;
-                    dct:bibliographicCitation "Forsvarets etterretningsdoktrine (2025) s. 100"@nb ;
-                    skos:definition "kunnskapsbehov som må bli besvart ved hjelp av etterretning"@nb ;
-                    skos:prefLabel "etterretningsbehov"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#etterretningsdialog
-:etterretningsdialog a
-                              skos:Concept ;
-                     skos:broader :etterretningsstyring ;
-                     skos:inScheme :spn_terminologi ;
-                     skos:prefLabel "etterretningsdialog"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#etterretningshjulet
-:etterretningshjulet a
-                              skos:Concept ;
-                     skos:broader :etterretning ;
-                     skos:inScheme :spn_terminologi ;
-                     dct:bibliographicCitation "Forsvarets etterretningsdoktrine (2025) s. 42"@nb ;
-                     skos:altLabel "e-hjulet"@nb ,
-                                   "etterretningsprosessen"@nb ;
-                     skos:definition "prosessen fra et etterretningsbehov oppstår, til det blir besvart i form av etterretningsprodukt"@nb ;
-                     skos:note "\"Det eksisterer mange forskjellige teorier og modeller av prosessen, men Forsvaret har valgt en syklisk tradisjonell versjon som beskrevet i kapittel 4\" (Forsvarets etterretningsdoktrine (2025) s. 101)"@nb ;
-                     skos:prefLabel "etterretningshjulet"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#etterretningsstyring
-:etterretningsstyring a
-                               skos:Concept ;
-                      skos:broader :etterretningshjulet ;
-                      skos:inScheme :spn_terminologi ;
-                      skos:definition "prioritering av etterretningsbehov, identifisere etterretningsbehov som kan besvares fra eksisterende kunnskapsbase, identifisere innhentingsbehov og ta stilling til hvilke etterretningsressurser som skal brukes"@nb ;
-                      skos:prefLabel "etterretningsstyring"@nb .
-
-
 ###  https://www.johannesodegard.no/terminologi#evaluering
 :evaluering a
                      skos:Concept ;
@@ -375,17 +246,6 @@
       skos:prefLabel "fare"@nb .
 
 
-###  https://www.johannesodegard.no/terminologi#flerdisiplin
-:flerdisiplin a
-                       skos:Concept ;
-              skos:broader :analyse ;
-              skos:inScheme :spn_terminologi ;
-              dct:bibliographicCitation "Forsvarets etterretningsdoktrine (2025) s. 102"@nb ;
-              skos:definition "analyse og vurdering av etterretning fra flere ulike etterretningsdisipliner"@nb ;
-              skos:prefLabel "flerdisiplin"@nb ;
-              skos:scopeNote "etterretning"@nb .
-
-
 ###  https://www.johannesodegard.no/terminologi#forebyggende_sikkerhet
 :forebyggende_sikkerhet a
                                  skos:Concept ;
@@ -394,17 +254,6 @@
                         skos:definition "planlegging, tilrettelegging, gjennomføring og kontroll av forebyggende tiltak mot uønskede hendelser og følger av disse"@nb ;
                         skos:note "I sikkerhetsloven av 1. juni 2018 nr. 24 er 'forebyggende sikkerhetsarbeid definert som \"planlegging, tilrettelegging, gjennomføring og kontroll av forebyggende tiltak mot sikkerhetstruende virksomhet og følger av slik virksomhet\" (§ 1-5 nr. 3). Selv om rammeverket i hovedsak springer ut fra sikkerhetsloven, omfatter termen i rammeverket både angrep og ulykker. Dette for å ivareta en helhetlig tilnærming til sikkerhetsarbeidet, i enkelte rammeverk omtalt som en \"all-hazards-approach\"."@nb ;
                         skos:prefLabel "forebyggende sikkerhetsarbeid"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#formidling
-:formidling a
-                     skos:Concept ;
-            skos:broader :etterretningshjulet ;
-            skos:inScheme :spn_terminologi ;
-            dct:bibliographicCitation "Forsvarets etterretningsdoktrine (2025) s. 77"@nb ;
-            skos:definition "ferdigheter, aktiviteter og selve etterretningsproduktet som samlet kommuniserer den relevante kunnskapen fra etterretningsorganisasjonen til etterretningsbrukeren"@nb ;
-            skos:prefLabel "formidling"@nb ;
-            skos:scopeNote "etterretning"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#forsvarlig_sikkerhetsnivå
@@ -464,15 +313,6 @@
                   skos:definition "sårbarhet knyttet til fysiske installasjoner eller objekter"@nb ;
                   skos:prefLabel "fysisk sårbarhet"@nb ;
                   skos:related :fysisk_sikkerhet .
-
-
-###  https://www.johannesodegard.no/terminologi#geografisk_meteorologisk_og_oseanografisk_etterretning
-:geografisk_meteorologisk_og_oseanografisk_etterretning a
-                                                                 skos:Concept ;
-                                                        skos:broader :innhenting_mot_fysisk_objekt ;
-                                                        skos:inScheme :spn_terminologi ;
-                                                        skos:altLabel "geografisk meteorologisk og oseanografisk etterretning"@nb ;
-                                                        skos:prefLabel "GEOINT"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#gjenopprettingsevne
@@ -606,16 +446,6 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
                         skos:prefLabel "handlemåtekompleksitet"@nb .
 
 
-###  https://www.johannesodegard.no/terminologi#hemmelighet
-:hemmelighet a
-                      skos:Concept ;
-             skos:broader :innhentingsbehov ;
-             skos:inScheme :spn_terminologi ;
-             dct:bibliographicCitation "Forsvarets etterretningsdoktrine (2025) s. 27"@nb ;
-             skos:definition "data eller informasjon som eksisterer, men som en aktør ønsker å holde hemmelig, for eksempel hvilke kapasiteter nye våpensystemer har, hvor militære våpenplattformer er, eller hvem som sto bak et cyberangrep"@nb ;
-             skos:prefLabel "hemmelighet"@nb .
-
-
 ###  https://www.johannesodegard.no/terminologi#hendelseshåndtering
 :hendelseshåndtering a
                               skos:Concept ;
@@ -653,59 +483,6 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
                 skos:note "Kan være både sikringstiltak og beredskapstiltak"@nb ,
                           "Tiltak identifiseres som hovedregel i en risikovurdering."@nb ;
                 skos:prefLabel "implementering"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#innhenting
-:innhenting a
-                     skos:Concept ;
-            skos:broader :etterretningshjulet ;
-            skos:inScheme :spn_terminologi ;
-            dct:bibliographicCitation "Forsvarets etterretningsdoktrine (2025) s. 103"@nb ;
-            skos:definition "generisk betegnelse på aktivitetene knyttet til både målsøking og målrettet innhenting"@nb ;
-            skos:prefLabel "innhenting"@nb ;
-            skos:scopeNote "etterretning"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#innhenting_mot_fysisk_objekt
-:innhenting_mot_fysisk_objekt a
-                                       skos:Concept ;
-                              skos:broader :innhentingsdisiplin ;
-                              skos:inScheme :spn_terminologi ;
-                              skos:prefLabel "innhentingsdisiplin mot fysisk objekt"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#innhenting_mot_person_og_virksomhet
-:innhenting_mot_person_og_virksomhet a
-                                              skos:Concept ;
-                                     skos:broader :innhentingsdisiplin ;
-                                     skos:inScheme :spn_terminologi ;
-                                     skos:prefLabel "innhentingsdisiplin mot person og virksomhet"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#innhentingsbehov
-:innhentingsbehov a
-                           skos:Concept ;
-                  skos:broader :innhenting ;
-                  skos:inScheme :spn_terminologi ;
-                  skos:definition "de identifiserte hullene (manglene) i kunnskapsbasen som må fylles for å kunne besvare eller forbedre en besvarelse av et etterretningsbehov"@nb ;
-                  skos:note "Innhentingsbehov består av etterretningsbehov eller informasjonsbehov og kan besvares enten av egne innhentingsressurser (for eksempel avlytting, fotografering osv.) eller ved å spørre andre organisasjoner eller partnere."@nb ;
-                  skos:prefLabel "innhentingsbehov"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#innhentingsdisiplin
-:innhentingsdisiplin a
-                              skos:Concept ;
-                     skos:broader :innhenting ;
-                     skos:inScheme :spn_terminologi ;
-                     skos:prefLabel "innhentingsdisiplin"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#innhentingsmetode
-:innhentingsmetode a
-                            skos:Concept ;
-                   skos:broader :innhenting ;
-                   skos:inScheme :spn_terminologi ;
-                   skos:prefLabel "innhentingsmetode"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#integritet
@@ -758,25 +535,6 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
            skos:related :autorisasjon .
 
 
-###  https://www.johannesodegard.no/terminologi#kommunikasjons-etterretning
-:kommunikasjons-etterretning a
-                                      skos:Concept ;
-                             skos:broader :innhenting_mot_person_og_virksomhet ;
-                             skos:inScheme :spn_terminologi ;
-                             dct:bibliographicCitation "Forsvarets etterretningsdoktrine (2025) s. 103"@nb ;
-                             skos:altLabel "COMINT"@nb ;
-                             skos:definition "etterretninger som er utvunnet av signaler fra elektroniske kommunikasjonssystemer (f.eks. telefoner og radioer), innsamlet eller oppfanget av andre enn tiltenkte brukere"@nb ;
-                             skos:prefLabel "kommunikasjons-etterretning"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#kompleksitet
-:kompleksitet a
-                       skos:Concept ;
-              skos:broader :innhentingsbehov ;
-              skos:inScheme :spn_terminologi ;
-              skos:prefLabel "kompleksitet"@nb .
-
-
 ###  https://www.johannesodegard.no/terminologi#kompromat
 :kompromat a
                     skos:Concept ;
@@ -784,16 +542,6 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
            skos:inScheme :spn_terminologi ;
            skos:definition "informasjon en trussel har kjennskap til, men som ikke er åpent kjent og kan utsette en person for tap av omdømme, relasjoner eller egenverd om den blir kjent for nærstående eller offentligheten"@nb ;
            skos:prefLabel "kompromat"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#konfidens
-:konfidens a
-                    skos:Concept ;
-           skos:broader :flerdisiplin ;
-           skos:inScheme :spn_terminologi ;
-           dct:bibliographicCitation "Forsvarets etterretningsdoktrine (2025) s. 103"@nb ;
-           skos:definition "kvalitativ beskrivelse av hvor sikker man er på konklusjonen(e) i en etterretningsvurdering"@nb ;
-           skos:prefLabel "konfidens"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#konfidensialitet
@@ -935,18 +683,6 @@ Historisk eksempel: CIAs fordekte oppkjøp og utnyttelse av Crypto AG fra 1970 -
                      skos:related :leverandørsikkerhet .
 
 
-###  https://www.johannesodegard.no/terminologi#menneskebasert_innhenting
-:menneskebasert_innhenting a
-                                    skos:Concept ;
-                           skos:broader :innhenting_mot_person_og_virksomhet ;
-                           skos:inScheme :spn_terminologi ;
-                           dct:bibliographicCitation "Forsvarets etterretningsdoktrine (2025) s. 104"@nb ;
-                           skos:altLabel "HUMINT"@nb ;
-                           skos:definition "aktivitet der informasjon og data blir innhentet av mennesker, fra mennesker, og de etterretninger som dette fører til"@nb ;
-                           skos:note "Begrepet menneskebasert innhenting brukes om aktiviteten der informasjon og data blir innhentet"@nb ;
-                           skos:prefLabel "menneskebasert innhenting"@nb .
-
-
 ###  https://www.johannesodegard.no/terminologi#menneskeskapt_ulykke
 :menneskeskapt_ulykke a
                                skos:Concept ;
@@ -1047,43 +783,12 @@ redskaper, eller bestanddelens konfidensialitetsbehov kan motså et angrep fra �
                                     skos:prefLabel "svært lav motstandsdyktighet"@nb .
 
 
-###  https://www.johannesodegard.no/terminologi#mysterium
-:mysterium a
-                    skos:Concept ;
-           skos:broader :innhentingsbehov ;
-           skos:inScheme :spn_terminologi ;
-           dct:bibliographicCitation "Forsvarets etterretningsdoktrine (2025) s. 27"@nb ;
-           skos:definition """informasjon om utfall av fremtidige hendelser, intensjoner som ennå ikke har kommet
-til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
-           skos:note "Eksempler på dette er spørsmål om i hvilken grad en stat er villig til å bruke militær makt for å oppnå politiske mål. All den tid en slik beslutning ennå ikke er tatt av den aktuelle statens ledere, vil en etterretningsorganisasjon bare være i stand til å estimere et slikt utfall."@nb ;
-           skos:prefLabel "mysterium"@nb ;
-           skos:scopeNote "etterretning"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#måle-_og_signatur-etterretning
-:måle-_og_signatur-etterretning a
-                                         skos:Concept ;
-                                skos:broader :innhenting_mot_fysisk_objekt ;
-                                skos:inScheme :spn_terminologi ;
-                                skos:altLabel "måle- og signaturetterretning"@nb ;
-                                skos:prefLabel "MASINT"@nb .
-
-
 ###  https://www.johannesodegard.no/terminologi#naturskapt_ulykke
 :naturskapt_ulykke a
                             skos:Concept ;
                    skos:broader :ulykke ;
                    skos:inScheme :spn_terminologi ;
                    skos:prefLabel "naturskapt ulykke"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#nettverks-etterretning
-:nettverks-etterretning a
-                                 skos:Concept ;
-                        skos:broader :innhenting_mot_fysisk_objekt ;
-                        skos:inScheme :spn_terminologi ;
-                        skos:altLabel "nettverks-etterretning"@nb ;
-                        skos:prefLabel "NETINT"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#nulldagssårbarhet
@@ -1160,24 +865,6 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
                 skos:prefLabel "personkontroll"@nb .
 
 
-###  https://www.johannesodegard.no/terminologi#pålitelighet
-:pålitelighet a
-                       skos:Concept ;
-              skos:broader :endisiplin ;
-              skos:inScheme :spn_terminologi ;
-              skos:definition "egenskap ved kilde om at den er til å stole på"@nb ;
-              skos:prefLabel "pålitelighet"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#radar_etterretning
-:radar_etterretning a
-                             skos:Concept ;
-                    skos:broader :innhenting_mot_fysisk_objekt ;
-                    skos:inScheme :spn_terminologi ;
-                    skos:altLabel "radar-etterretning"@nb ;
-                    skos:prefLabel "RADINT"@nb .
-
-
 ###  https://www.johannesodegard.no/terminologi#rapportering
 :rapportering a
                        skos:Concept ;
@@ -1197,14 +884,6 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
                  skos:definition "personell og ressurser spesielt forberedt og trent på å håndtere og avverge og en uønsket hendelse"@nb ;
                  skos:example "Lokalt politi er reaksjonsstyrke for dette objektet."@nb ;
                  skos:prefLabel "reaksjonsstyrke"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#redundant_innhenting
-:redundant_innhenting a
-                               skos:Concept ;
-                      skos:broader :innhentingsmetode ;
-                      skos:inScheme :spn_terminologi ;
-                      skos:prefLabel "redundant innhenting"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#ref
@@ -1313,16 +992,6 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
                      skos:prefLabel "sammensatte trusler"@nb .
 
 
-###  https://www.johannesodegard.no/terminologi#sannsynlighet_etterretning
-:sannsynlighet_etterretning a
-                                     skos:Concept ;
-                            skos:broader :flerdisiplin ;
-                            skos:inScheme :spn_terminologi ;
-                            dct:bibliographicCitation "Forsvarets etterretningsdoktrine (2025) s. 105"@nb ;
-                            skos:definition "beskrivelse av hvor sannsynlig det er at en gitt beskrivelse – i form av en etterretningsvurdering – vil være gyldig"@nb ;
-                            skos:prefLabel "sannsynlighet [etterretning]"@nb .
-
-
 ###  https://www.johannesodegard.no/terminologi#sannsynlighet_ulykke
 :sannsynlighet_ulykke a
                                skos:Concept ;
@@ -1352,14 +1021,6 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
                  skos:definition "analyse av en handlemåte og påfølgende skadefølger"@nb ;
                  skos:note "En scenarioanalyse er en strukturert analyseteknikk for å vurdere sårbarhetsnivå."@nb ;
                  skos:prefLabel "scenarioanalyse"@nb .
-
-
-###  https://www.johannesodegard.no/terminologi#sekvensiell_innhenting
-:sekvensiell_innhenting a
-                                 skos:Concept ;
-                        skos:broader :innhentingsmetode ;
-                        skos:inScheme :spn_terminologi ;
-                        skos:prefLabel "sekvensiell innhenting"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#sikkerhetsavtale
@@ -1539,6 +1200,9 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
            skos:inScheme :spn_terminologi ;
            skos:definition "angrep som kan føre til bortfall av en verdis konfidensialitet"@nb ;
            skos:prefLabel "spionasje"@nb .
+
+
+
 
 
 ###  https://www.johannesodegard.no/terminologi#styringsdokument_for_sikkerhet
@@ -1730,16 +1394,6 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
                          skos:prefLabel "to-faktor-autentisering"@nb .
 
 
-###  https://www.johannesodegard.no/terminologi#troverdighet
-:troverdighet a
-                       skos:Concept ;
-              skos:broader :endisiplin ;
-              skos:inScheme :spn_terminologi ;
-              skos:definition "egenskap ved informasjon om at den er riktig"@nb ;
-              skos:prefLabel "troverdighet"@nb ;
-              skos:scopeNote "etterretning"@nb .
-
-
 ###  https://www.johannesodegard.no/terminologi#trussel
 :trussel a
                   skos:Concept ;
@@ -1812,8 +1466,7 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
                   skos:inScheme :spn_terminologi ;
                   dct:bibliographicCitation "Forsvarets etterretningsdoktrine (2025) s. 106"@nb ;
                   skos:definition "samlet vurdering av omfanget av trusler med intensjon om å gjennomføre et angrep og deres respektive kapabiltieter og handlefrihet"@nb ;
-                  skos:prefLabel "trusselvurdering"@nb ;
-                  skos:related :etterretning .
+                  skos:prefLabel "trusselvurdering"@nb .
 
 
 ###  https://www.johannesodegard.no/terminologi#uaktsomhet
@@ -1941,22 +1594,11 @@ til uttrykk, eller beslutninger som ennå ikke er fattet"""@nb ;
                skos:prefLabel "vulkanutbrudd"@nb .
 
 
-###  https://www.johannesodegard.no/terminologi#åpne_kilder-etterretning
-:åpne_kilder-etterretning a
-                                   skos:Concept ;
-                          skos:broader :innhenting_mot_person_og_virksomhet ;
-                          dct:bibliographicCitation "Forsvarets etterretningsdoktrine (2025) s. 106"@nb ;
-                          skos:altLabel "OSINT"@nb ;
-                          skos:definition "etterretning som er generert av data og informasjon innhentet fra åpne kilder"@nb ;
-                          skos:prefLabel "åpne kilder-etterretning"@nb .
-
-
 ###  https://www.johannesodegard.no/terminologi#økonomiske_utfordringer
 :økonomiske_utfordringer a
                                   skos:Concept ;
                          skos:broader :personellsårbarhet ;
                          skos:prefLabel "økonomiske utfordringer"@nb .
-
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
