@@ -6,93 +6,10 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@base <http://www.johannesodegard.no/terminologi#> .
 
-<https://www.johannesodegard.no/terminologi> rdf:type owl:Ontology .
-
-#################################################################
-#    Annotation properties
-#################################################################
-
-###  http://purl.org/dc/terms/source
-dct:source rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#altLabel
-skos:altLabel rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#closeMatch
-skos:closeMatch rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#definition
-skos:definition rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#exactMatch
-skos:exactMatch rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#example
-skos:example rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#narrower
-skos:narrower rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#note
-skos:note rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#prefLabel
-skos:prefLabel rdf:type owl:AnnotationProperty ;
-               rdfs:subPropertyOf rdfs:label .
-
-
-###  http://www.w3.org/2004/02/skos/core#related
-skos:related rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#scopeNote
-skos:scopeNote rdf:type owl:AnnotationProperty .
-
-
-#################################################################
-#    Object Properties
-#################################################################
-
-###  http://www.w3.org/2004/02/skos/core#broader
-skos:broader rdf:type owl:ObjectProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#inScheme
-skos:inScheme rdf:type owl:ObjectProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#topConceptOf
-skos:topConceptOf rdf:type owl:ObjectProperty .
-
-
-#################################################################
-#    Classes
-#################################################################
-
-###  http://www.w3.org/2004/02/skos/core#Concept
-skos:Concept rdf:type owl:Class .
-
-
-###  http://www.w3.org/2004/02/skos/core#ConceptScheme
-skos:ConceptScheme rdf:type owl:Class .
-
-
-#################################################################
-#    Individuals
-#################################################################
 
 ###  http://www.johannesodegard.no/terminologi#Sikkerhet_på_norsk
-:spn rdf:type owl:NamedIndividual ,
+:spn a
                              skos:Concept ;
                     skos:inScheme :spn_terminologi ;
                     skos:topConceptOf :spn_terminologi ;
@@ -103,7 +20,7 @@ skos:ConceptScheme rdf:type owl:Class .
 
 ###  http://www.johannesodegard.no/terminologi#spn_terminologi
 :spn_terminologi
-    rdf:type owl:NamedIndividual , skos:ConceptScheme ;
+    a skos:ConceptScheme ;
     dct:title    "Sikkerhet på norsk – terminologi"@nb ;
     dct:creator "Johannes Ødegård"@nb ;
     dct:created "2025-10-23"^^xsd:date ;
